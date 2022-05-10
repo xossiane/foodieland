@@ -1,0 +1,140 @@
+@import '../../App.css';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
+body{
+    height: 3000px;
+}
+
+.header {
+    position: fixed;
+    display: flex;
+    width: 100vw;
+    height: 11rem;
+    top: 0;
+    left: 0;
+}
+
+.nav--margin-top{
+    margin-top: 11rem;
+}
+
+.nav {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 50;
+    width: 100%;
+    height: 100%;
+    top:0px;
+    padding: 3.3rem 3.5rem 3.7rem 8rem;
+    border-bottom: 1px solid rgba(0,0,0, .1);
+    background-color: #fff;
+}
+
+.nav__logo--img {
+    width: 11rem;
+    height: 3rem;
+}
+
+.nav__list {
+    display: block;
+    list-style: none;
+    position: absolute;
+    top: -130%;
+    left: 0;
+    transition: all 0.5s;
+    z-index: 5;
+    font-family: var(--inter);
+    font-size: 2rem;
+    width: 100%;
+    height: fit-content;
+    background-color: #fff;
+}
+
+.nav__list-display--on {
+    display: block;
+    top: 100%;
+    padding: 2.7rem 0;
+    opacity: 1;
+}
+
+.nav__list--item {
+    width: 100%;
+    margin-bottom: 2.4rem;
+}
+
+.nav__list--link, .nav__list--link:visited, .nav__list--link:active {
+    text-decoration: none;
+    display: inline-block;
+    color: var(--black);
+    width: 100%;
+    padding: 0 3rem;
+}
+
+.nav__list--link:hover {
+    background-color: #f0f0f0;
+}
+
+.nav__hamburguer--button {
+    margin: 0;
+    width: 55px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+
+}
+
+.nav__hamburguer--icon {
+    display: block;
+    width: 55px;
+    height: 8px;
+    background-color: var(--black);
+    border-radius: 10px;
+    transition: all .3s;
+}
+
+.nav__hamburguer--icon:before {
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    width: 55px;
+    height: 8px;
+    background-color: var(--black);
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+.nav__hamburguer--icon:after {
+    content: '';
+    position: absolute;
+    bottom:0;
+    left:0;
+    width: 55px;
+    height: 8px;
+    background-color: var(--black);
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+.nav__hamburguer--icon-open.nav__hamburguer--icon {
+    display: contents;
+    transition: all .3s;
+}
+
+.nav__hamburguer--icon-open.nav__hamburguer--icon:before {
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(45deg);
+    transition: all .3s;
+}
+
+.nav__hamburguer--icon-open.nav__hamburguer--icon:after {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-45deg);
+    transition: all .3s;
+}
