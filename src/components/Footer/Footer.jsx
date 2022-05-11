@@ -1,4 +1,4 @@
-import React,{useRef} from 'react'
+import React from 'react'
 import Logo from '../../assets/Logo.svg'
 import Instagram from '../../assets/004-instagram.svg'
 import Facebook from '../../assets/001-facebook.svg'
@@ -6,8 +6,6 @@ import Twitter from '../../assets/003-twitter.svg'
 import './Footer.css'
 
 function Footer() {
-    const teste = useRef()
-    console.log(teste)
 
   return (
     <footer className='footer'>
@@ -36,7 +34,7 @@ function Footer() {
                     <img className='footer__social--svg' src={Twitter} alt="logo do twitter" />
                 </a>
                 <a className='footer__social--link' href="#">
-                    <img ref={teste}className='footer__social--svg' src={Instagram} alt="logo do instagram" />
+                    <img className='footer__social--svg' src={Instagram} alt="logo do instagram" />
                 </a>
             </div>
         </div>
