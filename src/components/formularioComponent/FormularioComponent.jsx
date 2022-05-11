@@ -1,42 +1,49 @@
+import React, { useState } from "react";
 import InputComponent from "../input-component/InputComponent";
 function Formulario() {
-	var algo = '';
-  
-	const salvarDados = (entrouDados) => {
-    const dados = {
-      ...entrouDados,
-      id: Math.random().toString(),
-    };
-		algo = dados.name;
-    console.log(dados.name);
-		
+  var [dadosState, setDadosState] = useState({
+    name: "",
+    email: "",
+  });
+
+  function handleChange(event) {
+    const value = event.target.value;
+    setDadosState({
+      ...dadosState,
+      [event.target.name]: value,
+    });
+    console.log(setDadosState);
+    console.log(dadosState);
+  }
+  function teste() {
+    if (dadosState.name.length > 0 && dadosState.email.length) {
+      alert("nome: " + dadosState.name + " email " + dadosState.email);
+    } else alert("Campos vazios");
+  }
+  const submiteHandler = (event) => {
+    event.preventDefault();
   };
 
-  function teste() {
- /*     if (algo.length > 0) {
-      alert("Dados enviados");
-    } else alert("Existe campos incompletos");  */
-		console.log("funcao " + algo);
-  }
-
   return (
-    <div>
+    <form onSubmit={submiteHandler}>
       <InputComponent
-        onSalvarDados={salvarDados}
         type="text"
         placeholder="Enter your name..."
         title="NAME"
-				name="nome"
+        name="name"
+        value={dadosState.name}
+        onTextChange={handleChange}
       />
       <InputComponent
-        onSalvarDados={salvarDados}
         type="email"
         placeholder="Your email address..."
         title="EMAIL ADDRESS"
-				name="email"
+        name="email"
+        value={dadosState.email}
+        onTextChange={handleChange}
       />
       <button onClick={teste}>Submite</button>
-    </div>
+    </form>
   );
 }
 
