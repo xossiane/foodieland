@@ -1,21 +1,39 @@
-import './InputComponent.css'
-function InputComponent(props){
-	
+import React, { useState } from 'react';
 
-	function teste(){
-/* 		const input = document.querySelector(".inputContainer").value;
-		if(input.length > 0){
-			alert("DADOS ENVIADOS");
-		}
-		else alert("Existe campos incompletos")
-		console.log(input); */
+import "./InputComponent.css";
+
+function InputComponent(props) {
+
+	const [enteredName, setEnteredName] = useState("");
+
+
+	const nameChangeHandler = (event) => {
+		setEnteredName(event.target.value);
 	}
-	return(
-		<div>
+
+	const submiteHandler = (event) => {
+		event.preventDefault();
+
+ 		const expenseData = {
+			name: enteredName,
+		};
+		props.onSalvarDados(expenseData);
+		console.log("name " + expenseData)
+	
+	}
+	return (
+		<form onSubmit={submiteHandler}>
 			<h6>{props.title}</h6>
-			<input className="inputContainer" id='teste' type="text" placeholder={props.placeholder}/>
-{/* 			<button onClick={teste}>Submite</button>
- */}		</div>
+			<input
+				className="inputContainer"
+				type={props.type}
+				value={enteredName}
+				onChange={nameChangeHandler}
+				placeholder={props.placeholder}
+				name={props.nome}
+			/>
+			
+		</form>
 	);
 }
 
