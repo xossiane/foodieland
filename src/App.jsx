@@ -1,8 +1,9 @@
 import "./App.css";
-import LikeButton from "./assets/components/atoms/LikeButton/LikeButton";
+
+import Card from "./assets/components/organisms/Card/Card";
 
 function App() {
-  return <LikeButton></LikeButton>;
+  return <Card></Card>;
 }
 
 export default App;

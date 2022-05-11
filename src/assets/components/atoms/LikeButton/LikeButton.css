@@ -1,11 +1,13 @@
 @import url(../../../public/css/global.css);
 @import url(../../../public/css/reset.css);
 
-body {
-  background-color: black;
+.like-button {
+  position: absolute;
+  right: 16px;
+  top: 16px;
 }
 
-.like-button {
+.like-button__button {
   border: none;
   background-color: var(--colorLight);
   width: 48px;

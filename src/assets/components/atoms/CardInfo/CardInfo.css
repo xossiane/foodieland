@@ -1,0 +1,23 @@
+@import url(../../../public/css/global.css);
+@import url(../../../public/css/reset.css);
+
+.card__info {
+  display: flex;
+  margin-top: 27px;
+}
+
+.card__info__item {
+  display: flex;
+  align-items: center;
+}
+
+.card__info__item p {
+  color: var(--colorBlack);
+  opacity: 0.6;
+  font-weight: var(--fontWeightBody);
+  font-size: 1.4rem;
+  line-height: 17px;
+  letter-spacing: -0.02em;
+  margin-right: 27.75px;
+  margin-left: 14.12px;
+}

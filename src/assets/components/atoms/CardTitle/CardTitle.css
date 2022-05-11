@@ -1,0 +1,10 @@
+@import url(../../../public/css/global.css);
+@import url(../../../public/css/reset.css);
+
+.card__title {
+  color: var(--colorDark);
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 26px;
+  letter-spacing: -0.04em;
+}

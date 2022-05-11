@@ -16,9 +16,11 @@ const LikeButton = () => {
   };
 
   return (
-    <button onClick={changeHeartHandler} className="like-button">
-      <img src={heart} alt="" />
-    </button>
+    <div className="like-button">
+      <button onClick={changeHeartHandler} className="like-button__button">
+        <img src={heart} alt="" />
+      </button>
+    </div>
   );
 };
 
