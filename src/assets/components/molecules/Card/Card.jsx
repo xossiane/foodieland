@@ -1,17 +1,15 @@
 import "./Card.css";
-import CardHeader from "../../molecules/CardHeader/CardHeader";
-import CardContent from "../../molecules/CardContent/CardContent";
+import CardHeader from "../CardHeader/CardHeader";
+import CardContent from "../CardContent/CardContent";
 
-import Food01 from "../../../public/img/Food01.png";
-
-const Card = () => {
+const Card = (props) => {
   return (
     <article className="card">
-      <CardHeader image={Food01}></CardHeader>
+      <CardHeader image={props.image}></CardHeader>
       <CardContent
-        title={"Mixed Tropical Fruit Salad with Superfood Boosts"}
-        firstInfo={"30 minutes"}
-        secondInfo={"Healthy"}
+        title={props.title}
+        firstInfo={props.firstInfo}
+        secondInfo={props.secondInfo}
       ></CardContent>
     </article>
   );

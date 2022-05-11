@@ -1,9 +1,9 @@
 import "./App.css";
 
-import Card from "./assets/components/organisms/Card/Card";
+import Slider from "./assets/components/organisms/Slider/Slider";
 
 function App() {
-  return <Card></Card>;
+  return <Slider></Slider>;
 }
 
 export default App;
