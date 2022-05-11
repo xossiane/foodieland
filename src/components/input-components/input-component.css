@@ -1,10 +1,14 @@
 .inputContainer{
-    width: 400px;
-    height: 60px;
+    width: 355px;
+    height: 59px;
     background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 16px;
-    padding: 18px 0px 18px 19px;
+    border-radius: 24px;
+    padding: 0px;
+    margin-right: 13px;
+    margin-left: 10px;
+    margin-bottom: 28px;
+    
 }
 
 .inputContainer::placeholder {
@@ -12,10 +16,35 @@
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
-    line-height: 24px;
+    line-height: 30px;
     letter-spacing: -0.02em;
     color: rgba(0, 0, 0, 0.6);
     opacity: 0.8;
+    margin-right: 10px;
+    padding: 34px;
+
 
 
 }
+
+.submit_button {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 69px;
+    /* identical to box height, or 150% */
+    text-align: center;
+    letter-spacing: -0.02em;
+    width: 376px;
+    height: 60px;
+    left: 28px;
+    top: 1453px;
+    border-radius: 16px;
+    background-color: black;
+    color: white;
+
+
+}
+
