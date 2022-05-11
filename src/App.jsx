@@ -1,8 +1,8 @@
-import './App.css'
+import "./App.css";
+import LikeButton from "./assets/components/atoms/likeButton/LikeButton";
 
 function App() {
-
-  return (<h1>Hello World</h1>)
+  return <LikeButton></LikeButton>;
 }
 
-export default App
+export default App;

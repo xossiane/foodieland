@@ -1,0 +1,20 @@
+@import url(../../../public/css/global.css);
+@import url(../../../public/css/reset.css);
+
+body {
+  background-color: #000;
+}
+
+.like-button {
+  border: none;
+  background-color: var(--colorLight);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.like-button__img {
+}
