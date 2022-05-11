@@ -1,8 +1,9 @@
 @import '../../App.css';
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
 
-body{
-    height: 3000px;
+body.header-open{
+    height: 100%;
+    overflow-y: hidden;
 }
 
 .header {
@@ -44,7 +45,7 @@ body{
     top: -130%;
     left: 0;
     transition: all 0.5s;
-    z-index: 5;
+    z-index: 49;
     font-family: var(--inter);
     font-size: 2rem;
     width: 100%;
@@ -125,7 +126,6 @@ body{
 }
 
 .nav__hamburguer--icon-open.nav__hamburguer--icon:before {
-    display: block;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%) rotate(45deg);
