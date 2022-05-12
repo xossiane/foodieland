@@ -4,10 +4,13 @@
     background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 24px;
-    padding: 0px;
+    padding-left: 50px;
     margin-right: 13px;
-    margin-left: 10px;
+    margin-left: 18px;
     margin-bottom: 28px;
+    position: absolute;
+    margin-top: 290px;
+
     
 }
 
@@ -16,16 +19,18 @@
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
-    line-height: 30px;
+    line-height: 24px; 
     letter-spacing: -0.02em;
-    color: rgba(0, 0, 0, 0.6);
+    color: rgba(0, 0, 0, 0.4);
     opacity: 0.8;
     margin-right: 10px;
-    padding: 34px;
-
-
-
+    padding: 34px 0px;
+    
+    
 }
+
+
+
 
 .submit_button {
     font-family: 'Inter';
@@ -37,13 +42,17 @@
     /* identical to box height, or 150% */
     text-align: center;
     letter-spacing: -0.02em;
-    width: 376px;
+    width: 356px;
     height: 60px;
-    left: 28px;
-    top: 1453px;
+    left: 18px;
+    margin-top: 105px;
+    
+    /* top: 1453px; */
     border-radius: 16px;
     background-color: black;
     color: white;
+    position: absolute;
+    
 
 
 }

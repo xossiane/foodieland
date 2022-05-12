@@ -1,5 +1,12 @@
+*, *:after, *:before {
+margin: 0px;
+padding: 0px;
+box-sizing: inherit;
+
+}
 body {
-    width: 420px;
-    height: 1280px;
-    background-color: white;
+   box-sizing: border-box;
+}
+html {
+    font-size: 3 rem; 
 }
