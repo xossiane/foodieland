@@ -1,6 +1,6 @@
 import "./Card.css";
-import CardHeader from "../CardHeader/CardHeader";
-import CardContent from "../CardContent/CardContent";
+import CardHeader from "../CardHeader/";
+import CardContent from "../CardContent/";
 
 const Card = (props) => {
   return (

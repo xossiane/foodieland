@@ -1,6 +1,6 @@
 import "./CardHeader.css";
-import CardImage from "../../atoms/CardImage/CardImage";
-import LikeButton from "../../atoms/LikeButton/LikeButton";
+import CardImage from "../../atoms/CardImage/";
+import LikeButton from "../../atoms/LikeButton/";
 
 const CardHeader = (props) => {
   return (

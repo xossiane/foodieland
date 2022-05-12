@@ -1,8 +1,8 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 
 import "./Slider.css";
 
-import Card from "../../molecules/Card/Card";
+import Card from "../../molecules/Card/";
 
 import Food01 from "../../../public/img/Food01.png";
 import Food02 from "../../../public/img/Food02.png";
@@ -46,23 +46,19 @@ const Slider = () => {
 
   const slider = useRef(null);
 
-  const leftArrowClickHandler = (event) => {
-    event.preventDefault();
-    console.log(slider.current.offsetWidth);
-    slider.current.scrollLeft -= 340;
+  const leftArrowClickHandler = () => {
+    slider.current.scrollBy(-340, 0);
   };
 
-  const rightArrowClickHandler = (event) => {
-    event.preventDefault();
-    console.log(slider.current.offsetWidth);
-    slider.current.scrollLeft += 340;
+  const rightArrowClickHandler = () => {
+    slider.current.scrollBy(340, 0);
   };
 
   return (
     <div className="slider">
       <div className="slider__prev">
-        <button onClick={leftArrowClickHandler}>
-          <img src={Prev} />
+        <button>
+          <img onClick={leftArrowClickHandler} src={Prev} />
         </button>
       </div>
       <div className="slider__content" ref={slider}>
