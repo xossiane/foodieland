@@ -1,5 +1,5 @@
-@import url(../../../public/css/global.css);
-@import url(../../../public/css/reset.css);
+@import url(../../../../../public/css/global.css);
+@import url(../../../../../public/css/reset.css);
 
 .like-button {
   position: absolute;
@@ -16,7 +16,4 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.like-button__img {
 }

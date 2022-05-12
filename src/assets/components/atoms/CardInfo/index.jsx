@@ -1,7 +1,7 @@
 import "./CardInfo.css";
 
-import ForkKnife from "../../../public/img/ForkKnife.svg";
-import Timer from "../../../public/img/Timer.svg";
+import ForkKnife from "../../../../../public/img/ForkKnife.svg";
+import Timer from "../../../../../public/img/Timer.svg";
 
 const CardInfo = (props) => {
   return (

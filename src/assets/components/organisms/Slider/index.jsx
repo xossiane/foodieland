@@ -4,13 +4,13 @@ import "./Slider.css";
 
 import Card from "../../molecules/Card/";
 
-import Food01 from "../../../public/img/Food01.png";
-import Food02 from "../../../public/img/Food02.png";
-import Food03 from "../../../public/img/Food03.png";
-import Food04 from "../../../public/img/Food04.png";
+import Food01 from "../../../../../public/img/Food01.png";
+import Food02 from "../../../../../public/img/Food02.png";
+import Food03 from "../../../../../public/img/Food03.png";
+import Food04 from "../../../../../public/img/Food04.png";
 
-import Prev from "../../../public/img/Prev.svg";
-import Next from "../../../public/img/Next.svg";
+import Prev from "../../../../..//public/img/Prev.svg";
+import Next from "../../../../../public/img/Next.svg";
 
 const Slider = () => {
   const cardData = [
