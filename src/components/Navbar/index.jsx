@@ -1,5 +1,5 @@
 import {React, useState} from 'react'
-import Logo from '../../assets/Logo.svg'
+import Logo from '../../../public/assets/Logo.svg'
 import './Navbar.css'
 
 function Navbar() {
@@ -18,20 +18,18 @@ function Navbar() {
         <div className='nav__logo-container'>
             <img className='nav__logo--img' src={Logo} alt='Foodieland Logo'/>
         </div>
-        <button onClick={toggleIsNavOpen} className='nav__hamburguer--button'>
-          <div className={`nav__hamburguer--icon ${isNavOpen ? 'nav__hamburguer--icon-open' : ''}`}></div>
-        </button>
-      </nav>
-      <ul className={`nav__list ${isNavOpen ? 'nav__list-display--on' : ''}`}>
+        <ul className={`nav__list ${isNavOpen ? 'nav__list-display--on' : ''}`}>
           <li className='nav__list--item'><a className='nav__list--link' href="#">Home</a></li>
           <li className='nav__list--item'><a className='nav__list--link' href="#">Recipes</a></li>
           <li className='nav__list--item'><a className='nav__list--link' href="#">Blog</a></li>
           <li className='nav__list--item'><a className='nav__list--link' href="#">About us</a></li>
           <li className='nav__list--item'><a className='nav__list--link' href="#">Contact</a></li>
-      </ul>
-      
+        </ul>
+        <button onClick={toggleIsNavOpen} className='nav__hamburguer--button'>
+          <div className={`nav__hamburguer--icon ${isNavOpen ? 'nav__hamburguer--icon-open' : ''}`}></div>
+        </button>
+      </nav>
     </header>
-    <div className='nav--margin-top'></div>
     </>
   )
 }
