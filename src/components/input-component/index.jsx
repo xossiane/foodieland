@@ -3,22 +3,14 @@ import React, { useState } from "react";
 import "./InputComponent.css";
 
 function InputComponent(props) {
-  const [enteredName, setEnteredName] = useState("");
-
-  const nameChangeHandler = (event) => {
-    setEnteredName(event.target.value);
-    event.preventDefault();
-    props.onTextChange(event);
-  };
-
   return (
     <div className="containerInput">
       <h6>{props.title}</h6>
       <input
         className="inputContainer"
         type={props.type}
-        value={enteredName}
-        onChange={nameChangeHandler}
+        value={props.value}
+        onChange={props.onTextChange}
         placeholder={props.placeholder}
         name={props.name}
       />

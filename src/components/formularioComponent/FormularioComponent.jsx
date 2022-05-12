@@ -6,14 +6,16 @@ import TextAreaComponent from "../textArea-component";
 
 import "./FormularioComponent.css";
 
+const initialState = {
+  name: "",
+  email: "",
+  subject: "",
+  select: "",
+  message: "",
+};
+
 function Formulario() {
-  var [dadosState, setDadosState] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    select: "",
-    message: "",
-  });
+  var [dadosState, setDadosState] = useState(initialState);
 
   function handleChange(event) {
     const value = event.target.value;
@@ -21,9 +23,8 @@ function Formulario() {
       ...dadosState,
       [event.target.name]: value,
     });
-    console.log(dadosState);
   }
-  function teste() {
+  function verificarCampos() {
     if (
       dadosState.name.length > 0 &&
       dadosState.email.length > 0 &&
@@ -31,17 +32,18 @@ function Formulario() {
       dadosState.select.length > 0
     ) {
       alert("Dados enviados");
-    } else alert("Campos vazios");
+      return true;
+    } else {
+      alert("Campos vazios");
+      console.log(dadosState);
+      return false;
+    }
   }
   const submiteHandler = (event) => {
-    setDadosState({
-      name: "",
-      email: "",
-      subject: "",
-      select: "",
-      message: "",
-    });
     event.preventDefault();
+    if (verificarCampos()) {
+      setDadosState({ ...initialState });
+    }
   };
 
   return (
@@ -75,7 +77,7 @@ function Formulario() {
         placeholder="Enter subject"
         title="SUBJECT"
         name="subject"
-        value={dadosState.email}
+        value={dadosState.subject}
         onTextChange={handleChange}
       />
 
@@ -86,7 +88,7 @@ function Formulario() {
         placeholder="Enter your messages..."
         onTextChange={handleChange}
       />
-      <button onClick={teste}>Submit</button>
+      <button type="submit">Submit</button>
     </form>
   );
 }
