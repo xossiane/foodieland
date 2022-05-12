@@ -1,9 +1,7 @@
 import React from 'react'
-import Logo from '../../assets/Logo.svg'
-import Instagram from '../../assets/004-instagram.svg'
-import Facebook from '../../assets/001-facebook.svg'
-import Twitter from '../../assets/003-twitter.svg'
+import Logo from '../../../public/assets/Logo.svg'
 import './Footer.css'
+import Social from '../Social'
 
 function Footer() {
 
@@ -27,15 +25,9 @@ function Footer() {
                 <a className='footer__copyright--link' href="#"> Webflow</a>
             </span>
             <div className='footer__social-container'>
-                <a className='footer__social--link' href="#">
-                    <img className='footer__social--svg' src={Facebook} alt="logo do facebook" />
-                </a>
-                <a className='footer__social--link' href="#">
-                    <img className='footer__social--svg' src={Twitter} alt="logo do twitter" />
-                </a>
-                <a className='footer__social--link' href="#">
-                    <img className='footer__social--svg' src={Instagram} alt="logo do instagram" />
-                </a>
+                <Social social={'Facebook'} scale= {2} />
+                <Social social= {'twitter'} scale= {2} />
+                <Social social= {'Instagram'} scale={2} />
             </div>
         </div>
     </footer>
