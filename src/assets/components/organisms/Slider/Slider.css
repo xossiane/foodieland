@@ -36,4 +36,9 @@
   padding-left: 50px;
   overflow: hidden;
   overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.slider__content::-webkit-scrollbar {
+  display: none;
 }

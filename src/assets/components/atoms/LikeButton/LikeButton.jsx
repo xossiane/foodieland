@@ -5,7 +5,7 @@ import GrayHeart from "../../../public/img/GrayHeart.svg";
 import "./LikeButton.css";
 
 const LikeButton = () => {
-  const [heart, setHeart] = useState(RedHeart);
+  const [heart, setHeart] = useState(GrayHeart);
 
   const changeHeartHandler = () => {
     if (heart == RedHeart) {
