@@ -27,7 +27,8 @@ function Formulario() {
     if (
       dadosState.name.length > 0 &&
       dadosState.email.length > 0 &&
-      dadosState.subject.length > 0
+      dadosState.subject.length > 0 &&
+      dadosState.select.length > 0
     ) {
       alert("Dados enviados");
     } else alert("Campos vazios");
@@ -65,6 +66,7 @@ function Formulario() {
       <SelectComponent
         title="ENQUIRY TYPE"
         name="select"
+        value={dadosState.select}
         placeholder="Advertising"
         onTextChange={handleChange}
       />
@@ -80,6 +82,7 @@ function Formulario() {
       <TextAreaComponent
         title="MESSAGES"
         name="message"
+        value={dadosState.message}
         placeholder="Enter your messages..."
         onTextChange={handleChange}
       />

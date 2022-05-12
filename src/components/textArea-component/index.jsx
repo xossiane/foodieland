@@ -18,6 +18,7 @@ function selectComponent(props) {
         placeholder={props.placeholder}
         value={enteredTextArea}
         onChange={textAreaHandler}
+        name={props.name}
       />
     </div>
   );

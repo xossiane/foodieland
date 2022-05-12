@@ -6,3 +6,41 @@
   border-radius: 16px;
   padding: 20px 19px;
 }
+
+input[type="datetime-local"],
+input[type="number"],
+select {
+  -webkit-appearance: none;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.teste {
+  position: relative;
+}
+
+.teste::before,
+.teste::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  border-top: 2px solid rgb(0, 0, 0);
+  width: 10px;
+}
+
+.teste::before {
+  right: 26px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.teste::after {
+  right: 20px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}

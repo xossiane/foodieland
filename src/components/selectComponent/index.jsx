@@ -10,28 +10,31 @@ function selectComponent(props) {
     { id: 4, name: "Opção 4" },
   ];
   const selectHandler = (event) => {
-    event.preventDefault();
-    console.log(enteredSelect);
     setEnteredSelect(event.target.value);
+    console.log(enteredSelect);
+    event.preventDefault();
     props.onTextChange(event);
   };
 
   return (
     <div className="containerInput">
       <h6>{props.title}</h6>
-      <select
-        className="selectContainer"
-        value={enteredSelect}
-        placeholder={props.placeholder}
-        onChange={selectHandler}
-      >
-        <option value="" disabled selected></option>
-        {list.map((item, index) => (
-          <option key={item.id} value={item.name}>
-            {item.name}
-          </option>
-        ))}
-      </select>
+      <div className="teste">
+        <select
+          className="selectContainer"
+          value={enteredSelect}
+          name={props.name}
+          placeholder={props.placeholder}
+          onChange={selectHandler}
+        >
+          <option value="" disabled selected></option>
+          {list.map((item, index) => (
+            <option key={item.id} value={item.name}>
+              {item.name}
+            </option>
+          ))}
+        </select>
+      </div>
     </div>
   );
 }
