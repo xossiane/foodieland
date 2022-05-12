@@ -1,3 +1,9 @@
+:root {
+  --cor--cinza: rgba(0, 0, 0, 0.1);
+  --cor--preto: rgb(0, 0, 0);
+  --cor--branca: #ffffff;
+  --border-components: 1px solid rgba(0, 0, 0, 0.1);
+}
 *,
 *:after,
 *:before {

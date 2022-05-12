@@ -13,16 +13,14 @@ function selectComponent(props) {
   return (
     <div className="containerInput">
       <h6>{props.title}</h6>
-      <div className="teste">
+      <div className="containerSelect">
         <select
           className="selectContainer"
           value={props.value}
-          /*  defaultValue={list[0].name} */
           name={props.name}
           placeholder={props.placeholder}
           onChange={props.onTextChange}
         >
-          {/*   <option value="" disabled selected></option> */}
           {list.map((item, index) => (
             <option key={item.id} value={item.name}>
               {item.name}

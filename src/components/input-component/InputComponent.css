@@ -1,8 +1,8 @@
 .inputContainer {
   width: 375px;
   height: 60px;
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: var(--cor--branca);
+  border: var(--border-components);
   border-radius: 16px;
   padding: 18px 19px;
 }

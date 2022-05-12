@@ -15,17 +15,17 @@ select {
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: var(--border-components);
   border-radius: 6px;
   box-sizing: border-box;
 }
 
-.teste {
+.containerSelect {
   position: relative;
 }
 
-.teste::before,
-.teste::after {
+.containerSelect::before,
+.containerSelect::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -33,13 +33,13 @@ select {
   width: 10px;
 }
 
-.teste::before {
+.containerSelect::before {
   right: 26px;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-.teste::after {
+.containerSelect::after {
   right: 20px;
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);

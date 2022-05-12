@@ -1,8 +1,8 @@
 .textAreaContainer {
   width: 373px;
   height: 200px;
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: var(--cor--branca);
+  border: 1px solid var(--cor--cinza);
   border-radius: 16px;
   padding: 20px 19px;
 }
