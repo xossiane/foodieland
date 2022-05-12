@@ -1,9 +1,18 @@
 import React, { useState } from "react";
-import InputComponent from "../input-component/InputComponent";
+
+import InputComponent from "../input-component";
+import SelectComponent from "../selectComponent";
+import TextAreaComponent from "../textArea-component";
+
+import "./FormularioComponent.css";
+
 function Formulario() {
   var [dadosState, setDadosState] = useState({
     name: "",
     email: "",
+    subject: "",
+    select: "",
+    message: "",
   });
 
   function handleChange(event) {
@@ -12,12 +21,14 @@ function Formulario() {
       ...dadosState,
       [event.target.name]: value,
     });
-    console.log(setDadosState);
-    console.log(dadosState);
   }
   function teste() {
-    if (dadosState.name.length > 0 && dadosState.email.length) {
-      alert("nome: " + dadosState.name + " email " + dadosState.email);
+    if (
+      dadosState.name.length > 0 &&
+      dadosState.email.length > 0 &&
+      dadosState.subject.length > 0
+    ) {
+      alert("Dados enviados");
     } else alert("Campos vazios");
   }
   const submiteHandler = (event) => {
@@ -26,6 +37,7 @@ function Formulario() {
 
   return (
     <form onSubmit={submiteHandler}>
+      <h1>Contact us</h1>
       <InputComponent
         type="text"
         placeholder="Enter your name..."
@@ -40,6 +52,27 @@ function Formulario() {
         title="EMAIL ADDRESS"
         name="email"
         value={dadosState.email}
+        onTextChange={handleChange}
+      />
+      <SelectComponent
+        title="ENQUIRY TYPE"
+        name="select"
+        placeholder="Advertising"
+        onTextChange={handleChange}
+      />
+      <InputComponent
+        type="text"
+        placeholder="Enter subject"
+        title="SUBJECT"
+        name="subject"
+        value={dadosState.email}
+        onTextChange={handleChange}
+      />
+
+      <TextAreaComponent
+        title="MESSAGES"
+        name="message"
+        placeholder="Enter your messages..."
         onTextChange={handleChange}
       />
       <button onClick={teste}>Submite</button>
