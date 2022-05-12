@@ -1,9 +1,10 @@
 .inputContainer {
-  width: 400px;
+  width: 375px;
   height: 60px;
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 16px;
+  padding: 18px 19px;
 }
 
 .inputContainer::placeholder {
@@ -15,17 +16,9 @@
   letter-spacing: -0.02em;
   color: rgba(0, 0, 0, 0.6);
   opacity: 0.8;
+  padding-left: 19px;
 }
 
-h6 {
-  width: 72px;
-  height: 20px;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 20px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: rgba(0, 0, 0, 0.6);
+.containerInput {
+  margin-top: 32px;
 }

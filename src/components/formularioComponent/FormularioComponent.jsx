@@ -21,6 +21,7 @@ function Formulario() {
       ...dadosState,
       [event.target.name]: value,
     });
+    console.log(dadosState);
   }
   function teste() {
     if (
@@ -32,11 +33,18 @@ function Formulario() {
     } else alert("Campos vazios");
   }
   const submiteHandler = (event) => {
+    setDadosState({
+      name: "",
+      email: "",
+      subject: "",
+      select: "",
+      message: "",
+    });
     event.preventDefault();
   };
 
   return (
-    <form onSubmit={submiteHandler}>
+    <form className="container" onSubmit={submiteHandler}>
       <h1>Contact us</h1>
       <InputComponent
         type="text"
@@ -75,7 +83,7 @@ function Formulario() {
         placeholder="Enter your messages..."
         onTextChange={handleChange}
       />
-      <button onClick={teste}>Submite</button>
+      <button onClick={teste}>Submit</button>
     </form>
   );
 }

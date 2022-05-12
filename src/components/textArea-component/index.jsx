@@ -11,7 +11,7 @@ function selectComponent(props) {
   };
 
   return (
-    <div>
+    <div className="containerInput">
       <h6>{props.title}</h6>
       <textarea
         className="textAreaContainer"

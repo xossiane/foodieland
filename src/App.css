@@ -1,0 +1,33 @@
+h1 {
+  font-family: "Inter";
+
+  font-size: 60px;
+  line-height: 73px;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+
+  color: #000000;
+}
+
+h6 {
+  font-family: "Inter";
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.6);
+}
+button {
+  width: 372.59px;
+  height: 64px;
+  background: #000000;
+  border-radius: 16px;
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin-top: 32px;
+}

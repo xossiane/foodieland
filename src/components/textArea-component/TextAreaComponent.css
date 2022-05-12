@@ -1,8 +1,12 @@
 .textAreaContainer {
   width: 373px;
   height: 200px;
-
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 16px;
+  padding: 20px 19px;
+}
+
+.textAreaContainer::placeholder {
+  padding: 20px 19px;
 }
