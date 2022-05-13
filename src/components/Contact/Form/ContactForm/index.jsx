@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
-import InputComponent from "../input-component";
-import SelectComponent from "../selectComponent";
-import TextAreaComponent from "../textArea-component";
+import InputComponent from "../ContactInput";
+import SelectComponent from "../ContactSelect";
+import TextAreaComponent from "../ContactTextArea";
 
 import "./FormularioComponent.css";
 

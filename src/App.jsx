@@ -1,8 +1,8 @@
 import Navbar from './components/Navbar'
 import './App.css'
 import Footer from './components/Footer'
-import Formulario from "./components/formularioComponent/FormularioComponent";
-import Newsletter from './components/formulario/Formulario'
+import Formulario from "./components/Form/ContactForm";
+import Newsletter from './components/Newsletter'
 import Slider from "./components/Slider/organisms/Slider/";
 
 function App() {

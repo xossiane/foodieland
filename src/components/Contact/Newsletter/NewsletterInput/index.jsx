@@ -1,10 +1,8 @@
-import './input-component.css'
-import '../outsideContainer/outsideContainer.css'
-import direita from '../../../public/direita.png'
-import esquerda from '../../../public/esquerda.png'
+import './NewsletterInput.css'
+import direita from '/direita.png'
+import esquerda from '/esquerda.png'
 
     function InputComponent (props){
-        
 
         function teste(){ 
             const input = document.querySelector("#inputNewsletter").value;

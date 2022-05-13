@@ -1,7 +1,7 @@
 import "./CardContent.css";
 
-import CardTitle from "../../atoms/CardTitle/";
-import CardInfo from "../../atoms/CardInfo/";
+import CardTitle from "../../atoms/CardTitle";
+import CardInfo from "../../atoms/CardInfo";
 
 const CardContent = (props) => {
   return (

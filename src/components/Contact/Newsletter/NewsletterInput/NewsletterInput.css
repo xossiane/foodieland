@@ -1,3 +1,47 @@
+
+.inputContainer::placeholder {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px; 
+    letter-spacing: -0.02em;
+    color: rgba(0, 0, 0, 0.4);
+    opacity: 0.8;
+    margin-right: 10px;
+    padding: 34px 0px;
+    
+    
+}
+
+
+
+
+.submit_button {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 69px;
+    /* identical to box height, or 150% */
+    text-align: center;
+    letter-spacing: -0.02em;
+    width: 356px;
+    height: 60px;
+    left: 18px;
+    margin-top: 28px;
+    
+    /* top: 1453px; */
+    border-radius: 16px;
+    background-color: black;
+    color: white;
+    position: absolute;
+    
+
+
+}
+
 .outsideContainer {
     position: relative;
     width: 388.01px;
