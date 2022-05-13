@@ -1,4 +1,4 @@
-.inputContainer{
+/* .inputContainer{
     width: 355px;
     height: 59px;
     background: #FFFFFF;
@@ -8,11 +8,7 @@
     margin-right: 13px;
     margin-left: 18px;
     margin-bottom: 28px;
-    position: absolute;
-    margin-top: 290px;
-
-    
-}
+} */
 
 .inputContainer::placeholder {
     font-family: 'Inter';
