@@ -25,9 +25,9 @@ function Footer() {
                 <a className='footer__copyright--link' href="#"> Webflow</a>
             </span>
             <div className='footer__social-container'>
-                <Social social={'Facebook'} scale= {2} />
-                <Social social= {'twitter'} scale= {2} />
-                <Social social= {'Instagram'} scale={2} />
+                <Social social={'Facebook'} scale= {1} />
+                <Social social= {'twitter'} scale= {1} />
+                <Social social= {'Instagram'} scale={1} />
             </div>
         </div>
     </footer>
