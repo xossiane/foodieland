@@ -1,0 +1,12 @@
+.textAreaContainer {
+  width: 373px;
+  height: 200px;
+  background: var(--cor--branca);
+  border: 1px solid var(--cor--cinza);
+  border-radius: 16px;
+  padding: 20px 19px;
+}
+
+.textAreaContainer::placeholder {
+  padding: 20px 19px;
+}

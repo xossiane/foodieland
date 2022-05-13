@@ -1,0 +1,24 @@
+.inputContainer {
+  width: 375px;
+  height: 60px;
+  background: var(--cor--branca);
+  border: var(--border-components);
+  border-radius: 16px;
+  padding: 18px 19px;
+}
+
+.inputContainer::placeholder {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  color: rgba(0, 0, 0, 0.6);
+  opacity: 0.8;
+  padding-left: 10px;
+}
+
+.containerInput {
+  margin-top: 32px;
+}

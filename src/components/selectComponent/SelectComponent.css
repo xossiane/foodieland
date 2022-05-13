@@ -1,0 +1,46 @@
+.selectContainer {
+  width: 375px;
+  height: 60px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  padding: 20px 19px;
+}
+
+input[type="datetime-local"],
+input[type="number"],
+select {
+  -webkit-appearance: none;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: var(--border-components);
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.containerSelect {
+  position: relative;
+}
+
+.containerSelect::before,
+.containerSelect::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  border-top: 2px solid rgb(0, 0, 0);
+  width: 10px;
+}
+
+.containerSelect::before {
+  right: 26px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.containerSelect::after {
+  right: 20px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
