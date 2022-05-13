@@ -1,4 +1,4 @@
-h1 {
+.titulo {
   font-family: "Inter";
   font-size: 60px;
   line-height: 73px;
@@ -7,7 +7,7 @@ h1 {
   color: #000000;
 }
 
-h6 {
+.subtitulo {
   font-family: "Inter";
   margin-bottom: 15px;
   font-weight: 500;
@@ -18,7 +18,7 @@ h6 {
   color: rgba(0, 0, 0, 0.6);
 }
 
-button {
+.btn-Submit {
   width: 372.59px;
   height: 64px;
   background: #000000;

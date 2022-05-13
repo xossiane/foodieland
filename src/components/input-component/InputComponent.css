@@ -5,6 +5,7 @@
   border: var(--border-components);
   border-radius: 16px;
   padding: 18px 19px;
+  position: relative;
 }
 
 .inputContainer::placeholder {

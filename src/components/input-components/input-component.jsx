@@ -7,7 +7,7 @@ import esquerda from '../../../public/esquerda.png'
         
 
         function teste(){ 
-            const input = document.querySelector(".inputContainer").value;
+            const input = document.querySelector("#inputNewsletter").value;
             if (input.length > 0){
                 alert("Thanks for your subscription");
             }
@@ -26,7 +26,7 @@ import esquerda from '../../../public/esquerda.png'
                     <p>Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim </p>
                     </div>
                 
-                    <input className= "inputContainer" type="text" placeholder={props.texto} />
+                    <input id='inputNewsletter' className= "inputContainer" type="text" placeholder={props.texto} />
                     <div className="containerButton">
                     <button className="submit_button" onClick = {teste}>Submit</button>
                     

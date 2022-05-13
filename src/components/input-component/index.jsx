@@ -5,7 +5,7 @@ import "./InputComponent.css";
 function InputComponent(props) {
   return (
     <div className="containerInput">
-      <h6>{props.title}</h6>
+      <h6 className="subtitulo">{props.title}</h6>
       <input
         className="inputContainer"
         type={props.type}

@@ -1,4 +1,4 @@
-@import '../../../public/css/variables.css';
+@import '/public/css/global.css';
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
 
 body.header-open{
@@ -6,7 +6,7 @@ body.header-open{
     overflow-y: hidden;
 }
 
-body{margin-top: 11rem;}
+body{margin-top: 14rem;}
 
 .header {
     position: fixed;

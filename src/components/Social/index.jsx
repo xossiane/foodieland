@@ -1,7 +1,7 @@
 import React from 'react'
-import Facebook from '../../../public/assets/001-facebook.svg'
-import Twitter from '../../../public/assets/003-twitter.svg'
-import Instagram from '../../../public/assets/004-instagram.svg'
+import Facebook from '/assets/001-facebook.svg'
+import Twitter from '/assets/003-twitter.svg'
+import Instagram from '/assets/004-instagram.svg'
 
 function index({social, scale=1}) {
 

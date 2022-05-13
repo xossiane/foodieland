@@ -48,7 +48,7 @@ function Formulario() {
 
   return (
     <form className="container" onSubmit={submiteHandler}>
-      <h1>Contact us</h1>
+      <h1 className="titulo">Contact us</h1>
       <InputComponent
         type="text"
         placeholder="Enter your name..."
@@ -88,7 +88,7 @@ function Formulario() {
         placeholder="Enter your messages..."
         onTextChange={handleChange}
       />
-      <button type="submit">Submit</button>
+      <button className="btn-Submit" type="submit">Submit</button>
     </form>
   );
 }

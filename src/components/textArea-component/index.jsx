@@ -4,7 +4,7 @@ import "./TextAreaComponent.css";
 function selectComponent(props) {
   return (
     <div className="containerInput">
-      <h6>{props.title}</h6>
+      <h6 className="subtitulo">{props.title}</h6>
       <textarea
         className="textAreaContainer"
         placeholder={props.placeholder}
