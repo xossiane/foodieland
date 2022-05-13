@@ -1,0 +1,9 @@
+:root {
+  --colorDark: #000000;
+  --colorLight: #ffffff;
+
+  --fontfamilyPrimary: "Inter", sans-serif;
+
+  --fontWeightTitle: 600;
+  --fontWeightBody: 500;
+}

@@ -1,0 +1,44 @@
+@import url(../../../../../public/css/global.css);
+@import url(../../../../../public/css/reset.css);
+
+.slider {
+  position: relative;
+}
+
+.slider__prev {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.slider__prev button {
+  border: none;
+  background-color: transparent;
+}
+
+.slider__next {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.slider__next button {
+  border: none;
+  background-color: transparent;
+}
+
+.slider__content {
+  display: flex;
+  padding-left: 50px;
+  overflow: hidden;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.slider__content::-webkit-scrollbar {
+  display: none;
+}

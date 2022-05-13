@@ -1,0 +1,19 @@
+@import url(../../../../../public/css/global.css);
+@import url(../../../../../public/css/reset.css);
+
+.like-button {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+}
+
+.like-button__button {
+  border: none;
+  background-color: var(--colorLight);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
