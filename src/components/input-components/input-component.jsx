@@ -1,7 +1,7 @@
 import './input-component.css'
 import '../outsideContainer/outsideContainer.css'
-import direita from '../images/direita.png'
-import esquerda from '../images/esquerda.png'
+import direita from '../../../public/direita.png'
+import esquerda from '../../../public/esquerda.png'
 
     function InputComponent (props){
         
