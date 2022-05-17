@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 import Logo from "/public/assets/Logo.svg";
 import "./Navbar.css";
 import Facebook from "../Social/Facebook";
@@ -10,10 +10,13 @@ function Navbar() {
 
   const toggleIsNavOpen = () => {
     setIsNavOpen(!isNavOpen);
+  };
+
+  useEffect(() => {
     isNavOpen === true
       ? document.body.classList.add("header-open")
       : document.body.classList.remove("header-open");
-  };
+  }, [isNavOpen]);
 
   return (
     <>
