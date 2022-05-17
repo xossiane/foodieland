@@ -13,6 +13,8 @@ import Prev from "/assets/Prev.svg";
 import Next from "/assets/Next.svg";
 
 const Slider = () => {
+  const [isScrolling, setIsScrolling] = useState(false)
+
   const cardData = [
     {
       id: 0,
@@ -48,11 +50,22 @@ const Slider = () => {
 
   const leftArrowClickHandler = () => {
     slider.current.scrollBy(-340, 0);
+    disableBtnHandler();
   };
 
   const rightArrowClickHandler = () => {
     slider.current.scrollBy(340, 0);
+    disableBtnHandler();
   };
+
+  const disableBtnHandler = () =>{
+    setIsScrolling(true)
+    setInterval(() =>{
+      setIsScrolling(false)
+    }, 1000)
+  }
+
+
 
   return (
     <div className="slider">
@@ -61,8 +74,8 @@ const Slider = () => {
       </div>
       <div className="slider__container">
       <div className="slider__prev">
-        <button>
-          <img onClick={leftArrowClickHandler} src={Prev} />
+        <button onClick={leftArrowClickHandler} disabled={isScrolling}>
+          <img src={Prev} />
         </button>
       </div>
       <div className="slider__content" ref={slider}>
@@ -77,7 +90,7 @@ const Slider = () => {
         ))}
       </div>
       <div className="slider__next">
-        <button onClick={rightArrowClickHandler}>
+        <button onClick={rightArrowClickHandler} disabled={isScrolling}>
           <img src={Next} />
         </button>
       </div>
