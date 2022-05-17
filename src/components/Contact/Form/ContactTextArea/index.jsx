@@ -3,10 +3,10 @@ import "./TextAreaComponent.css";
 
 function selectComponent(props) {
   return (
-    <div className="containerInput">
-      <h6 className="subtitulo">{props.title}</h6>
+    <div className="textArea-container">
+      <h6 className="input-container__subtitulo">{props.title}</h6>
       <textarea
-        className="textAreaContainer"
+        className="textArea-container__text"
         placeholder={props.placeholder}
         value={props.value}
         onChange={props.onTextChange}

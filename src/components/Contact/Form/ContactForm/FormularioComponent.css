@@ -1,7 +1,61 @@
-.container {
+.form-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 30px;
- 
+}
+
+.form-container__titulo {
+  font-family: "Inter";
+  font-size: 60px;
+  line-height: 73px;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  color: #000000;
+}
+
+.form-container__button {
+  width: 372.59px;
+  height: 64px;
+  background: #000000;
+  border-radius: 16px;
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin-top: 32px;
+}
+
+.form-container--fundo {
+  display: none;
+}
+
+@media screen and (min-width: 1270px) {
+  .form-container--fundo {
+    display: block;
+    width: 400px;
+    height: 472px;
+    background: linear-gradient(
+      180deg,
+      rgba(231, 249, 253, 0) 0%,
+      #e7f9fd 100%
+    );
+    border-radius: 30px;
+  }
+  .form-container--fundo__img {
+    width: 350px;
+    height: 472px;
+  }
+  .teste {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: center;
+  }
+  .teste2 {
+    border: 1px solid blue;
+  }
 }

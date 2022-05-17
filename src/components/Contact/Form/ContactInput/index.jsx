@@ -4,10 +4,10 @@ import "./InputComponent.css";
 
 function InputComponent(props) {
   return (
-    <div className="containerInput">
-      <h6 className="subtitulo">{props.title}</h6>
+    <div className="input-container">
+      <h6 className="input-container__subtitulo">{props.title}</h6>
       <input
-        className="inputContainer"
+        className="input-container__input"
         type={props.type}
         value={props.value}
         onChange={props.onTextChange}

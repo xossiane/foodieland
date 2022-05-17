@@ -11,11 +11,11 @@ function selectComponent(props) {
   ];
 
   return (
-    <div className="containerInput">
-      <h6 className="subtitulo">{props.title}</h6>
-      <div className="containerSelect">
+    <div className="select-container">
+      <h6 className="input-container__subtitulo">{props.title}</h6>
+      <div className="select-container--div">
         <select
-          className="selectContainer"
+          className="select-container--div__select"
           value={props.value}
           name={props.name}
           placeholder={props.placeholder}

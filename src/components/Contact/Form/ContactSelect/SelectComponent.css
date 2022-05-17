@@ -1,4 +1,7 @@
-.selectContainer {
+.select-container {
+  margin-top: 32px;
+}
+.select-container--div__select {
   width: 375px;
   height: 60px;
   background: #ffffff;
@@ -7,8 +10,6 @@
   padding: 20px 19px;
 }
 
-input[type="datetime-local"],
-input[type="number"],
 select {
   -webkit-appearance: none;
   width: 100%;
@@ -20,12 +21,12 @@ select {
   box-sizing: border-box;
 }
 
-.containerSelect {
+.select-container--div {
   position: relative;
 }
 
-.containerSelect::before,
-.containerSelect::after {
+.select-container--div::before,
+.select-container--div::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -33,13 +34,13 @@ select {
   width: 10px;
 }
 
-.containerSelect::before {
+.select-container--div::before {
   right: 26px;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-.containerSelect::after {
+.select-container--div::after {
   right: 20px;
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);

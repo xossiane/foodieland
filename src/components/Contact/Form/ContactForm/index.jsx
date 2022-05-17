@@ -4,6 +4,7 @@ import InputComponent from "../ContactInput";
 import SelectComponent from "../ContactSelect";
 import TextAreaComponent from "../ContactTextArea";
 
+import Cheffok from "../../../../../public/assets/cheff-ok.png";
 import "./FormularioComponent.css";
 
 const initialState = {
@@ -47,48 +48,55 @@ function Formulario() {
   };
 
   return (
-    <form className="container" onSubmit={submiteHandler}>
-      <h1 className="titulo">Contact us</h1>
-      <InputComponent
-        type="text"
-        placeholder="Enter your name..."
-        title="NAME"
-        name="name"
-        value={dadosState.name}
-        onTextChange={handleChange}
-      />
-      <InputComponent
-        type="email"
-        placeholder="Your email address..."
-        title="EMAIL ADDRESS"
-        name="email"
-        value={dadosState.email}
-        onTextChange={handleChange}
-      />
-      <SelectComponent
-        title="ENQUIRY TYPE"
-        name="select"
-        value={dadosState.select}
-        placeholder="Advertising"
-        onTextChange={handleChange}
-      />
-      <InputComponent
-        type="text"
-        placeholder="Enter subject"
-        title="SUBJECT"
-        name="subject"
-        value={dadosState.subject}
-        onTextChange={handleChange}
-      />
+    <form className="form-container" onSubmit={submiteHandler}>
+      <h1 className="form-container__titulo">Contact us</h1>
+      <div className="teste">
+        <div className="form-container--fundo">
+          <img className="form-container--fundo__img" src={Cheffok} />
+        </div>
+        <InputComponent
+          type="text"
+          placeholder="Enter your name..."
+          title="NAME"
+          name="name"
+          value={dadosState.name}
+          onTextChange={handleChange}
+        />
+        <InputComponent
+          type="email"
+          placeholder="Your email address..."
+          title="EMAIL ADDRESS"
+          name="email"
+          value={dadosState.email}
+          onTextChange={handleChange}
+        />
+        <SelectComponent
+          title="ENQUIRY TYPE"
+          name="select"
+          value={dadosState.select}
+          placeholder="Advertising"
+          onTextChange={handleChange}
+        />
+        <InputComponent
+          type="text"
+          placeholder="Enter subject"
+          title="SUBJECT"
+          name="subject"
+          value={dadosState.subject}
+          onTextChange={handleChange}
+        />
 
-      <TextAreaComponent
-        title="MESSAGES"
-        name="message"
-        value={dadosState.message}
-        placeholder="Enter your messages..."
-        onTextChange={handleChange}
-      />
-      <button className="btn-Submit" type="submit">Submit</button>
+        <TextAreaComponent
+          title="MESSAGES"
+          name="message"
+          value={dadosState.message}
+          placeholder="Enter your messages..."
+          onTextChange={handleChange}
+        />
+        <button className="form-container__button" type="submit">
+          Submit
+        </button>
+      </div>
     </form>
   );
 }

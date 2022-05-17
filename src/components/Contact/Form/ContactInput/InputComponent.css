@@ -1,4 +1,4 @@
-.inputContainer {
+.input-container__input {
   width: 375px;
   height: 60px;
   background: var(--cor--branca);
@@ -8,7 +8,7 @@
   position: relative;
 }
 
-.inputContainer::placeholder {
+.input-container__input::placeholder {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
@@ -20,6 +20,20 @@
   padding-left: 10px;
 }
 
-.containerInput {
+.input-container {
   margin-top: 32px;
+}
+
+.input-container__subtitulo {
+  font-family: "Inter";
+  margin-bottom: 15px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+@media screen and (min-width: 1270px) {
 }
