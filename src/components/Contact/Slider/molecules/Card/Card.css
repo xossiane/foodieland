@@ -3,3 +3,9 @@
 .card {
   margin-right: 50px;
 }
+
+@media screen and (min-height: 1024px){
+  .card{
+    margin-right: 40px;
+  }
+}

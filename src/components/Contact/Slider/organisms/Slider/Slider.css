@@ -6,6 +6,16 @@
   margin-top: 152px;
 }
 
+.slider__title{
+  font-family: var(--fontfamilyPrimary);
+  font-weight: var(--fontWeightTitle);
+  color: var(--colorDark);
+  font-size: 3.6rem;
+  line-height: 43.57px;
+  letter-spacing: -4%;
+  display: none;
+}
+
 .slider__prev {
   position: absolute;
   top: 50%;
@@ -42,4 +52,32 @@
 
 .slider__content::-webkit-scrollbar {
   display: none;
+}
+
+@media screen and (min-width: 1024px) 
+{
+  .slider{
+    margin-top: 162px;
+  }
+
+  
+
+  .slider__title{
+    display: block;
+  }
+
+  .slider__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .slider__container:first-child{
+    margin-bottom: 80px;
+  }
+
+  .slider__prev,
+  .slider__next{
+    display: none;
+  }
 }

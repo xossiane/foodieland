@@ -56,6 +56,10 @@ const Slider = () => {
 
   return (
     <div className="slider">
+      <div className="slider__container">
+        <h2 className="slider__title">Check out the delicious recipe</h2>
+      </div>
+      <div className="slider__container">
       <div className="slider__prev">
         <button>
           <img onClick={leftArrowClickHandler} src={Prev} />
@@ -76,6 +80,7 @@ const Slider = () => {
         <button onClick={rightArrowClickHandler}>
           <img src={Next} />
         </button>
+      </div>
       </div>
     </div>
   );
