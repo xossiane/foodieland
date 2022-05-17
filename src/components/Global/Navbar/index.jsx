@@ -10,7 +10,7 @@ function Navbar() {
 
   const toggleIsNavOpen = () => {
     setIsNavOpen(!isNavOpen);
-    !isNavOpen
+    isNavOpen === true
       ? document.body.classList.add("header-open")
       : document.body.classList.remove("header-open");
   };
