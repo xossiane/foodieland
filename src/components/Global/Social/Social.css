@@ -9,3 +9,16 @@
 path, circle {
     transition: fill 0.4s;
 }
+
+.social__link:hover path, .social__link:hover circle {
+    fill:var(--orange);
+    transition: fill 0.4s
+}
+.social__link:hover {
+    background-color: #f0f0f0;
+    transition: background-color .4s;
+}
+
+.social__link {
+    transition: background-color .4s;
+}

@@ -7,7 +7,7 @@ function Facebook({ scale = 1, color = "black", className = null }) {
   };
 
   return (
-    <a href="#">
+    <a className="social__link" href="#">
       <svg
         className={`${className}`}
         style={styles}
