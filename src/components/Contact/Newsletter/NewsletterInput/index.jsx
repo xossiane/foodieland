@@ -1,6 +1,7 @@
 import "./NewsletterInput.css";
 import direita from "../../../../../public/assets/direita.png";
 import esquerda from "../../../../../public/assets/esquerda.png";
+import direita2 from "../../../../../public/assets/direita2.png";
 
 function InputComponent(props) {
   function teste() {
@@ -11,18 +12,22 @@ function InputComponent(props) {
     console.log(input);
   }
   return (
-    <div className="outsideContainer">
+    <div className="newsletter__content">
+      
       <img className="direitaImage" src={direita} />
-      <img className="esquerdaImage" src={esquerda} />
-      <div className="titleContainer">
+      <img className="direita__Image__2" src={direita2} />
+      <img className="esquerdaImage" src={esquerda} /> 
+      <div className="newsletter__title">
         <h1>Deliciousness to your inbox</h1>
       </div>
-      <div className="textContainer">
+      <div className="newsletter__text">
         <p>
           Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod
           tempor incididunt ut labore et dolore magna aliqut enim ad minim{" "}
         </p>
       </div>
+
+      <div className="newsletter__btnInput__together">
 
       <input
         id="inputNewsletter"
@@ -30,10 +35,11 @@ function InputComponent(props) {
         type="text"
         placeholder={props.texto}
       />
-      <div className="containerButton">
-        <button className="submit_button" onClick={teste}>
-          Submit
+      <div>
+        <button className="newsletter__button" onClick={teste}>
+          Subscribe
         </button>
+      </div>
       </div>
     </div>
   );

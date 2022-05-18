@@ -14,7 +14,4 @@
   --cor--branca: #ffffff;
   --border-components: 1px solid rgba(0, 0, 0, 0.1);
 }
-@media screen {
-  max-width: 1024px;
-  
-}
+
