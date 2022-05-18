@@ -1,4 +1,4 @@
-.input-container__input {
+.input {
   width: 375px;
   height: 60px;
   background: var(--cor--branca);
@@ -8,7 +8,7 @@
   position: relative;
 }
 
-.input-container__input::placeholder {
+.input::placeholder {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
@@ -20,11 +20,11 @@
   padding-left: 10px;
 }
 
-.input-container {
+.input__container {
   margin-top: 32px;
 }
 
-.input-container__subtitulo {
+.input__label {
   font-family: "Inter";
   margin-bottom: 15px;
   font-weight: 500;
@@ -35,5 +35,8 @@
   color: rgba(0, 0, 0, 0.6);
 }
 
-@media screen and (min-width: 1270px) {
+@media screen and (min-width: 1024px) {
+  .input__container:nth-child(2n) {
+    margin-left: 60px;
+  }
 }

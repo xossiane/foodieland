@@ -1,7 +1,7 @@
-.textArea-container {
+.textArea__container {
   margin-top: 32px;
 }
-.textArea-container__text {
+.textArea {
   width: 373px;
   height: 200px;
   background: var(--cor--branca);
@@ -10,13 +10,14 @@
   padding: 20px 19px;
 }
 
-.textArea-container__text::placeholder {
+.textArea::placeholder {
   padding: 20px 19px;
 }
 
 @media screen and (min-width: 1270px) {
-  .textArea-container__text {
-    width: 840px;
+  .textArea {
+    max-width: 840px;
     height: 200px;
+    width: 780px;
   }
 }
