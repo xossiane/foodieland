@@ -11,7 +11,7 @@
 }
 
 .slider__title {
-  font-family: var(--fontfamilyPrimary);
+  font-family: var(--inter);
   font-weight: var(--fontWeightTitle);
   color: var(--colorDark);
   font-size: 3.6rem;

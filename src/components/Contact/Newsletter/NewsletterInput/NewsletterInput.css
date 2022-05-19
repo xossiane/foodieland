@@ -1,6 +1,6 @@
 
 .inputContainer::placeholder {
-    font-family: 'Inter';
+    font-family: var(--inter);
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -14,11 +14,13 @@
     
 }
 
-
+.inputContainer{
+    border-radius: 24px
+}
 
 
 .newsletter__button {
-    font-family: 'Inter';
+    font-family: var(--inter);
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -63,7 +65,7 @@
     text-align: center;
     display: flex;
     padding-top: 0px;
-    font-family: 'Inter';
+    font-family: var(--inter);
     font-style: normal;
     font-weight: 7800;
     font-size: 20px;
@@ -83,7 +85,7 @@
     margin-left: 32px;
     margin-right: 27px;
     margin-bottom: 37px;
-    font-family: 'Inter';
+    font-family: var(--inter);
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -119,6 +121,10 @@
     
 }
 
+.direita__Image__2{
+    display: none;
+}
+
 @media screen and (min-width: 1024px) {
 
     .newsletter__content {
@@ -148,6 +154,8 @@
         border: none;
         width: 480px;
         height: 80px;
+        border-radius: 24px;
+        padding: 18px 19px;
 
 
     }
@@ -173,6 +181,7 @@
     }
     
     .direita__Image__2 {
+        display: block;
         position: absolute;
         right: 260px;
         z-index: 5;

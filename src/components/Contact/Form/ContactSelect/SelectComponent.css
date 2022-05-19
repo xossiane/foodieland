@@ -8,17 +8,18 @@
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 16px;
   padding: 20px 19px;
+  font-family: var(--inter);
 }
 
 select {
   -webkit-appearance: none;
   width: 100%;
   padding: 12px 20px;
-  margin: 8px 0;
   display: inline-block;
   border: var(--border-components);
   border-radius: 6px;
   box-sizing: border-box;
+
 }
 
 .select__div {

@@ -2,6 +2,6 @@
 @import url(../../../../../../public/css/reset.css);
 
 .card__content {
-  font-family: var(--fontfamilyPrimary);
+  font-family: var(--inter);
   max-width: 290px;
 }

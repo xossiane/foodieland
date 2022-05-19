@@ -13,10 +13,9 @@ function InputComponent(props) {
   }
   return (
     <div className="newsletter__content">
-      
       <img className="direitaImage" src={direita} />
       <img className="direita__Image__2" src={direita2} />
-      <img className="esquerdaImage" src={esquerda} /> 
+      <img className="esquerdaImage" src={esquerda} />
       <div className="newsletter__title">
         <h1>Deliciousness to your inbox</h1>
       </div>
@@ -28,18 +27,17 @@ function InputComponent(props) {
       </div>
 
       <div className="newsletter__btnInput__together">
-
-      <input
-        id="inputNewsletter"
-        className="inputContainer"
-        type="text"
-        placeholder={props.texto}
-      />
-      <div>
-        <button className="newsletter__button" onClick={teste}>
-          Subscribe
-        </button>
-      </div>
+        <input
+          id="inputNewsletter"
+          className="input inputContainer"
+          type="text"
+          placeholder={props.texto}
+        />
+        <div>
+          <button className="newsletter__button" onClick={teste}>
+            Subscribe
+          </button>
+        </div>
       </div>
     </div>
   );

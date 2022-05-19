@@ -8,7 +8,7 @@
 }
 
 .form__title {
-  font-family: "Inter";
+  font-family: var(--inter);
   font-size: 60px;
   line-height: 73px;
   font-weight: 600;
@@ -21,7 +21,7 @@
   height: 64px;
   background: #000000;
   border-radius: 16px;
-  font-family: "Inter";
+  font-family: var(--inter);
   font-weight: 600;
   font-size: 16px;
   letter-spacing: -0.02em;
