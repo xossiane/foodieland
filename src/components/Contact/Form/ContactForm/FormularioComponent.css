@@ -1,7 +1,78 @@
-.container {
+.form {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 30px;
- 
+  max-width: fit-content;
+  margin: 0 auto 30px;
+}
+
+.form__title {
+  font-family: "Inter";
+  font-size: 60px;
+  line-height: 73px;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  color: #000000;
+}
+
+.form__button {
+  width: 372.59px;
+  height: 64px;
+  background: #000000;
+  border-radius: 16px;
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin-top: 32px;
+  cursor: pointer;
+}
+
+.form__img--container {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .form {
+    max-width: 1440px;
+    margin: 0 auto 160px;
+  }
+  .form__img--container {
+    display: block;
+
+    height: 472px;
+    background: linear-gradient(
+      180deg,
+      rgba(231, 249, 253, 0) 0%,
+      #e7f9fd 100%
+    );
+    border-radius: 30px;
+    flex: 1;
+    margin: 0 80px;
+  }
+  .form__img {
+    width: 350px;
+    height: 472px;
+  }
+
+  .form__input {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    flex: 3;
+  }
+
+  .form--container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 72px;
+  }
+
+  .form__button {
+    width: 180px;
+    height: 64px;
+  }
 }
