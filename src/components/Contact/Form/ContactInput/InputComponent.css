@@ -1,7 +1,7 @@
 .input {
   width: 375px;
   height: 60px;
-  background: var(--cor--branca);
+  background: var(--colorLight);
   border: var(--border-components);
   border-radius: 16px;
   padding: 18px 19px;

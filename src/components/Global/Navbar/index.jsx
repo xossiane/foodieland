@@ -26,6 +26,7 @@ function Navbar() {
             <img className="nav__logo--img" src={Logo} alt="Foodieland Logo" />
           </div>
           <ul
+            id="nav__menu"
             className={`nav__list ${isNavOpen ? "nav__list-display--on" : ""}`}
           >
             <li className="nav__list--item">

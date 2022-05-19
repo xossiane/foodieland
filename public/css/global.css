@@ -4,11 +4,11 @@
   --fontWeightTitle: 600;
   --fontWeightBody: 500;
   --orange: #FF7967;
-  --black: #000;
   --inter: 'Inter', sans-serif;
   --cor--cinza: rgba(0, 0, 0, 0.1);
-  --cor--preto: rgb(0, 0, 0);
-  --cor--branca: #ffffff;
   --border-components: 1px solid rgba(0, 0, 0, 0.1);
+
+  /* breakpoints media query */
+  --desktop: 1024px
 }
 

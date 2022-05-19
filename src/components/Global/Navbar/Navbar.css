@@ -1,4 +1,4 @@
-@import '/public/css/global.css';
+
 
 body.header-open{
     height: 100%;
@@ -28,7 +28,7 @@ body{margin-top: 14rem;}
     top:0px;
     padding: 0 3.5rem 0 8rem;
     border-bottom: 1px solid rgba(0,0,0, .1);
-    background-color: #fff;
+    background-color: var(--colorLight);
 }
 
 .nav__logo--img {
@@ -48,7 +48,7 @@ body{margin-top: 14rem;}
     font-size: 2rem;
     width: 100%;
     height: fit-content;
-    background-color: #fff;
+    background-color: var(--colorLight);
 }
 
 .nav__list-display--on {
@@ -65,7 +65,7 @@ body{margin-top: 14rem;}
 .nav__list--link, .nav__list--link:visited, .nav__list--link:active {
     text-decoration: none;
     display: inline-block;
-    color: var(--black);
+    color: var(--colorDark);
     width: 100%;
     padding: 1.2rem 3rem;
     transition: background-color .3s, color .3s;
@@ -92,7 +92,7 @@ body{margin-top: 14rem;}
     display: block;
     width: 55px;
     height: 8px;
-    background-color: var(--black);
+    background-color: var(--colorDark);
     border-radius: 10px;
     transition: all .3s;
 }
@@ -104,7 +104,7 @@ body{margin-top: 14rem;}
     left:0;
     width: 55px;
     height: 8px;
-    background-color: var(--black);
+    background-color: var(--colorDark);
     border-radius: 10px;
     transition: all 0.3s;
 }
@@ -116,7 +116,7 @@ body{margin-top: 14rem;}
     left:0;
     width: 55px;
     height: 8px;
-    background-color: var(--black);
+    background-color: var(--colorDark);
     border-radius: 10px;
     transition: all 0.3s;
 }

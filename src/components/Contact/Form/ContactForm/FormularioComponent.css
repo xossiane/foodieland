@@ -13,19 +13,19 @@
   line-height: 73px;
   font-weight: 600;
   letter-spacing: -0.04em;
-  color: #000000;
+  color: var(--colorDark);
 }
 
 .form__button {
   width: 372.59px;
   height: 64px;
-  background: #000000;
+  background: var(--colorDark);
   border-radius: 16px;
   font-family: var(--inter);
   font-weight: 600;
   font-size: 16px;
   letter-spacing: -0.02em;
-  color: #ffffff;
+  color: var(--colorLight);
   margin-top: 32px;
   cursor: pointer;
 }

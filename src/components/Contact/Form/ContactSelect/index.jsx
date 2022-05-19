@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import "./SelectComponent.css";
 function selectComponent(props) {
   const list = [
-    { id: 0, name: "" },
     { id: 1, name: "Opção 1" },
     { id: 2, name: "Opção 2" },
     { id: 3, name: "Opção 3" },
@@ -18,9 +17,12 @@ function selectComponent(props) {
           className="select"
           value={props.value}
           name={props.name}
-          placeholder={props.placeholder}
           onChange={props.onTextChange}
+          required
         >
+          <option value="" disabled selected>
+            Advertising
+          </option>
           {list.map((item, index) => (
             <option key={item.id} value={item.name}>
               {item.name}

@@ -1,4 +1,3 @@
-@import '/public/css/global.css';
 
 
 .footer {
@@ -43,7 +42,7 @@
 .footer__list--link, .footer__list--link:visited, .footer__list--link:active{
     font-size: 1.4rem;
     font-weight: 500;
-    color: var(--black);
+    color: var(--colorDark);
     text-decoration: none;
     transition: color .3s;
 }

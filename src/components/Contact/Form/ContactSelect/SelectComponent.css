@@ -4,7 +4,7 @@
 .select {
   width: 375px;
   height: 60px;
-  background: #ffffff;
+  background: var(--colorLight);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 16px;
   padding: 20px 19px;
@@ -33,6 +33,7 @@ select {
   top: 50%;
   border-top: 2px solid rgb(0, 0, 0);
   width: 10px;
+  pointer-events: none;
 }
 
 .select__div::before {
@@ -45,4 +46,13 @@ select {
   right: 20px;
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
+}
+
+.select {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  color: rgba(0, 0, 0, 0.6);
 }
