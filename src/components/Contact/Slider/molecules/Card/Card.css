@@ -3,3 +3,13 @@
 .card {
   margin-right: 50px;
 }
+
+.card:nth-child(4) {
+  margin-right: 0;
+}
+
+@media screen and (min-height: 1400px) {
+  .card {
+    margin-right: 40px;
+  }
+}
