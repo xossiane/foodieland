@@ -1,5 +1,4 @@
-
-
+@use "/public/styles/variables" as *;
 .like-button {
   position: absolute;
   right: 16px;
@@ -8,7 +7,7 @@
 
 .like-button__button {
   border: none;
-  background-color: var(--colorLight);
+  background-color: $colorLight;
   width: 48px;
   height: 48px;
   border-radius: 50%;

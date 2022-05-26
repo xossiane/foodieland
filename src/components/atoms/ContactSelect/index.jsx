@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./SelectComponent.css";
+import "./SelectComponent.scss";
 function selectComponent(props) {
   const list = [
     { id: 1, name: "Opção 1" },
@@ -20,7 +20,7 @@ function selectComponent(props) {
           onChange={props.onTextChange}
           required
         >
-          <option value="" disabled selected>
+          <option value="Advertising" disabled>
             Advertising
           </option>
           {list.map((item, index) => (

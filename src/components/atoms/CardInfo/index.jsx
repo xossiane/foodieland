@@ -1,4 +1,4 @@
-import "./CardInfo.css";
+import "./CardInfo.scss";
 
 import ForkKnife from "/assets/ForkKnife.svg";
 import Timer from "/assets/Timer.svg";

@@ -1,7 +1,6 @@
-
-
+@use "/public/styles/variables" as *;
 .card__title {
-  color: var(--colorDark);
+  color: $colorDark;
   font-weight: 600;
   font-size: 1.8rem;
   line-height: 26px;

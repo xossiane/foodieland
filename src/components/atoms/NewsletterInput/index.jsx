@@ -1,4 +1,4 @@
-import "./NewsletterInput.css";
+import "./NewsletterInput.scss";
 import direita from "/assets/direita.png";
 import esquerda from "/assets/esquerda.png";
 import direita2 from "/assets/direita2.png";

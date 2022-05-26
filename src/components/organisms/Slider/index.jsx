@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 
-import "./Slider.css";
+import "./Slider.scss";
 
 import { Card } from "../../molecules";
 

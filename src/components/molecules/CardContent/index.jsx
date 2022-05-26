@@ -1,4 +1,4 @@
-import "./CardContent.css";
+import "./CardContent.scss";
 import { CardTitle, CardInfo } from "../../atoms";
 const CardContent = (props) => {
   return (

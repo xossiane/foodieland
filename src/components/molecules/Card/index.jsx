@@ -1,4 +1,4 @@
-import "./Card.css";
+import "./Card.scss";
 
 import { CardHeader, CardContent } from "../index";
 const Card = (props) => {

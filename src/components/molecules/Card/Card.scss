@@ -1,4 +1,4 @@
-
+@use "/public/styles/variables" as *;
 .card {
   margin-right: 50px;
 }
@@ -7,7 +7,7 @@
   margin-right: 0;
 }
 
-@media screen and (min-height: 1400px) {
+@media screen and (min-height: $desktop-xm) {
   .card {
     margin-right: 40px;
   }

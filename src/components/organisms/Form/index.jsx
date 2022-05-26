@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import Cheffok from "/assets/cheff-ok.png";
-import "./FormularioComponent.css";
+import "./FormularioComponent.scss";
 
 import { ContactInput, ContactSelect, ContactTextArea } from "../../atoms";
 

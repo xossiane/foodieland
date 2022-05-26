@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import RedHeart from "/assets/RedHeart.svg";
 import GrayHeart from "/assets/GrayHeart.svg";
-import "./LikeButton.css";
+import "./LikeButton.scss";
 
 const LikeButton = () => {
   const [heart, setHeart] = useState(GrayHeart);

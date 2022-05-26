@@ -1,16 +1,17 @@
+@use "/public/styles/variables" as *;
 .input {
   width: 375px;
   height: 60px;
-  background: var(--colorLight);
-  border: var(--border-components);
+  background: $colorLight;
+  border: $border-components;
   border-radius: 16px;
   padding: 18px 19px;
   position: relative;
-  font-family: var(--inter);
+  font-family: $inter;
 }
 
 .input::placeholder {
-  font-family: var(--inter);
+  font-family: $inter;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -26,7 +27,7 @@
 }
 
 .input__label {
-  font-family: var(--inter);
+  font-family: $inter;
   margin-bottom: 15px;
   font-weight: 500;
   font-size: 12px;
@@ -36,7 +37,7 @@
   color: rgba(0, 0, 0, 0.6);
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: $desktop-xl) {
   .input__container:nth-child(2n) {
     margin-left: 60px;
   }

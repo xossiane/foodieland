@@ -1,0 +1,29 @@
+[
+  {
+    "id": 0,
+    "img": "/assets/article1",
+    "title": "Crochet Projects for Noodle Lovers",
+    "desc": "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim",
+    "avatar": "/assets/wade",
+    "author": "Wade Warren",
+    "date": "12 November 2021"
+  },
+  {
+    "id": 1,
+    "img": "/assets/Food01",
+    "title": "10 Vegetarian Recipes To Eat This Month",
+    "desc": "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim",
+    "avatar": "/assets/robert",
+    "author": "Robert Fox",
+    "date": "12 November 2021"
+  },
+  {
+    "id": 2,
+    "img": "/assets/article3",
+    "title": "Full Guide to Becoming a Professional Chef",
+    "desc": "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim",
+    "avatar": "/assets/dianne",
+    "author": "Dianne Russell",
+    "date": "12 November 2021"
+  }
+]

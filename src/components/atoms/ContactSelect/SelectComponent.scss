@@ -1,14 +1,15 @@
+@use "/public/styles/variables" as *;
 .select__container {
   margin-top: 32px;
 }
 .select {
   width: 375px;
   height: 60px;
-  background: var(--colorLight);
+  background: $colorLight;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 16px;
   padding: 20px 19px;
-  font-family: var(--inter);
+  font-family: $inter;
 }
 
 select {
@@ -16,10 +17,9 @@ select {
   width: 100%;
   padding: 12px 20px;
   display: inline-block;
-  border: var(--border-components);
+  border: $border-components;
   border-radius: 6px;
   box-sizing: border-box;
-
 }
 
 .select__div {

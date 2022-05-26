@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import "./InputComponent.css";
+import "./InputComponent.scss";
 
 function InputComponent(props) {
   return (

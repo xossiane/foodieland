@@ -1,6 +1,7 @@
 import { React, useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import Logo from "/public/assets/Logo.svg";
-import "./Navbar.css";
+import "./Navbar.scss";
 
 import { Facebook, Instagram, Twitter } from "../../atoms";
 function Navbar() {
@@ -38,9 +39,9 @@ function Navbar() {
               </a>
             </li>
             <li className="nav__list--item">
-              <a className="nav__list--link" href="#">
+              <Link className="nav__list--link" to="/">
                 Blog
-              </a>
+              </Link>
             </li>
             <li className="nav__list--item">
               <a className="nav__list--link" href="#">
@@ -48,9 +49,9 @@ function Navbar() {
               </a>
             </li>
             <li className="nav__list--item">
-              <a className="nav__list--link" href="#">
+              <Link className="nav__list--link" to="/contact">
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
           <button onClick={toggleIsNavOpen} className="nav__hamburguer--button">

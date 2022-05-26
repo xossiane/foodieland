@@ -1,0 +1,5 @@
+@use "/public/styles/variables" as *;
+.card__content {
+  font-family: $inter;
+  max-width: 290px;
+}

@@ -1,0 +1,196 @@
+@use "/public/styles/variables" as *;
+body.header-open {
+  height: 100%;
+  overflow-y: hidden;
+}
+
+body {
+  margin-top: 14rem;
+}
+
+.header {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: 11rem;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.nav {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  padding: 0 3.5rem 0 8rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: $colorLight;
+
+  &__logo--img {
+    width: 11rem;
+    height: 3rem;
+  }
+}
+
+.nav__list {
+  display: block;
+  list-style: none;
+  position: absolute;
+  top: -130%;
+  left: 0;
+  transition: all 0.5s;
+  z-index: -1;
+  font-family: $inter;
+  font-size: 2rem;
+  width: 100%;
+  height: fit-content;
+  background-color: $colorLight;
+}
+
+.nav__list-display--on {
+  display: block;
+  top: 100%;
+  padding: 2.7rem 0;
+  opacity: 1;
+}
+
+.nav__list--item {
+  width: 100%;
+}
+
+.nav__list--link,
+.nav__list--link:visited,
+.nav__list--link:active {
+  text-decoration: none;
+  display: inline-block;
+  color: $colorDark;
+  width: 100%;
+  padding: 1.2rem 3rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav__list--link:hover {
+  background-color: #f0f0f0;
+  transition: background-color 0.3s, color 0.3s;
+  color: $orange;
+}
+
+.nav__hamburguer--button {
+  margin: 0;
+  width: 55px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.nav__hamburguer--icon {
+  display: block;
+  width: 55px;
+  height: 8px;
+  background-color: $colorDark;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+.nav__hamburguer--icon:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 55px;
+  height: 8px;
+  background-color: $colorDark;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+.nav__hamburguer--icon:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 55px;
+  height: 8px;
+  background-color: $colorDark;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+.nav__hamburguer--icon-open.nav__hamburguer--icon {
+  display: contents;
+  transition: all 0.3s;
+}
+
+.nav__hamburguer--icon-open.nav__hamburguer--icon:before {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  transition: all 0.3s;
+}
+
+.nav__hamburguer--icon-open.nav__hamburguer--icon:after {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  transition: all 0.3s;
+}
+
+.nav__social-container {
+  display: none;
+  align-self: stretch;
+  text-align: center;
+  align-items: center;
+}
+
+.nav__social-container a {
+  width: 4rem;
+  line-height: 11rem;
+}
+
+@media only screen and (min-width: $desktop) {
+  .nav {
+    padding-right: 6rem;
+  }
+  .nav__social-container {
+    display: flex;
+    gap: 2rem;
+  }
+  .nav__hamburguer--button {
+    display: none;
+  }
+  .nav__list {
+    display: flex;
+    width: auto;
+    position: relative;
+    top: 0;
+    z-index: 0;
+    background: transparent;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1.6rem;
+    height: auto;
+    align-self: stretch;
+  }
+  .nav__list--item {
+    width: auto;
+    margin: 0;
+    display: flex;
+    height: 100%;
+  }
+  .nav__list--link {
+    height: 100%;
+    line-height: 8rem;
+  }
+  .nav__list :nth-child(5) {
+    order: 4;
+  }
+  .nav__list :nth-child(4) {
+    order: 5;
+  }
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import "./Social.css";
+import "./Social.scss";
 
 function Facebook({ scale = 1, color = "black", className = null }) {
   const styles = {

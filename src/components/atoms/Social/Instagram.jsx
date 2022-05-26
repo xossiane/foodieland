@@ -1,5 +1,5 @@
 import React from "react";
-import "./Social.css";
+import "./Social.scss";
 
 function Instagram({ scale = 1, color = "black", className }) {
   const styles = {

@@ -1,4 +1,4 @@
-import "./CardTitle.css";
+import "./CardTitle.scss";
 
 const CardTitle = (props) => {
   return (

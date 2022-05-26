@@ -1,3 +1,4 @@
+@use "/public/styles/variables" as *;
 .form {
   display: flex;
   flex-direction: column;
@@ -8,24 +9,24 @@
 }
 
 .form__title {
-  font-family: var(--inter);
+  font-family: $inter;
   font-size: 60px;
   line-height: 73px;
   font-weight: 600;
   letter-spacing: -0.04em;
-  color: var(--colorDark);
+  color: $colorDark;
 }
 
 .form__button {
   width: 372.59px;
   height: 64px;
-  background: var(--colorDark);
+  background: $colorDark;
   border-radius: 16px;
-  font-family: var(--inter);
+  font-family: $inter;
   font-weight: 600;
   font-size: 16px;
   letter-spacing: -0.02em;
-  color: var(--colorLight);
+  color: $colorLight;
   margin-top: 32px;
   cursor: pointer;
 }
@@ -34,7 +35,7 @@
   display: none;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: $desktop) {
   .form {
     max-width: 1440px;
     margin: 0 auto 160px;
@@ -72,7 +73,7 @@
   }
 
   .form__button {
-    width: 180px;
+    /*  width: 180px; */
     height: 64px;
   }
 }

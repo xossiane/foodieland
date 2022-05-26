@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Logo from "/assets/Logo.svg";
-import "./Footer.css";
+import "./Footer.scss";
 
 import { Facebook, Instagram, Twitter } from "../../atoms";
 function Footer() {

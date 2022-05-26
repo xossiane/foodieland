@@ -1,4 +1,4 @@
-import "./CardHeader.css";
+import "./CardHeader.scss";
 
 import { CardImage, LikeButton } from "../../atoms";
 const CardHeader = (props) => {

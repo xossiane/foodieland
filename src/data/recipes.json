@@ -1,0 +1,20 @@
+[
+  {
+    "id": 0,
+    "img": "/assets/recipes1",
+    "title": "Chicken Meatballs with Cream Cheese",
+    "author": "By Andreas Paula"
+  },
+  {
+    "id": 1,
+    "img": "/assets/recipes2",
+    "title": "Traditional Bolognaise Ragu",
+    "author": "By Andreas Paula"
+  },
+  {
+    "id": 2,
+    "img": "/assets/recipes3",
+    "title": "Pork and Chive Chinese Dumplings",
+    "author": "By Andreas Paula"
+  }
+]
