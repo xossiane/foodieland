@@ -1,3 +1,5 @@
+@use '/public/styles/variables' as *;
+
 .blog-header {
 
     &__container-title {
@@ -15,4 +17,13 @@
         font-weight: 400;
         line-height: 2.8rem;
     }
+}
+
+@media only screen and (min-width: $desktop) {
+    .blog-header {
+    
+        &__title {
+            font-size: 6.4rem;
+    
+        }}
 }

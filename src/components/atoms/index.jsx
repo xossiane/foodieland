@@ -11,3 +11,4 @@ export { default as Instagram } from "./Social/Instagram";
 export { default as Twitter } from "./Social/Twitter";
 export { default as BlogTitle } from "./BlogTitle";
 export { default as SearchIcon } from "./SearchIcon";
+export { default as Button } from "./Button";

@@ -1,29 +1,29 @@
-import React, { useState } from "react";
-import { SearchIcon } from "../../atoms";
+import React, { useState, useContext } from "react";
+import { SearchIcon, Button } from "../../atoms";
 import "./SearchBlog.scss";
-import articles from "/src/data/articles.json";
+import { SearchBlogContext } from "/src/context/SearchBlogContext";
 
 function SearchBlog() {
-  const [searchInput, setSearchInput] = useState("");
-  const [blogList, setBlogList] = useState("");
+  const { searchInput, searchInputHandler } = useContext(SearchBlogContext);
 
-  const searchInputHandler = (e) => {
+  const onSubmitHandler = (e) => {
     e.preventDefault();
-    setSearchInput(e.target.value);
   };
-  console.log(articles);
 
   return (
-    <form className="search-form">
+    <form className="search-form" onSubmit={onSubmitHandler}>
       <input
         className="search-form__input"
         placeholder="Search article, news or recipe..."
         value={searchInput}
         onChange={searchInputHandler}
       />
-      <button className="search-form__button">
-        <SearchIcon />
-      </button>
+      <div className="search-form__button-container">
+        <Button className={"search-form__button--1"}>Search</Button>
+        <button className="search-form__button--2">
+          <SearchIcon />
+        </button>
+      </div>
     </form>
   );
 }
