@@ -17,4 +17,9 @@
     background-color: $colorGray;
     transition: all 0.3s;
   }
+
+  &--active {
+    background-color: $colorDark;
+    color: $colorLight;
+  }
 }
