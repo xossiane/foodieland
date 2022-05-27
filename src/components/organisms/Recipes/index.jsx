@@ -1,9 +1,10 @@
 import { Recipe } from "../../molecules";
 import { Advertising } from "../../atoms";
 import Date from "../../../data/recipes.json";
+import "./Recipes.scss";
 function Recipes() {
   return (
-    <div>
+    <div className="recipes__container">
       <Advertising />
       <h1>RECIPES</h1>
       <div>
