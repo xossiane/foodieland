@@ -1,7 +1,8 @@
 import "./NavigationItem.scss";
 
 const NavigationItem = (props) => {
-  return <button className="navigation__item">{props.label}</button>;
+  const { label, className } = props;
+  return <button className={`navigation__item ${className}`}>{label}</button>;
 };
 
 export default NavigationItem;
