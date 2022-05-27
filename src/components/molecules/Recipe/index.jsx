@@ -6,8 +6,8 @@ function Recipe(props) {
       {props.dados.map((dado) => (
         <div className="recipe__container" key={dado.id}>
           <img src={dado.img} />
-          <h1>{dado.title}</h1>
-          <h1>{dado.author}</h1>
+          <h2>{dado.title}</h2>
+          <h3>{dado.author}</h3>
         </div>
       ))}
     </article>
