@@ -1,8 +1,9 @@
 import Ads from "/assets/ads.png";
+import "./Advertising.scss";
 function Advertising() {
   return (
     <div>
-      <img src={Ads} />
+      <img className="ads__img" src={Ads} />
     </div>
   );
 }
