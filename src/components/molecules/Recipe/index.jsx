@@ -1,6 +1,6 @@
 function Recipe(props) {
   const date = (
-    <div>
+    <article>
       {props.dados.map((dado) => (
         <div key={dado.id}>
           <img src={dado.img} />
@@ -8,9 +8,9 @@ function Recipe(props) {
           <h1>{dado.author}</h1>
         </div>
       ))}
-    </div>
+    </article>
   );
-  return <div> {date}</div>;
+  return <>{date}</>;
 }
 
 export default Recipe;
