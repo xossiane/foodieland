@@ -46,58 +46,60 @@ function Formulario() {
   };
 
   return (
-    <form className="form" onSubmit={submiteHandler}>
+    <div>
       <h1 className="form__title">Contact us</h1>
-      <div className="form--container">
-        <div className="form__img--container">
-          <img className="form__img" src={Cheffok} />
-        </div>
-        <div className="form__input">
-          <ContactInput
-            type="text"
-            placeholder="Enter your name..."
-            title="NAME"
-            name="name"
-            value={dadosState.name}
-            onTextChange={handleChange}
-          />
-          <ContactInput
-            type="email"
-            placeholder="Your email address..."
-            title="EMAIL ADDRESS"
-            name="email"
-            value={dadosState.email}
-            onTextChange={handleChange}
-          />
-          <ContactSelect
-            title="ENQUIRY TYPE"
-            name="select"
-            value={dadosState.select}
-            placeholder="Advertising"
-            onTextChange={handleChange}
-          />
-          <ContactInput
-            type="text"
-            placeholder="Enter subject"
-            title="SUBJECT"
-            name="subject"
-            value={dadosState.subject}
-            onTextChange={handleChange}
-          />
+      <form className="form" onSubmit={submiteHandler}>
+        <div className="form--container">
+          <div className="form__img--container">
+            <img className="form__img" src={Cheffok} />
+          </div>
+          <div className="form__input">
+            <ContactInput
+              type="text"
+              placeholder="Enter your name..."
+              title="NAME"
+              name="name"
+              value={dadosState.name}
+              onTextChange={handleChange}
+            />
+            <ContactInput
+              type="email"
+              placeholder="Your email address..."
+              title="EMAIL ADDRESS"
+              name="email"
+              value={dadosState.email}
+              onTextChange={handleChange}
+            />
+            <ContactSelect
+              title="ENQUIRY TYPE"
+              name="select"
+              value={dadosState.select}
+              placeholder="Advertising"
+              onTextChange={handleChange}
+            />
+            <ContactInput
+              type="text"
+              placeholder="Enter subject"
+              title="SUBJECT"
+              name="subject"
+              value={dadosState.subject}
+              onTextChange={handleChange}
+            />
 
-          <ContactTextArea
-            title="MESSAGES"
-            name="message"
-            value={dadosState.message}
-            placeholder="Enter your messages..."
-            onTextChange={handleChange}
-          />
-          <button className="form__button" type="submit">
-            Submit
-          </button>
+            <ContactTextArea
+              title="MESSAGES"
+              name="message"
+              value={dadosState.message}
+              placeholder="Enter your messages..."
+              onTextChange={handleChange}
+            />
+            <button className="form__button" type="submit">
+              Submit
+            </button>
+          </div>
         </div>
-      </div>
-    </form>
+      </form>
+    </div>
   );
 }
 
