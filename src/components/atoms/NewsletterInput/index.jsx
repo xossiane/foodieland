@@ -1,18 +1,33 @@
+import React, { useState } from "react"
 import "./NewsletterInput.scss";
 import direita from "/assets/direita.png";
 import esquerda from "/assets/esquerda.png";
 import direita2 from "/assets/direita2.png";
 
+import {ContactInput} from "../../atoms";
+
+const initialState ={
+  email:"",
+};
+
 function InputComponent(props) {
-  function teste(event) {
-    event.preventDefault();
-    const input = document.querySelector("#inputNewsletter").value;
-    if (input.length > 0) {
+  var [emailState, setEmailState] = useState(initialState);
+  function handleChange(event) {
+    const value = event.target.value;
+    setEmailState({...emailState, [event.target.name]: value,
+    });
+  }
+  function verifyInput() {
+    if (
+      emailState.email.trim().length > 0 
+    ) {
       alert("Thanks for your subscription");
-      /* alterar o querySelector para ref ou state, mudar o nome do evento teste */
-      input = "";
-    } else alert("Please, enter your email adress for more recipes");
-    console.log(input);
+      return true;
+    } else {
+      alert("Please enter your email for delicious recipes");
+      console.log(emailState);
+      return false
+    }
   }
   return (
     <div className="newsletter__content">
@@ -30,12 +45,13 @@ function InputComponent(props) {
       </div>
 
       <div className="newsletter__btnInput__together">
-        <form onSubmit={teste}>
-          <input
-            id="inputNewsletter"
-            className="input inputContainer"
+        <form onSubmit={verifyInput}>
+        <ContactInput className="newsletter_inputContainer"
             type="email"
-            placeholder={props.texto}
+            placeholder="Your email address..."
+            name="email"
+            value={emailState.email}
+            onTextChange={handleChange}
           />
           <div>
             <button className="newsletter__button">Subscribe</button>
