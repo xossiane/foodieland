@@ -24,5 +24,9 @@
     background-color: $colorDark;
     border: 1px solid $colorDark;
     color: $colorLight;
+
+    &:hover {
+      background-color: $colorDark;
+    }
   }
 }
