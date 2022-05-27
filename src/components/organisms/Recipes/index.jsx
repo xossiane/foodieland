@@ -6,7 +6,7 @@ function Recipes() {
   return (
     <div className="recipes__container">
       <Advertising />
-      <h1>RECIPES</h1>
+      <h1>Tasty Recipes</h1>
       <div>
         <Recipe dados={Date} />
       </div>

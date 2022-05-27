@@ -1,6 +1,18 @@
+@use "/public/styles/variables" as *;
 .recipes__container {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 48px;
+
+  h1 {
+    /* width: 247.53px; */
+    height: 48.03px;
+    font-family: $inter;
+    $fontWeightTitle: 600;
+    font-size: 32px;
+    letter-spacing: -0.04em;
+
+    color: $colorDark;
+  }
 }
