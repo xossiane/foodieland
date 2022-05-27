@@ -22,6 +22,7 @@
 
   &--active {
     background-color: $colorDark;
+    border: 1px solid $colorDark;
     color: $colorLight;
   }
 }
