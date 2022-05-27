@@ -2,7 +2,9 @@
 .recipe__container {
   img {
     width: 221.67px;
-    height: 215.17px;
+    height: 147.78px;
+    border-radius: 20px;
+    margin-bottom: 28px;
   }
   h2 {
     width: 241.38px;
@@ -14,6 +16,7 @@
     line-height: 28px;
     letter-spacing: -0.04em;
     color: $colorDark;
+    margin-bottom: 19px;
   }
   h3 {
     /*    width: 139.16px;
@@ -25,5 +28,6 @@
     line-height: 17px;
     letter-spacing: -0.02em;
     color: $colorGrey;
+    margin-bottom: 30px;
   }
 }
