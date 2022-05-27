@@ -1,8 +1,9 @@
-import { Navbar, Footer, NewsletterForm } from "../../organisms";
+import { Navbar, Footer, NewsletterForm, BlogHeader } from "../../organisms";
 export default function Blog() {
   return (
     <>
       <Navbar />
+      <BlogHeader />
       <NewsletterForm />
       <Footer />
     </>
