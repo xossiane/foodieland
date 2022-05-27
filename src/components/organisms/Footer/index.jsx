@@ -4,14 +4,19 @@ import "./Footer.scss";
 
 import { Facebook, Instagram, Twitter } from "../../atoms";
 function Footer() {
-  const [windowWidth, setWindowWidth] = useState();
+  const [windowSize, setWindowSize] = useState(window.innerWidth);
 
   useEffect(() => {
-    setWindowWidth(window.innerWidth);
-  });
+    let timeoutId = null;
+    const updateSize = () => {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => setWindowSize(window.innerWidth), 150);
+    };
+    window.addEventListener("resize", updateSize);
+  }, []);
 
   const getSocial = () => {
-    if (windowWidth < 1024) {
+    if (windowSize < 1024) {
       return (
         <>
           <Facebook scale={2} className={"hover-orange"} />

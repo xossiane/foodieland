@@ -6,7 +6,7 @@ import direita2 from "/assets/direita2.png";
 function InputComponent(props) {
   function teste(event) {
     event.preventDefault();
-    const input = document.querySelector("#inputNewsletter").value;
+    let input = document.querySelector("#inputNewsletter").value;
     if (input.length > 0) {
       alert("Thanks for your subscription");
       /* alterar o querySelector para ref ou state, mudar o nome do evento teste */
