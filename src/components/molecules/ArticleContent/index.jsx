@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import {
   CardImage,
   CardTitle,
@@ -6,16 +7,19 @@ import {
   ArticleText,
   ArticleDate,
 } from "../../atoms";
-import article from "../../../data/articles.json";
 import bar from "../../../../public/assets/bar.png";
 import "./ArticleContent.scss";
+import { SearchBlogContext } from "/src/context/SearchBlogContext";
 
 function ArticleContent() {
+  const { getFilteredArray } = useContext(SearchBlogContext);
+  const article = getFilteredArray();
+
   return (
     <div className="article__post">
       {article.map((article) => {
         return (
-          <div className="article__post__item">
+          <div key={article.id} className="article__post__item">
             <CardImage image={article.img}></CardImage>
             <CardTitle
               className="card__title--mt"
@@ -31,6 +35,7 @@ function ArticleContent() {
           </div>
         );
       })}
+      {article.length === 0 && <p>Nenhuma receita econtrada 😭😭😭😭</p>}
     </div>
   );
 }
