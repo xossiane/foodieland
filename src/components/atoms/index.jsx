@@ -14,3 +14,6 @@ export { default as ArticleAuthor } from "./ArticleAuthor";
 export { default as ArticleAvatar } from "./ArticleAvatar";
 export { default as ArticleDate } from "./ArticleDate";
 export { default as ArticleText } from "./ArticleText";
+export { default as BlogTitle } from "./BlogTitle";
+export { default as SearchIcon } from "./SearchIcon";
+export { default as Button } from "./Button";

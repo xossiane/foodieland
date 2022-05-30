@@ -1,0 +1,55 @@
+@use 'public/styles/variables' as *;
+
+.search-form {
+    position: relative;
+    width: 100%;
+    @media only screen and (min-width: $desktop) {
+        max-width: 70rem;
+    }
+
+    &__input {
+        height: 5.5rem;
+        padding: 0 5rem 0 2.5rem;
+        width: 100%;
+        border-radius: 24px;
+        border: 1px solid rgba(0,0,0,0.1);
+        font-size: 1.2rem;
+        outline-color: $orange;
+        @media only screen and (min-width:$desktop){
+            height: 8rem;
+        }
+
+        
+
+        &::placeholder {
+            font-family: $inter;
+            font-size: 1.2rem;
+        }
+    }
+
+    &__button {
+
+        &--1{
+            position: absolute;
+            top: 50%;
+            right: 1.5rem;
+            transform: translateY(-50%);
+            display: none;
+            @media only screen and (min-width:$desktop){
+                display: block;
+            }
+        }
+        &--2{
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            right: 1.5rem;
+            transform: translateY(-50%);
+            @media only screen and (min-width:$desktop){
+                display: none;
+            }
+        }
+    }
+}

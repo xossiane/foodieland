@@ -1,32 +1,29 @@
-import React, { useState } from "react"
+import React, { useState } from "react";
 import "./NewsletterInput.scss";
 import direita from "/assets/direita.png";
 import esquerda from "/assets/esquerda.png";
 import direita2 from "/assets/direita2.png";
 
-import {ContactInput} from "../../atoms";
+import { ContactInput } from "../../atoms";
 
-const initialState ={
-  email:"",
+const initialState = {
+  email: "",
 };
 
 function InputComponent(props) {
   var [emailState, setEmailState] = useState(initialState);
   function handleChange(event) {
     const value = event.target.value;
-    setEmailState({...emailState, [event.target.name]: value,
-    });
+    setEmailState({ ...emailState, [event.target.name]: value });
   }
   function verifyInput() {
-    if (
-      emailState.email.trim().length > 0 
-    ) {
+    if (emailState.email.trim().length > 0) {
       alert("Thanks for your subscription");
       return true;
     } else {
       alert("Please enter your email for delicious recipes");
       console.log(emailState);
-      return false
+      return false;
     }
   }
   return (
@@ -46,7 +43,8 @@ function InputComponent(props) {
 
       <div className="newsletter__btnInput__together">
         <form onSubmit={verifyInput}>
-        <ContactInput className="newsletter_inputContainer"
+          <ContactInput
+            className="newsletter_inputContainer"
             type="email"
             placeholder="Your email address..."
             name="email"
