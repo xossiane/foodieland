@@ -1,0 +1,26 @@
+@use "/public/styles/variables" as *;
+.article__info{
+display: flex;
+align-items: center;
+margin-bottom: 19px;
+
+&__bar {
+    background-color: $colorDark;
+    opacity: 15%;
+    width: 1.05px;
+    height: 30px;
+    margin: 0 11px 0 11px;
+}
+}
+
+.article__post{
+justify-items: center;
+display: flex;
+flex-direction: column;
+align-items: center;
+
+&__item{
+    max-width: 295px ;
+}
+}
+
