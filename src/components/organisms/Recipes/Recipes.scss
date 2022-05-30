@@ -1,18 +1,26 @@
 @use "/public/styles/variables" as *;
-.recipes__container {
+.recipes-title {
+  /*  width: 247.53px; */
+  height: 48.03px;
+  font-family: $inter;
+  $fontWeightTitle: 600;
+  font-size: 32px;
+  letter-spacing: -0.04em;
+  color: $colorDark;
+  margin: 48px 0px 30px 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.recipes-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 48px;
-
-  h1 {
-    /* width: 247.53px; */
-    height: 48.03px;
-    font-family: $inter;
-    $fontWeightTitle: 600;
-    font-size: 32px;
-    letter-spacing: -0.04em;
-    color: $colorDark;
-    margin: 48px 0px 30px 0px;
+  @media screen {
+    @media (min-width: 1024px) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
   }
 }

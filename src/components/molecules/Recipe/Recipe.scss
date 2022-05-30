@@ -1,12 +1,36 @@
 @use "/public/styles/variables" as *;
-.recipe__container {
-  img {
+/* .recipe-article {
+} */
+.recipe-container {
+  margin-bottom: 30px;
+  @media screen {
+    @media (min-width: 1024px) {
+      display: flex;
+    }
+  }
+  &__img {
     width: 221.67px;
     height: 147.78px;
     border-radius: 20px;
     margin-bottom: 28px;
+    @media screen {
+      @media (min-width: 1024px) {
+        width: 180px;
+        height: 120px;
+      }
+    }
   }
-  h2 {
+  &__typography {
+    @media screen {
+      @media (min-width: 1024px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 24px;
+      }
+    }
+  }
+  &__subtitle {
     width: 241.38px;
     height: 68.96px;
     font-family: $inter;
@@ -17,8 +41,13 @@
     letter-spacing: -0.04em;
     color: $colorDark;
     margin-bottom: 19px;
+    @media screen {
+      @media (min-width: 1024px) {
+        margin-bottom: 0px;
+      }
+    }
   }
-  h3 {
+  &__author {
     /*    width: 139.16px;
     height: 20.94px; */
     font-family: $inter;
