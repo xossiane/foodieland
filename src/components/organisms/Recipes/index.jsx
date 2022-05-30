@@ -6,11 +6,12 @@ function Recipes() {
   return (
     <div>
       <div className="recipes-container">
-        <Advertising />
-        <h1 className="recipes-title">Tasty Recipes</h1>
-
-        <div>
-          <Recipe dados={Date} />
+        <Advertising className="recipes-container__img" />
+        <h1 className="recipes-container__title">Tasty Recipes</h1>
+        <div className="recipes-container__receitas">
+          <div>
+            <Recipe dados={Date} />
+          </div>
         </div>
       </div>
     </div>
