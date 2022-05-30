@@ -6,7 +6,7 @@ const Navigation = (props) => {
 
   return (
     <div className="navigation">
-      {Array.from({ length: pages }).map((index) => (
+      {Array.from({ length: pages }).map((_, index) => (
         <NavigationItem key={index + 1} label={index + 1} />
       ))}
     </div>
