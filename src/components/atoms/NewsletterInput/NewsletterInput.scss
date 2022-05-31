@@ -29,7 +29,7 @@
   width: 356px;
   height: 60px;
   left: 18px;
-  margin-top: 28px;
+  margin-top: 15px;
 
   /* top: 1453px; */
   border-radius: 16px;
@@ -128,17 +128,21 @@
     height: 60px;
     right: 0;
     top: 0;
-
     left: auto;
-    margin-top: 10px;
-    margin-right: 10px;
+    margin-top: 42px;
+    margin-right: 11px;
   }
-  .inputContainer {
+  .newsletter_inputContainer {
     border: none;
-    width: 480px;
+    width: 500px;
     height: 80px;
     border-radius: 24px;
     padding: 18px 19px;
+  }
+
+  .input {
+    width: 480px;
+    height: 80px;
   }
 
   .newsletter__title {
@@ -168,4 +172,5 @@
     z-index: 5;
     top: 234px;
   }
+  
 }

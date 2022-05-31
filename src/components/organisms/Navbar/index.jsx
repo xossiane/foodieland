@@ -6,13 +6,30 @@ import "./Navbar.scss";
 import { Facebook, Instagram, Twitter } from "../../atoms";
 function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const [windowSize, setWindowSize] = useState(window.innerWidth);
 
   const toggleIsNavOpen = () => {
     setIsNavOpen(!isNavOpen);
   };
 
   useEffect(() => {
-    isNavOpen === true
+    let timeoutId = null;
+    const updateSize = () => {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => setWindowSize(window.innerWidth), 150);
+    };
+    window.addEventListener("resize", updateSize);
+  }, []);
+  console.log(windowSize);
+
+  useEffect(() => {
+    if (windowSize > 1024) {
+      setIsNavOpen(false);
+    }
+  }, [windowSize]);
+
+  useEffect(() => {
+    isNavOpen
       ? document.body.classList.add("header-open")
       : document.body.classList.remove("header-open");
   }, [isNavOpen]);

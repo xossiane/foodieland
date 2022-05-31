@@ -1,0 +1,8 @@
+@use "/public/styles/variables" as *;
+.article__author {
+    font-family: $inter;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 700;  
+    margin-left: 11px;  
+    }

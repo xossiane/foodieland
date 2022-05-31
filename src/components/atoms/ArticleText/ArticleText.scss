@@ -1,0 +1,12 @@
+@use "/public/styles/variables" as *;
+.article__text {
+    font-family: $inter;
+    font-size: 14px;
+    height: 112px;
+    width: 295px;
+    color: $colorDark;
+    opacity: 80%;
+    line-height: 28px;
+    margin: 15px 0 22px 0;
+
+}

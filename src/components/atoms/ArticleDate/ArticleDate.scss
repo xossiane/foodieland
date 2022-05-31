@@ -1,0 +1,9 @@
+@use "/public/styles/variables" as *;
+.article__date {
+font-family: $inter;
+font-size: 12px;
+line-height: 15px;
+opacity: 80%;
+font-weight: $fontWeightBody;
+
+}

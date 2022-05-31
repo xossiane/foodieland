@@ -1,8 +1,14 @@
 @use "/public/styles/variables" as *;
 .card__title {
+  font-family: $inter;
   color: $colorDark;
   font-weight: 600;
   font-size: 1.8rem;
   line-height: 26px;
   letter-spacing: -0.04em;
+  
+  &--mt
+  {
+    margin-top: 25px;
+  }
 }

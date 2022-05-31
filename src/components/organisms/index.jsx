@@ -4,3 +4,5 @@ export { default as Navbar } from "./Navbar";
 export { default as NewsletterForm } from "./NewsletterForm";
 export { default as Slider } from "./Slider";
 export { default as Recipes } from "./Recipes";
+export { default as Articles } from "./Articles";
+export { default as BlogHeader } from "./BlogHeader";

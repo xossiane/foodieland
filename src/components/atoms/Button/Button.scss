@@ -1,0 +1,9 @@
+@use "/public/styles/variables" as *;
+
+.default-button {
+    background-color: $colorDark;
+    border-radius: 16px;
+    color: $colorLight;
+    padding: 2rem 5.8rem;
+    cursor: pointer;
+}
