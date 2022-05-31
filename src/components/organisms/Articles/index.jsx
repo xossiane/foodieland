@@ -6,7 +6,7 @@ const Articles = (props) => {
   return (
     <div className="articles">
       <ArticleContent />
-      <Navigation pages={3} />
+      <Navigation />
     </div>
   );
 };

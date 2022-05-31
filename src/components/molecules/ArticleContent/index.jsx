@@ -12,8 +12,9 @@ import "./ArticleContent.scss";
 import { SearchBlogContext } from "/src/context/SearchBlogContext";
 
 function ArticleContent() {
-  const { getFilteredArray } = useContext(SearchBlogContext);
-  const article = getFilteredArray();
+  const { getFilteredArray, dataArticles } = useContext(SearchBlogContext);
+  //const article = getFilteredArray();
+  const article = dataArticles;
 
   return (
     <div className="article__post">
