@@ -6,13 +6,18 @@ import {
   Articles,
   Recipes,
 } from "../../organisms";
+
+import "./Blog.scss";
+
 export default function Blog() {
   return (
     <>
       <Navbar />
       <BlogHeader />
-      <Articles />
-      <Recipes />
+      <div className="blog__content">
+        <Articles />
+        <Recipes />
+      </div>
       <NewsletterForm />
       <Footer />
     </>
