@@ -49,9 +49,9 @@ function Formulario() {
     <div>
       <h1 className="form__title">Contact us</h1>
       <form className="form" onSubmit={submiteHandler}>
-        <div className="form--container">
-          <div className="form__img--container">
-            <img className="form__img" src={Cheffok} />
+        <div className="form-container">
+          <div className="form-container__containerImg">
+            <img className="containerImg__img" src={Cheffok} />
           </div>
           <div className="form__input">
             <ContactInput
