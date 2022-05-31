@@ -4,12 +4,17 @@ import { NavigationItem } from "../../atoms";
 import "./Navigation.scss";
 
 const Navigation = (props) => {
-  const { pages } = useContext(SearchBlogContext);
+  const { pages, setCurrentPage } = useContext(SearchBlogContext);
 
   return (
     <div className="navigation">
       {Array.from({ length: pages }).map((_, index) => (
-        <NavigationItem key={index + 1} label={index + 1} />
+        <NavigationItem
+          onClick={setCurrentPage}
+          page={index}
+          key={index}
+          label={index + 1}
+        />
       ))}
     </div>
   );

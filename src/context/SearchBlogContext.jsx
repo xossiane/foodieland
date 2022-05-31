@@ -6,6 +6,7 @@ export const SearchBlogContext = React.createContext({
   searchInputHandler: () => {},
   pages: "",
   dataArticles: [],
+  setCurrentPage: () => {},
 });
 
 const SearchBlogProvider = ({ children }) => {
@@ -19,6 +20,10 @@ const SearchBlogProvider = ({ children }) => {
   const endIndex = itensPerPage + startIndex;
 
   const dataArticles = articles.slice(startIndex, endIndex);
+
+  const changeCurrentPageHandler = (index) => {
+    setCurrentPage(index);
+  };
 
   const searchInputHandler = (e) => {
     setSearchInput(e.target.value);
@@ -39,6 +44,7 @@ const SearchBlogProvider = ({ children }) => {
         getFilteredArray,
         pages: pages,
         dataArticles: dataArticles,
+        setCurrentPage: changeCurrentPageHandler,
       }}
     >
       {children}

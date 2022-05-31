@@ -28,11 +28,11 @@
   },
   {
     "id": 3,
-    "img": "/assets/article1.png",
-    "title": "Crochet Projects for Noodle Lovers",
+    "img": "/assets/article3.png",
+    "title": "Full Guide to Becoming a Professional Chef",
     "desc": "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim",
-    "avatar": "/assets/wade.png",
-    "author": "Wade Warren",
+    "avatar": "/assets/dianne.png",
+    "author": "Dianne Russell",
     "date": "12 November 2021"
   },
   {
@@ -46,11 +46,11 @@
   },
   {
     "id": 5,
-    "img": "/assets/article3.png",
-    "title": "Full Guide to Becoming a Professional Chef",
+    "img": "/assets/article1.png",
+    "title": "Crochet Projects for Noodle Lovers",
     "desc": "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim",
-    "avatar": "/assets/dianne.png",
-    "author": "Dianne Russell",
+    "avatar": "/assets/wade.png",
+    "author": "Wade Warren",
     "date": "12 November 2021"
   }
 ]
