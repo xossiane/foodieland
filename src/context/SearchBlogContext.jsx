@@ -8,6 +8,7 @@ export const SearchBlogContext = React.createContext({
   dataArticles: [],
   setCurrentPage: () => {},
   currentPage: "",
+  navigationItems: "",
 });
 
 const SearchBlogProvider = ({ children }) => {
@@ -16,11 +17,12 @@ const SearchBlogProvider = ({ children }) => {
   const [itensPerPage, setItensPerPage] = useState(3);
   const [currentPage, setCurrentPage] = useState(0);
 
-  const pages = Math.ceil(articles.length / itensPerPage);
-  const startIndex = currentPage * itensPerPage;
-  const endIndex = itensPerPage + startIndex;
-
-  const dataArticles = articles.slice(startIndex, endIndex);
+  const getFilteredArray = () => {
+    let array = articles.filter((item) =>
+      item.title.toLowerCase().includes(searchInput.toLowerCase())
+    );
+    return array;
+  };
 
   const changeCurrentPageHandler = (index) => {
     setCurrentPage(index);
@@ -30,12 +32,18 @@ const SearchBlogProvider = ({ children }) => {
     setSearchInput(e.target.value);
   };
 
-  const getFilteredArray = () => {
-    let array = articles.filter((item) =>
-      item.title.toLowerCase().includes(searchInput.toLowerCase())
-    );
-    return array;
-  };
+  const pages = Math.ceil(getFilteredArray().length / itensPerPage);
+  const startIndex = currentPage * itensPerPage;
+  const endIndex = itensPerPage + startIndex;
+  let navigationItems = [];
+
+  if (currentPage + 2 < pages - 1) {
+    navigationItems = [currentPage, currentPage + 1, currentPage + 2];
+  } else {
+    navigationItems = [pages - 3, pages - 2, pages - 1];
+  }
+
+  const dataArticles = getFilteredArray().slice(startIndex, endIndex);
 
   return (
     <SearchBlogContext.Provider
@@ -47,6 +55,7 @@ const SearchBlogProvider = ({ children }) => {
         dataArticles: dataArticles,
         setCurrentPage: changeCurrentPageHandler,
         currentPage: currentPage,
+        navigationItems: navigationItems,
       }}
     >
       {children}
