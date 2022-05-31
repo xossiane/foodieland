@@ -7,6 +7,7 @@ export const SearchBlogContext = React.createContext({
   pages: "",
   dataArticles: [],
   setCurrentPage: () => {},
+  currentPage: "",
 });
 
 const SearchBlogProvider = ({ children }) => {
@@ -45,6 +46,7 @@ const SearchBlogProvider = ({ children }) => {
         pages: pages,
         dataArticles: dataArticles,
         setCurrentPage: changeCurrentPageHandler,
+        currentPage: currentPage,
       }}
     >
       {children}
