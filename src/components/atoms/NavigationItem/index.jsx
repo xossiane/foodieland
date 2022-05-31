@@ -1,7 +1,7 @@
 import "./NavigationItem.scss";
 
 const NavigationItem = (props) => {
-  const { label, className, onClick, page } = props;
+  const { image, label, className, onClick, page } = props;
 
   const onClickHandler = () => {
     onClick(page);
@@ -11,7 +11,8 @@ const NavigationItem = (props) => {
       onClick={onClickHandler}
       className={`navigation__item ${className}`}
     >
-      {label}
+      {label !== "" && label}
+      {image !== null && <img src={image} />}
     </button>
   );
 };
