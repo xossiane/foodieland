@@ -1,26 +1,17 @@
-import { React, useState, useEffect } from "react";
+import { React, useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import Logo from "/public/assets/Logo.svg";
 import "./Navbar.scss";
+import { SearchBlogContext } from "/src/context/SearchBlogContext";
 
 import { Facebook, Instagram, Twitter } from "../../atoms";
 function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
-  const [windowSize, setWindowSize] = useState(window.innerWidth);
+  const { windowSize } = useContext(SearchBlogContext);
 
   const toggleIsNavOpen = () => {
     setIsNavOpen(!isNavOpen);
   };
-
-  useEffect(() => {
-    let timeoutId = null;
-    const updateSize = () => {
-      clearTimeout(timeoutId);
-      timeoutId = setTimeout(() => setWindowSize(window.innerWidth), 150);
-    };
-    window.addEventListener("resize", updateSize);
-  }, []);
-  console.log(windowSize);
 
   useEffect(() => {
     if (windowSize > 1024) {

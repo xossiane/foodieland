@@ -9,7 +9,6 @@ export const SearchBlogContext = React.createContext({
   setCurrentPage: () => {},
   currentPage: "",
   navigationItems: "",
-  windowSize: 0,
 });
 
 const paginationReducer = (state, action) => {
@@ -55,7 +54,6 @@ const SearchBlogProvider = ({ children }) => {
     };
     window.addEventListener("resize", updateSize);
   }, []);
-  console.log(windowSize);
 
   useEffect(() => {
     if (windowSize > 1024) {
