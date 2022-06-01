@@ -35,9 +35,6 @@ const SearchBlogProvider = ({ children }) => {
   const [searchInput, setSearchInput] = useState("");
   const [windowSize, setWindowSize] = useState(window.innerWidth);
 
-  /*const [itensPerPage, setItensPerPage] = useState(3);
-  const [currentPage, setCurrentPage] = useState(0);*/
-
   const paginationDefaultValue = {
     itensPerPage: 3,
     currentPage: 0,
