@@ -55,6 +55,9 @@ const Navigation = (props) => {
     minPages = pages > 5;
     maxPages = currentPage <= pages - 6;
     isDesktop = true;
+    if (currentPage > pages) {
+      setCurrentPage(Math.ceil(currentPage / 2));
+    }
   } else {
     minPages = pages > 3;
     maxPages = currentPage <= pages - 4;
