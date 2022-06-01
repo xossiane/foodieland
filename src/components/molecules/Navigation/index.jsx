@@ -10,21 +10,27 @@ const Navigation = (props) => {
   const [isDesktop, setIsDesktop] = useState(false);
   const [minPages, setMinPages] = useState(pages > 3);
   const [maxPages, setMaxPages] = useState(currentPage <= pages - 4);
-  const [aux, setAux] = useState(null);
 
   useEffect(() => {
     if (windowSize > 1024) {
       setIsDesktop(true);
-      setMinPages(pages > 5);
-      setMaxPages(currentPage <= pages - 6);
-      // setCurrentPage(aux);
     } else {
       setIsDesktop(false);
+    }
+  }, [windowSize]);
+
+  useEffect(() => {
+    if (isDesktop) {
+      setMinPages(pages > 5);
+      setMaxPages(currentPage <= pages - 6);
+      if (currentPage > pages) {
+        setCurrentPage(0);
+      }
+    } else {
       setMinPages(pages > 3);
       setMaxPages(currentPage <= pages - 4);
-      // setAux(currentPage / 2);
     }
-  }, [windowSize, currentPage]);
+  }, [currentPage, pages]);
 
   const navigationLeft = (
     <NavigationItem
