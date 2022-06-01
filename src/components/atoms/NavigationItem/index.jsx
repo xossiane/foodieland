@@ -8,7 +8,7 @@ const NavigationItem = (props) => {
   };
   return (
     <button
-      onClick={onClickHandler}
+      onClick={onClick && onClickHandler}
       className={`navigation__item ${className}`}
     >
       {label !== "" && label}

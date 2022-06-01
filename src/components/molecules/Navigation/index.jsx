@@ -5,7 +5,7 @@ import LastPage from "/public/assets/LastPage.png";
 import "./Navigation.scss";
 
 const Navigation = (props) => {
-  const { pages, setCurrentPage, currentPage, navigationItems } =
+  const { pages, setCurrentPage, currentPage, navigationItems, windowSize } =
     useContext(SearchBlogContext);
 
   const navigationLeft = (
@@ -23,6 +23,8 @@ const Navigation = (props) => {
       label={">"}
     />
   );
+
+  const ellipsis = <NavigationItem label={"..."} />;
 
   const navigationArray = navigationItems.map((index) => (
     <NavigationItem
@@ -46,11 +48,27 @@ const Navigation = (props) => {
       />
     ));
 
+  let minPages;
+  let maxPages;
+  let isDesktop;
+  if (windowSize > 1024) {
+    minPages = pages > 5;
+    maxPages = currentPage <= pages - 6;
+    isDesktop = true;
+    setCurrentPage(Math.ceil(currentPage / 2));
+  } else {
+    minPages = pages > 3;
+    maxPages = currentPage <= pages - 4;
+    isDesktop = false;
+  }
+
   return (
     <div className="navigation">
-      {currentPage !== 0 && pages > 3 && navigationLeft}
-      {pages > 3 ? navigationArray : navigationMinArray}
-      {currentPage <= pages - 4 && navigationRight}
+      {currentPage !== 0 && minPages && navigationLeft}
+      {isDesktop && currentPage !== 0 && minPages && ellipsis}
+      {minPages ? navigationArray : navigationMinArray}
+      {isDesktop && maxPages && ellipsis}
+      {maxPages && navigationRight}
     </div>
   );
 };
