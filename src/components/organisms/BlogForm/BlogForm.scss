@@ -1,0 +1,31 @@
+@use '/public/styles/variables' as *;
+
+.blogform {
+    font-family: $inter;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    &__header{
+        font-size: 3rem;
+        font-family: $inter;
+        text-align: center;
+        margin: 2rem 0;
+    }
+
+    &__input{
+
+        &--text{
+            padding: 1rem;
+            outline-color: $orange;
+
+            &::placeholder{
+                font-family: $inter;
+            }
+        }
+    }
+    button {
+        margin: 2rem 0;
+    }
+}

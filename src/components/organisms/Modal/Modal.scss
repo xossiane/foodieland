@@ -1,0 +1,46 @@
+@use '/public/styles/variables' as *;
+
+.backdrop__blog{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.modal__blog {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 110;
+
+    &--content{
+    position: absolute;
+    width: 80%;
+    max-width: 80rem;
+    top: 15vh;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $colorLight;
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow:  0 2px 8px rgba(0, 0, 0, 0.25);
+    animation: slide-down 300ms ease-out;
+    }
+}
+
+@keyframes slide-down {
+    from {
+      opacity: 0;
+      transform: translateY(-3rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
