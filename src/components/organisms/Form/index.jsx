@@ -55,6 +55,7 @@ function Formulario() {
           </div>
           <div className="form__input">
             <ContactInput
+              className="input-container__input"
               type="text"
               placeholder="Enter your name..."
               title="NAME"
@@ -63,6 +64,7 @@ function Formulario() {
               onTextChange={handleChange}
             />
             <ContactInput
+              className="input-container__input"
               type="email"
               placeholder="Your email address..."
               title="EMAIL ADDRESS"
@@ -78,6 +80,7 @@ function Formulario() {
               onTextChange={handleChange}
             />
             <ContactInput
+              className="input-container__input"
               type="text"
               placeholder="Enter subject"
               title="SUBJECT"

@@ -11,7 +11,7 @@ function selectComponent(props) {
 
   return (
     <div className="select__container">
-      <h6 className="input__label">{props.title}</h6>
+      <h6 className="input-container__label">{props.title}</h6>
       <div className="select__div">
         <select
           className="select"
