@@ -72,7 +72,11 @@ const Slider = () => {
       </div>
       <div className="slider__container">
         <div className="slider__prev">
-          <button onClick={leftArrowClickHandler} disabled={isScrolling}>
+          <button
+            className="slider__button"
+            onClick={leftArrowClickHandler}
+            disabled={isScrolling}
+          >
             <img src={Prev} />
           </button>
         </div>
@@ -88,7 +92,11 @@ const Slider = () => {
           ))}
         </div>
         <div className="slider__next">
-          <button onClick={rightArrowClickHandler} disabled={isScrolling}>
+          <button
+            className="slider__button"
+            onClick={rightArrowClickHandler}
+            disabled={isScrolling}
+          >
             <img src={Next} />
           </button>
         </div>
