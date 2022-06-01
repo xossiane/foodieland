@@ -24,3 +24,45 @@ align-items: center;
 }
 }
 
+@media screen and (min-width: $desktop) {
+    .article__post__item{
+        display: flex;
+        max-width: 1280px;
+        justify-content: center;
+        max-width: $desktop;
+    }
+
+    .card__image--mt{
+        display:flex;
+    }
+
+    .card__title--mt {
+        position: absolute;
+        margin-bottom: 16px;
+        margin-top: 10px;
+    }
+    .article__info{
+        &__bar {
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-start;
+            flex-direction: row;
+        }
+    }
+
+    .article__text {
+        margin: 60px 7px -33px 0;
+        width: 51rem;
+        font-size: 16px;
+    }
+    .article__info__bar__container {
+        display: flex;
+        flex-direction: column;
+        margin-left: 4rem;
+        margin-bottom: 32px;
+    }
+
+    .card__title--mt {
+        font-size: 2.4rem;
+    }
+}

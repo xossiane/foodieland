@@ -1,6 +1,13 @@
+@use "/public/styles/variables" as *;
+
 .blog__content {
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  max-width: 1280px;
+  flex-direction: column;
+  @media screen and (max-width: $desktop){
+    margin: 60px auto;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1280px;
+    flex: row;
+    
+  }
 }

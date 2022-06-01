@@ -21,7 +21,8 @@ function ArticleContent() {
       {article.map((article) => {
         return (
           <div key={article.id} className="article__post__item">
-            <CardImage image={article.img}></CardImage>
+            <CardImage className="card__image--mt" image={article.img}></CardImage>
+            <div className="article__info__bar__container">
             <CardTitle
               className="card__title--mt"
               title={article.title}
@@ -32,6 +33,7 @@ function ArticleContent() {
               <ArticleAuthor text={article.author}></ArticleAuthor>
               <img className="article__info__bar" src={bar} alt="" />
               <ArticleDate text={article.date}></ArticleDate>
+              </div>
             </div>
           </div>
         );

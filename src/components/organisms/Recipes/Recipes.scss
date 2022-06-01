@@ -10,7 +10,12 @@
         order: 3;
         width: 400px;
         height: 434px;
+        
       }
+    }
+    .ads__img{
+      width: 400px;
+      height: 434px;
     }
   }
 
@@ -28,7 +33,8 @@
     @media screen {
       @media (min-width: $desktop) {
         order: 1;
-        margin-right: 245px;
+        margin-right: 206px;
+        margin-top: 0px;
       }
     }
   }
