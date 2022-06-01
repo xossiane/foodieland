@@ -4,10 +4,10 @@ import "./InputComponent.scss";
 
 function InputComponent(props) {
   return (
-    <div className="input__container">
-      <h6 className="input__label">{props.title}</h6>
+    <div className="input-container">
+      <h6 className="input-container__label">{props.title}</h6>
       <input
-        className="input"
+        className={props.className}
         type={props.type}
         value={props.value}
         onChange={props.onTextChange}
