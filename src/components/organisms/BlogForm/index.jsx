@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./BlogForm.scss";
 import Modal from "../Modal";
 import { Button } from "../../atoms";
@@ -7,9 +7,13 @@ import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { v4 as uuid } from "uuid";
 
 function BlogForm({ setShowModal }) {
-  const titleRef = useRef("");
-  const descRef = useRef("");
-  const authorRef = useRef("");
+  const [inputs, setInputs] = useState({
+    title: "",
+    desc: "",
+    author: "",
+    img: "",
+  });
+  const [isBtnEnable, setIsBtnEnable] = useState(false);
   const [imageUpload, setImageUpload] = useState(null);
   const [imageUrl, setImageUrl] = useState(null);
 
@@ -39,6 +43,12 @@ function BlogForm({ setShowModal }) {
     const data = await response.json();
     console.log(data);
   }
+
+  // useEffect(() => {
+  //   // if () {
+  //     console.log("blocked");
+  //   }
+  // }, [inputs]);
 
   const onSubmitHandler = (e) => {
     e.preventDefault();
@@ -93,7 +103,9 @@ function BlogForm({ setShowModal }) {
             type="text"
             name="title"
             placeholder="Article Title..."
-            ref={titleRef}
+            onChange={(e) =>
+              setInputs((prev) => ({ ...prev, title: e.target.value }))
+            }
             required
           />
 
@@ -109,7 +121,9 @@ function BlogForm({ setShowModal }) {
             rows={10}
             name="description"
             placeholder="Article Description..."
-            ref={descRef}
+            onChange={(e) =>
+              setInputs((prev) => ({ ...prev, desc: e.target.value }))
+            }
             required
           />
 
@@ -125,7 +139,9 @@ function BlogForm({ setShowModal }) {
             type="text"
             name="authorName"
             placeholder="Author Name..."
-            ref={authorRef}
+            onChange={(e) =>
+              setInputs((prev) => ({ ...prev, author: e.target.value }))
+            }
             required
           />
 
@@ -140,6 +156,7 @@ function BlogForm({ setShowModal }) {
             required
             onChange={(e) => {
               setImageUpload(e.target.files[0]);
+              setInputs((prev) => ({ ...prev, img: e.target.files[0].name }));
             }}
           />
           <Button className={"button-l"}> Submit </Button>
