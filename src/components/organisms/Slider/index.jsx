@@ -66,7 +66,7 @@ const Slider = () => {
   };
 
   return (
-    <div className="slider">
+    <section className="slider">
       <div className="slider__container">
         <h2 className="slider__title">Check out the delicious recipe</h2>
       </div>
@@ -93,7 +93,7 @@ const Slider = () => {
           </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
