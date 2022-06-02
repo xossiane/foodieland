@@ -1,130 +1,122 @@
 @use "/public/styles/variables" as *;
-.article__info{
-display: flex;
-align-items: center;
-margin-bottom: 19px;
+.article__info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 19px;
 
-&__bar {
+  &__bar {
     background-color: $colorDark;
     opacity: 15%;
     width: 1.05px;
     height: 30px;
     margin: 0 11px 0 11px;
-}
+  }
 }
 
-.article__post{
-justify-content: center;
-display: flex;
-flex-direction: column;
-align-items: center;
-gap: 1rem;
+.article__post {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 
-&__item{
-    max-width: 295px ;
+  &__item {
+    max-width: 295px;
     display: flex;
     flex-direction: column;
-}
+  }
 }
 
 .article {
-
-    &__text{
-        height: auto;
-    }
+  &__text {
+    height: auto;
+  }
 }
 
-@media only screen and (min-width: 700px){
-.article {
+@media only screen and (min-width: $tablet) {
+  .article {
     padding: 0 3rem;
 
-    &__text{
-        margin: 0;
-        width: 36rem;
+    &__text {
+      margin: 0;
+      width: 36rem;
     }
 
-    &__info{
-        margin: 0;
+    &__info {
+      margin: 0;
     }
 
-    &__post{
-        align-items: flex-start;
-        justify-content: flex-start;
-        width: 65%;
-        gap: 4rem;
-        
+    &__post {
+      align-items: flex-start;
+      justify-content: flex-start;
+      width: 65%;
+      gap: 4rem;
     }
 
-    &__post__item{
-        flex-direction: row;
-        max-width: fit-content;
-        gap: 1rem;
+    &__post__item {
+      flex-direction: row;
+      max-width: fit-content;
+      gap: 1rem;
     }
 
-    &__info__bar__container{
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
+    &__info__bar__container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
     }
-
-    
-}
-.card__title--mt{
+  }
+  .card__title--mt {
     margin-top: 0;
+  }
 }
 
-}
-
-@media screen and (min-width: 810px) {
-    .article {
-        &__post{
-            margin: 0 auto;
-            
-        }
+@media screen and (min-width: $tablet-x) {
+  .article {
+    &__post {
+      margin: 0 auto;
     }
+  }
 }
 
 @media screen and (min-width: $desktop) {
+  .article__post__item {
+    max-width: 1280px;
+    justify-content: space-between;
+    max-width: $desktop;
+    gap: 4rem;
+  }
 
-    .article__post__item{
-        
-        max-width: 1280px;
-        justify-content: space-between;
-        max-width: $desktop;
-        gap: 4rem;
-    }
+  .card__image--mt {
+    display: flex;
+  }
 
-    .card__image--mt{
-        display:flex;
+  .article__info {
+    &__bar {
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+      flex-direction: row;
     }
+  }
 
-    .article__info{
-        &__bar {
-            display: flex;
-            align-items: flex-end;
-            justify-content: flex-start;
-            flex-direction: row;
-        }
-    }
+  .article__text {
+    width: 51rem;
+    font-size: 16px;
+  }
+  .article__info__bar__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem 0;
+  }
 
-    .article__text {
-        width: 51rem;
-        font-size: 16px;
-    }
-    .article__info__bar__container {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding: 1rem 0;
-    }
-
-    .card__title--mt {
-        font-size: 2.4rem;
-    }
+  .card__title--mt {
+    font-size: 2.4rem;
+  }
 }
 
 @media only screen and (min-width: $desktop-x) {
-    .article__post{
-        margin: 0;
-    }
+  .article__post {
+    margin: 0;
+  }
 }

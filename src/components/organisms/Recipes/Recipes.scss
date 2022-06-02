@@ -6,14 +6,13 @@
 
   &__img {
     @media screen {
-      @media (min-width: $desktop) {
+      @media (min-width: $desktop-x) {
         order: 3;
         width: 400px;
         height: 434px;
-        
       }
     }
-    .ads__img{
+    .ads__img {
       width: 400px;
       height: 434px;
     }
@@ -31,12 +30,12 @@
     display: flex;
     justify-content: center;
     @media screen {
-      @media (min-width: $desktop) {
+      @media (min-width: $desktop-x) {
         order: 1;
         text-align: center;
         margin-top: 0px;
       }
-      @media (min-width: $desktop-x){
+      @media (min-width: $desktop-x) {
         align-self: flex-start;
       }
     }
@@ -48,7 +47,7 @@
     align-items: center;
     margin-bottom: 48px;
     @media screen {
-      @media (min-width: 1024px) {
+      @media (min-width: $desktop) {
         display: flex;
         flex-direction: column-reverse;
         order: 2;

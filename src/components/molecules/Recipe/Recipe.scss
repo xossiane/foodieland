@@ -4,10 +4,9 @@
 .recipe-container {
   margin-bottom: 30px;
   @media screen {
-    @media (min-width: 1024px) {
+    @media (min-width: $desktop-x) {
       display: flex;
       margin-bottom: 24px;
-      
     }
   }
   &__img {
@@ -16,18 +15,16 @@
     border-radius: 20px;
     margin-bottom: 28px;
     @media screen {
-      @media (min-width: 1024px) {
+      @media (min-width: $desktop-x) {
         width: 180px;
         height: 120px;
         margin-bottom: 0;
-
-        
       }
     }
   }
   &__typography {
     @media screen {
-      @media (min-width: 1024px) {
+      @media (min-width: $desktop-x) {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -47,7 +44,7 @@
     color: $colorDark;
     margin-bottom: 19px;
     @media screen {
-      @media (min-width: 1024px) {
+      @media (min-width: $desktop-x) {
         margin-bottom: 16px;
         width: 196px;
         height: 56px;
