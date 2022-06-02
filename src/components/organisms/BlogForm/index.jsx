@@ -1,16 +1,28 @@
-import React, { useRef, useContext } from "react";
+import React, { useRef } from "react";
 import "./BlogForm.scss";
 import Modal from "../Modal";
 import { Button } from "../../atoms";
-import { AddArticleContext } from "/src/context/AddArticleContext";
 
-function BlogForm() {
-  const { addArticleHandler } = useContext(AddArticleContext);
-
+function BlogForm({ setShowModal }) {
   const titleRef = useRef("");
   const descRef = useRef("");
   const authorRef = useRef("");
   // const ImgRef = useRef('')
+
+  async function addArticleHandler(article) {
+    const response = await fetch(
+      "https://webfood-45487-default-rtdb.firebaseio.com/articles.json",
+      {
+        method: "POST",
+        body: JSON.stringify(article),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    const data = await response.json();
+    console.log(data);
+  }
 
   const onSubmitHandler = (e) => {
     e.preventDefault();
@@ -29,7 +41,8 @@ function BlogForm() {
       "November",
       "December",
     ];
-    const d = new date();
+
+    const d = new Date();
     const article = {
       title: titleRef.current.value,
       desc: descRef.current.value,
@@ -40,12 +53,22 @@ function BlogForm() {
     };
 
     addArticleHandler(article);
+
+    titleRef.current.value = "";
+    descRef.current.value = "";
+    authorRef.current.value = "";
   };
 
   return (
-    <Modal>
+    <Modal setShowModal={setShowModal}>
       <div className="blogform-container">
         <h2 className="blogform__header">New Article</h2>
+        <button
+          className="blogform__closebtn"
+          onClick={() => setShowModal(false)}
+        >
+          <span className="blogform__closebtn--icon"></span>
+        </button>
         <form action="" className="blogform" onSubmit={onSubmitHandler}>
           <label htmlFor="blogform__Title" className="blogform__Title">
             Article Title

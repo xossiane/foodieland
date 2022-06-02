@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useReducer } from "react";
+import React, { useState, useEffect, useReducer, useContext } from "react";
 import articles from "/src/data/articles.json";
 
 export const SearchBlogContext = React.createContext({
@@ -9,6 +9,7 @@ export const SearchBlogContext = React.createContext({
   setCurrentPage: () => {},
   currentPage: "",
   navigationItems: "",
+  articles: [],
 });
 
 const paginationReducer = (state, action) => {
@@ -33,6 +34,28 @@ const paginationReducer = (state, action) => {
 const SearchBlogProvider = ({ children }) => {
   const [searchInput, setSearchInput] = useState("");
   const [windowSize, setWindowSize] = useState(window.innerWidth);
+  // const [articles, setArticles] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
+
+  const fetchArticlesHandler = async () => {
+    setIsLoading(true);
+    setError(null);
+    try {
+      const res = await fetch(
+        "https://webfood-45487-default-rtdb.firebaseio.com/articles.json"
+      );
+      if (!response.ok) {
+        throw new Error("Something went Wrong");
+      }
+      const data = await response.json();
+
+      console.log(data);
+    } catch (error) {
+      setError(error.message);
+    }
+    setIsLoading(false);
+  };
 
   const paginationDefaultValue = {
     itensPerPage: 3,
@@ -120,6 +143,7 @@ const SearchBlogProvider = ({ children }) => {
         currentPage: paginationState.currentPage,
         navigationItems: navigationItems,
         windowSize: windowSize,
+        fetchArticlesHandler,
       }}
     >
       {children}

@@ -14,6 +14,52 @@
         margin: 2rem 0;
     }
 
+    &__closebtn{
+        padding: 2rem;
+        position: absolute;
+        right: 0;
+        top: -5.5rem;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+
+        &:hover .blogform__closebtn--icon:before,
+        &:hover .blogform__closebtn--icon:after{
+            background-color: $colorDark;
+        }
+
+
+
+        &--icon{
+            position: absolute;
+            top: 1.8rem;
+            left: -.2rem;
+
+            &:after{
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 45px;
+                height: 6px;
+                background-color: $colorLight;
+                transform: rotate(45deg);
+                border-radius: 5px;
+            }
+            &::before{
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 45px;
+                height: 6px;
+                background-color: $colorLight;
+                transform: rotate(-45deg);
+                border-radius: 5px;
+            }
+        }
+    }
+
     &__input{
 
         &--text{
@@ -29,3 +75,4 @@
         margin: 2rem 0;
     }
 }
+

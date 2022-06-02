@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   Navbar,
   Footer,
@@ -11,16 +12,20 @@ import BlogForm from "../../organisms/BlogForm";
 import "./Blog.scss";
 
 export default function Blog() {
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <>
-      <BlogForm />
+      {showModal && <BlogForm setShowModal={setShowModal} />}
       <Navbar />
-      <BlogHeader />
-      <div className="blog__content">
-        <Articles />
-        <Recipes />
-      </div>
-      <NewsletterForm />
+      <main>
+        <BlogHeader />
+        <section className="blog__content">
+          <Articles setShowModal={setShowModal} />
+          <Recipes />
+        </section>
+        <NewsletterForm />
+      </main>
       <Footer />
     </>
   );

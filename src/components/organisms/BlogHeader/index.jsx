@@ -5,10 +5,10 @@ import "./BlogHeader.scss";
 
 function BlogHeader() {
   return (
-    <div className="blog-header">
+    <section className="blog-header">
       <BlogTitle />
       <SearchBlog />
-    </div>
+    </section>
   );
 }
 

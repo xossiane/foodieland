@@ -4,7 +4,8 @@ import "./SearchBlog.scss";
 import { SearchBlogContext } from "/src/context/SearchBlogContext";
 
 function SearchBlog() {
-  const { searchInput, searchInputHandler } = useContext(SearchBlogContext);
+  const { searchInput, searchInputHandler, fetchArticlesHandler } =
+    useContext(SearchBlogContext);
 
   const onSubmitHandler = (e) => {
     e.preventDefault();
@@ -20,7 +21,10 @@ function SearchBlog() {
       />
       <div className="search-form__button-container">
         <Button className={"search-form__button--1"}>Search</Button>
-        <button className="search-form__button--2">
+        <button
+          className="search-form__button--2"
+          onClick={fetchArticlesHandler}
+        >
           <SearchIcon />
         </button>
       </div>

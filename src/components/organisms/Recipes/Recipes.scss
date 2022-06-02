@@ -33,8 +33,11 @@
     @media screen {
       @media (min-width: $desktop) {
         order: 1;
-        margin-right: 206px;
+        text-align: center;
         margin-top: 0px;
+      }
+      @media (min-width: $desktop-x){
+        align-self: flex-start;
       }
     }
   }

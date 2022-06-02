@@ -27,7 +27,7 @@ function InputComponent(props) {
     }
   }
   return (
-    <div className="newsletter__content">
+    <section className="newsletter__content">
       <img className="direitaImage" src={direita} />
       <img className="direita__Image__2" src={direita2} />
       <img className="esquerdaImage" src={esquerda} />
@@ -56,7 +56,7 @@ function InputComponent(props) {
           </div>
         </form>
       </div>
-    </div>
+    </section>
   );
 }
 export default InputComponent;
