@@ -1,41 +1,32 @@
 @use "/public/styles/variables" as *;
-.textArea__container {
+.textArea-container {
   margin-top: 32px;
-}
-.textArea {
-  width: 373px;
-  height: 200px;
-  background: $colorLight;
-  border: 1px solid $colorGray;
-  border-radius: 16px;
-  padding: 20px 19px;
-  font-family: $inter;
-}
-
-.textArea::placeholder {
-  padding: 20px 19px;
-
-  font-family: $inter;
-
-  font-style: normal;
-
-  font-weight: 400;
-
-  font-size: 14px;
-
-  line-height: 24px;
-
-  letter-spacing: -0.02em;
-
-  color: rgba(0, 0, 0, 0.6);
-
-  opacity: 0.8;
-}
-
-@media screen and (min-width: $desktop-xm) {
-  .textArea {
-    max-width: 840px;
+  &__textArea {
+    width: 373px;
     height: 200px;
-    width: 780px;
+    background: $colorLight;
+    border: 1px solid $colorGray;
+    border-radius: 16px;
+    padding: 20px 19px;
+    font-family: $inter;
+
+    &::placeholder {
+      padding: 20px 19px;
+      font-family: $inter;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: -0.02em;
+      color: rgba(0, 0, 0, 0.6);
+      opacity: 0.8;
+    }
+    @media screen {
+      @media (min-width: $desktop-xm) {
+        max-width: 840px;
+        height: 200px;
+        width: 780px;
+      }
+    }
   }
 }
