@@ -10,11 +10,11 @@ function selectComponent(props) {
   ];
 
   return (
-    <div className="select__container">
+    <div className="select-container">
       <h6 className="input-container__label">{props.title}</h6>
-      <div className="select__div">
+      <div className="select-container__div">
         <select
-          className="select"
+          className="select-container__select"
           value={props.value}
           name={props.name}
           onChange={props.onTextChange}

@@ -1,58 +1,45 @@
 @use "/public/styles/variables" as *;
-.select__container {
+.select-container {
   margin-top: 32px;
-}
-.select {
-  width: 375px;
-  height: 60px;
-  background: $colorLight;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 16px;
-  padding: 20px 19px;
-  font-family: $inter;
-}
+  &__div {
+    position: relative;
 
-select {
-  -webkit-appearance: none;
-  width: 100%;
-  padding: 12px 20px;
-  display: inline-block;
-  border: $border-components;
-  border-radius: 6px;
-  box-sizing: border-box;
-}
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      border-top: 2px solid rgb(0, 0, 0);
+      width: 10px;
+      pointer-events: none;
+    }
 
-.select__div {
-  position: relative;
-}
+    &::before {
+      right: 26px;
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
 
-.select__div::before,
-.select__div::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  border-top: 2px solid rgb(0, 0, 0);
-  width: 10px;
-  pointer-events: none;
-}
+    &::after {
+      right: 20px;
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+    }
+  }
+  &__select {
+    -webkit-appearance: none;
+    width: 375px;
+    height: 60px;
+    background: $colorLight;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    padding: 20px 19px;
+    font-family: $inter;
 
-.select__div::before {
-  right: 26px;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-.select__div::after {
-  right: 20px;
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-
-.select {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  letter-spacing: -0.02em;
-  color: rgba(0, 0, 0, 0.6);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: -0.02em;
+    color: rgba(0, 0, 0, 0.6);
+  }
 }
