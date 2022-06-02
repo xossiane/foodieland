@@ -1,13 +1,29 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import "./BlogForm.scss";
 import Modal from "../Modal";
 import { Button } from "../../atoms";
+import { storage } from "/src/data/firebase.js";
+import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import { v4 as uuid } from "uuid";
 
 function BlogForm({ setShowModal }) {
   const titleRef = useRef("");
   const descRef = useRef("");
   const authorRef = useRef("");
-  // const ImgRef = useRef('')
+  const [imageUpload, setImageUpload] = useState(null);
+  const [imageUrl, setImageUrl] = useState(null);
+
+  const uploadImage = () => {
+    const imageRef = ref(
+      storage,
+      `article-images/${imageUpload.name + uuid()}`
+    );
+    uploadBytes(imageRef, imageUpload).then((geturl) => {
+      getDownloadURL(geturl.ref).then((url) => {
+        setImageUrl(url);
+      });
+    });
+  };
 
   async function addArticleHandler(article) {
     const response = await fetch(
@@ -26,7 +42,7 @@ function BlogForm({ setShowModal }) {
 
   const onSubmitHandler = (e) => {
     e.preventDefault();
-
+    uploadImage();
     const monthNames = [
       "January",
       "February",
@@ -41,7 +57,6 @@ function BlogForm({ setShowModal }) {
       "November",
       "December",
     ];
-
     const d = new Date();
     const article = {
       title: titleRef.current.value,
@@ -50,10 +65,9 @@ function BlogForm({ setShowModal }) {
       date: `${d.getDate()} ${
         monthNames[d.getUTCMonth()]
       } ${d.getUTCFullYear()}`,
+      img: imageUrl,
     };
-
     addArticleHandler(article);
-
     titleRef.current.value = "";
     descRef.current.value = "";
     authorRef.current.value = "";
@@ -123,6 +137,10 @@ function BlogForm({ setShowModal }) {
             type="file"
             name="img"
             accept="image/png, image/jpeg, image/jpg"
+            required
+            onChange={(e) => {
+              setImageUpload(e.target.files[0]);
+            }}
           />
           <Button className={"button-l"}> Submit </Button>
         </form>
