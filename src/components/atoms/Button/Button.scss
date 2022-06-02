@@ -8,14 +8,15 @@
     cursor: pointer;
 }
 
-.button-sm {
-    font-size: 1rem;
-}
+.button {
 
-.button-m {
-    font-size: 1.5rem;
-}
-
-.button-l {
-    font-size: 2rem;
+    &-sm{
+        font-size: 1rem;
+    }
+    &-m{
+        font-size: 1.5rem;
+    }
+    &-l{
+        font-size: 2rem;
+    }
 }
