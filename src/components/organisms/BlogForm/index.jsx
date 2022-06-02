@@ -1,15 +1,53 @@
-import React from "react";
+import React, { useRef, useContext } from "react";
 import "./BlogForm.scss";
 import Modal from "../Modal";
 import { Button } from "../../atoms";
+import { AddArticleContext } from "/src/context/AddArticleContext";
 
 function BlogForm() {
+  const { addArticleHandler } = useContext(AddArticleContext);
+
+  const titleRef = useRef("");
+  const descRef = useRef("");
+  const authorRef = useRef("");
+  // const ImgRef = useRef('')
+
+  const onSubmitHandler = (e) => {
+    e.preventDefault();
+
+    const monthNames = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ];
+    const d = new date();
+    const article = {
+      title: titleRef.current.value,
+      desc: descRef.current.value,
+      author: authorRef.current.value,
+      date: `${d.getDate()} ${
+        monthNames[d.getUTCMonth()]
+      } ${d.getUTCFullYear()}`,
+    };
+
+    addArticleHandler(article);
+  };
+
   return (
     <Modal>
       <div className="blogform-container">
         <h2 className="blogform__header">New Article</h2>
-        <form action="" className="blogform">
-          <label for="blogform__Title" className="blogform__Title">
+        <form action="" className="blogform" onSubmit={onSubmitHandler}>
+          <label htmlFor="blogform__Title" className="blogform__Title">
             Article Title
           </label>
           <input
@@ -18,9 +56,14 @@ function BlogForm() {
             type="text"
             name="title"
             placeholder="Article Title..."
+            ref={titleRef}
+            required
           />
 
-          <label for="blogform__Description" className="blogform__Description">
+          <label
+            htmlFor="blogform__Description"
+            className="blogform__Description"
+          >
             Article Description
           </label>
           <textarea
@@ -29,9 +72,14 @@ function BlogForm() {
             rows={10}
             name="description"
             placeholder="Article Description..."
+            ref={descRef}
+            required
           />
 
-          <label for="blogform__AuthorName" className="blogform__AuthorName">
+          <label
+            htmlFor="blogform__AuthorName"
+            className="blogform__AuthorName"
+          >
             Author Name
           </label>
           <input
@@ -40,9 +88,11 @@ function BlogForm() {
             type="text"
             name="authorName"
             placeholder="Author Name..."
+            ref={authorRef}
+            required
           />
 
-          <label for="blogform__img" className="blogform__AuthorName">
+          <label htmlFor="blogform__img" className="blogform__AuthorName">
             Article Image
           </label>
           <input
