@@ -46,7 +46,7 @@ function Formulario() {
   };
 
   return (
-    <div>
+    <section>
       <h1 className="form__title">Contact us</h1>
       <form className="form" onSubmit={submiteHandler}>
         <div className="form-container">
@@ -102,7 +102,7 @@ function Formulario() {
           </div>
         </div>
       </form>
-    </div>
+    </section>
   );
 }
 
