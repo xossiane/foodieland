@@ -1,12 +1,10 @@
 import { Navigation, ArticleContent } from "../../molecules";
-import { Button } from "../../atoms";
 
 import "./Articles.scss";
 
-const Articles = ({ setShowModal }) => {
+const Articles = () => {
   return (
     <div className="articles">
-      <Button onClick={(e) => setShowModal(true)}>Teste</Button>
       <ArticleContent />
       <Navigation />
     </div>
