@@ -1,5 +1,27 @@
 @use "/public/styles/variables" as *;
-.inputContainer::placeholder {
+/* .inputContainer::placeholder {
+  font-family: $inter;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  color: rgba(0, 0, 0, 0.4);
+  opacity: 0.8;
+  margin-right: 10px;
+  padding: 34px 0px;
+} */
+.newsletter_inputContainer {
+  width: 375px;
+  height: 60px;
+  background: $colorLight;
+  border: $border-components;
+  border-radius: 16px;
+  padding: 18px 19px;
+  position: relative;
+  font-family: $inter;
+}
+.newsletter_inputContainer::placeholder {
   font-family: $inter;
   font-style: normal;
   font-weight: 400;
@@ -116,7 +138,8 @@
 
 @media screen and (min-width: $desktop) {
   .newsletter__content {
-    width: 1280px;
+    max-width: 1280px;
+    width: 80%;
     height: 442px;
   }
   .newsletter__btnInput__together {
@@ -134,16 +157,16 @@
   }
   .newsletter_inputContainer {
     border: none;
-    width: 500px;
+    width: 480px;
     height: 80px;
     border-radius: 24px;
     padding: 18px 19px;
   }
 
-  .input {
+  /* .input {
     width: 480px;
     height: 80px;
-  }
+  } */
 
   .newsletter__title {
     width: 700px;
@@ -169,8 +192,6 @@
     display: block;
     position: absolute;
     right: 260px;
-    z-index: 5;
     top: 234px;
   }
-  
 }
