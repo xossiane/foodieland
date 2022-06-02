@@ -52,7 +52,7 @@ function InputComponent(props) {
             onTextChange={handleChange}
           />
           <div>
-            <button className="newsletter__button">Subscribe</button>
+            <button className="newsletter-content__button">Subscribe</button>
           </div>
         </form>
       </div>

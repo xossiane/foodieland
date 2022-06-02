@@ -21,31 +21,17 @@
     margin-right: 10px;
     padding: 34px 0px;
   }
+  @media screen and (min-width: $desktop) {
+    border: none;
+    width: 480px;
+    height: 80px;
+    border-radius: 24px;
+    padding: 18px 19px;
+    
+  }
 }
-
-
 .inputContainer {
   border-radius: 24px;
-}
-
-.newsletter__button {
-  font-family: $inter;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  margin-bottom: 69px;
-  text-align: center;
-  letter-spacing: -0.02em;
-  width: 356px;
-  height: 60px;
-  left: 18px;
-  margin-top: 15px;
-  border-radius: 16px;
-  background-color: $colorDark;
-  color: $colorLight;
-  position: absolute;
-  cursor: pointer;
 }
 
 .newsletter-content {
@@ -145,26 +131,35 @@
         position: relative;
         width: 480px;}
     }
-}
-
-
-@media screen and (min-width: $desktop) {
-
-  .newsletter__button {
-    width: 160px;
+    &__button {
+    font-family: $inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 69px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    width: 356px;
     height: 60px;
-    right: 0;
-    top: 0;
-    left: auto;
-    margin-top: 11px;
-    margin-right: 11px;
-  }
-  .newsletter_inputContainer {
-    border: none;
-    width: 480px;
-    height: 80px;
-    border-radius: 24px;
-    padding: 18px 19px;
-  }
-
+    left: 18px;
+    margin-top: 15px;
+    border-radius: 16px;
+    background-color: $colorDark;
+    color: $colorLight;
+    position: absolute;
+    cursor: pointer;
+    @media screen and (min-width:$desktop) {
+      width: 160px;
+     height: 60px;
+     right: 0;
+     top: 0;
+     left: auto;
+     margin-top: 11px;
+     margin-right: 11px;
+    }
+    }
 }
+
+
+
