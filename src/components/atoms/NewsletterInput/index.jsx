@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./NewsletterInput.scss";
-import direita from "/assets/direita.png";
-import esquerda from "/assets/esquerda.png";
-import direita2 from "/assets/direita2.png";
+import salad from "/assets/salad.png";
+import vegetables from "/assets/vegetables.png";
+import rucula from "/assets/rucula.png";
 
 import { ContactInput } from "../../atoms";
 
@@ -27,22 +27,22 @@ function InputComponent(props) {
     }
   }
   return (
-    <section className="newsletter__content">
-      <img className="direitaImage" src={direita} />
-      <img className="direita__Image__2" src={direita2} />
-      <img className="esquerdaImage" src={esquerda} />
-      <div className="newsletter__title">
+    <section className="newsletter-content">
+      <img className="newsletter-content__salad" src={salad} />
+      <img className="newsletter-content__rucula" src={rucula} />
+      <img className="newsletter-content__vegetables" src={vegetables} />
+      <div className="newsletter-content__title">
         <h1>Deliciousness to your inbox</h1>
       </div>
-      <div className="newsletter__text">
+      <div className="newsletter-content__text">
         <p>
           Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod
           tempor incididunt ut labore et dolore magna aliqut enim ad minim{" "}
         </p>
       </div>
 
-      <div className="newsletter__btnInput__together">
-        <form onSubmit={verifyInput}>
+      <div> 
+        <form className="newsletter-content__btnInput__together" onSubmit={verifyInput}>
           <ContactInput
             className="newsletter_inputContainer"
             type="email"
@@ -52,7 +52,7 @@ function InputComponent(props) {
             onTextChange={handleChange}
           />
           <div>
-            <button className="newsletter__button">Subscribe</button>
+            <button className="newsletter-content__button">Subscribe</button>
           </div>
         </form>
       </div>
