@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useReducer, useContext } from "react";
+import React, { useState } from "react";
 import articles from "/src/data/articles.json";
 import usePagination from "../hooks/usePagination";
 
