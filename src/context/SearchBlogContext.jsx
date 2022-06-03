@@ -17,6 +17,16 @@ export const SearchBlogContext = React.createContext({
 const SearchBlogProvider = ({ children }) => {
   const [searchInput, setSearchInput] = useState("");
 
+  const getFilteredArray = () => {
+    let array = articles.filter((item) =>
+      item.title.toLowerCase().includes(searchInput.toLowerCase())
+    );
+    return array;
+  };
+  const searchInputHandler = (e) => {
+    setSearchInput(e.target.value);
+  };
+
   const desktopConfig = {
     itensPerPage: 6,
     navigationNumber: 5,
@@ -32,19 +42,8 @@ const SearchBlogProvider = ({ children }) => {
   const [pagination, setCurrentPage, changeNavigationItensHandler, windowSize] =
     usePagination(mobileConfig, desktopConfig);
 
-  const getFilteredArray = () => {
-    let array = articles.filter((item) =>
-      item.title.toLowerCase().includes(searchInput.toLowerCase())
-    );
-    return array;
-  };
-
   const changeCurrentPageHandler = (index) => {
     setCurrentPage(index);
-  };
-
-  const searchInputHandler = (e) => {
-    setSearchInput(e.target.value);
   };
 
   const navigation = changeNavigationItensHandler(getFilteredArray());
