@@ -65,7 +65,41 @@ const usePagination = (mobileConfig, desktopConfig) => {
     dispatchPaginationState({ type: "CHANGE__CURRENT__PAGE", value: index });
   };
 
-  return [paginationState, changeCurrentPageHandler, windowSize];
+  const changeNavigationItensHandler = (enteredArray) => {
+    const pages = Math.ceil(enteredArray.length / paginationState.itensPerPage);
+    const startIndex =
+      paginationState.currentPage * paginationState.itensPerPage;
+    const endIndex = paginationState.itensPerPage + startIndex;
+    const lastPage = pages - 1;
+    let outputArray = [];
+
+    if (
+      paginationState.currentPage + paginationState.hasPageNumber <
+      lastPage
+    ) {
+      for (let i = 0; i < paginationState.navigationNumber; i++) {
+        outputArray.push(paginationState.currentPage + i);
+      }
+    } else {
+      for (let i = paginationState.navigationNumber; i > 0; i--) {
+        outputArray.push(pages - i);
+      }
+    }
+
+    return {
+      navigationItems: outputArray,
+      startIndex: startIndex,
+      endIndex: endIndex,
+      pages: pages,
+    };
+  };
+
+  return [
+    paginationState,
+    changeCurrentPageHandler,
+    changeNavigationItensHandler,
+    windowSize,
+  ];
 };
 
 export default usePagination;

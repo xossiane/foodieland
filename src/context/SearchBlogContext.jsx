@@ -29,10 +29,8 @@ const SearchBlogProvider = ({ children }) => {
     hasPageNumber: 2,
   };
 
-  const [pagination, setCurrentPage, windowSize] = usePagination(
-    mobileConfig,
-    desktopConfig
-  );
+  const [pagination, setCurrentPage, changeNavigationItensHandler, windowSize] =
+    usePagination(mobileConfig, desktopConfig);
 
   const getFilteredArray = () => {
     let array = articles.filter((item) =>
@@ -49,23 +47,12 @@ const SearchBlogProvider = ({ children }) => {
     setSearchInput(e.target.value);
   };
 
-  const pages = Math.ceil(getFilteredArray().length / pagination.itensPerPage);
-  const startIndex = pagination.currentPage * pagination.itensPerPage;
-  const endIndex = pagination.itensPerPage + startIndex;
-  const lastPage = pages - 1;
-  let navigationItems = [];
+  const navigation = changeNavigationItensHandler(getFilteredArray());
 
-  if (pagination.currentPage + pagination.hasPageNumber < lastPage) {
-    for (let i = 0; i < pagination.navigationNumber; i++) {
-      navigationItems.push(pagination.currentPage + i);
-    }
-  } else {
-    for (let i = pagination.navigationNumber; i > 0; i--) {
-      navigationItems.push(pages - i);
-    }
-  }
-
-  const dataArticles = getFilteredArray().slice(startIndex, endIndex);
+  const dataArticles = getFilteredArray().slice(
+    navigation.startIndex,
+    navigation.endIndex
+  );
 
   return (
     <SearchBlogContext.Provider
@@ -73,11 +60,11 @@ const SearchBlogProvider = ({ children }) => {
         searchInput,
         searchInputHandler,
         getFilteredArray,
-        pages: pages,
+        pages: navigation.pages,
         dataArticles: dataArticles,
         setCurrentPage: changeCurrentPageHandler,
         currentPage: pagination.currentPage,
-        navigationItems: navigationItems,
+        navigationItems: navigation.navigationItems,
         navigationNumber: pagination.navigationNumber,
         windowSize: windowSize,
       }}
