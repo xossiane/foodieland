@@ -7,7 +7,7 @@ import {
   ArticleText,
   ArticleDate,
 } from "../../atoms";
-import bar from "../../../../public/assets/bar.png";
+import bar from "/assets/bar.png";
 import "./ArticleContent.scss";
 import { BlogContext } from "/src/context/BlogContext";
 

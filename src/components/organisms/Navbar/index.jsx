@@ -1,6 +1,6 @@
 import { React, useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
-import Logo from "/public/assets/Logo.svg";
+import Logo from "/assets/Logo.svg";
 import "./Navbar.scss";
 import { Facebook, Instagram, Twitter } from "../../atoms";
 function Navbar() {
