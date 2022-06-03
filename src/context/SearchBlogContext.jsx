@@ -9,6 +9,7 @@ export const SearchBlogContext = React.createContext({
   setCurrentPage: () => {},
   currentPage: "",
   navigationItems: "",
+  navigationNumber: "",
   articles: [],
 });
 
@@ -142,6 +143,7 @@ const SearchBlogProvider = ({ children }) => {
         setCurrentPage: changeCurrentPageHandler,
         currentPage: paginationState.currentPage,
         navigationItems: navigationItems,
+        navigationNumber: paginationState.navigationNumber,
         windowSize: windowSize,
         fetchArticlesHandler,
       }}
