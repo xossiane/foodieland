@@ -1,4 +1,4 @@
-import React, { useReducer } from "react";
+import React, { useReducer, useEffect, useState } from "react";
 
 const paginationReducer = (state, action) => {
   if (action.type === "CHANGE__CURRENT__PAGE") {
@@ -47,16 +47,16 @@ const usePagination = (mobileConfig, desktopConfig) => {
     if (windowSize > 1024) {
       dispatchPaginationState({
         type: "CHANGE_RESOLUTION",
-        itensPerPage: 6,
-        navigationNumber: 5,
-        hasPageNumber: 4,
+        itensPerPage: desktopConfig.itensPerPage,
+        navigationNumber: desktopConfig.navigationNumber,
+        hasPageNumber: desktopConfig.hasPageNumber,
       });
     } else {
       dispatchPaginationState({
         type: "CHANGE_RESOLUTION",
-        itensPerPage: 3,
-        navigationNumber: 3,
-        hasPageNumber: 2,
+        itensPerPage: mobileConfig.itensPerPage,
+        navigationNumber: mobileConfig.navigationNumber,
+        hasPageNumber: mobileConfig.hasPageNumber,
       });
     }
   }, [windowSize]);
@@ -65,7 +65,7 @@ const usePagination = (mobileConfig, desktopConfig) => {
     dispatchPaginationState({ type: "CHANGE__CURRENT__PAGE", value: index });
   };
 
-  return [paginationState, changeCurrentPageHandler];
+  return [paginationState, changeCurrentPageHandler, windowSize];
 };
 
 export default usePagination;

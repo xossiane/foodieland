@@ -13,8 +13,10 @@ const Navigation = (props) => {
     navigationNumber,
   } = useContext(SearchBlogContext);
   const [isDesktop, setIsDesktop] = useState(false);
-  const [minPages, setMinPages] = useState(pages > 3);
-  const [maxPages, setMaxPages] = useState(currentPage <= pages - 4);
+  const [minPages, setMinPages] = useState(pages > navigationNumber);
+  const [maxPages, setMaxPages] = useState(
+    currentPage <= pages - (navigationNumber + 1)
+  );
 
   useEffect(() => {
     if (windowSize > 1024) {
