@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import { SearchIcon, Button } from "../../atoms";
 import "./SearchBlog.scss";
 import { BlogContext } from "/src/context/BlogContext";

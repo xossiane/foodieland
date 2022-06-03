@@ -42,7 +42,14 @@ function ArticleContent() {
         );
       })}
       {article.length === 0 && (
-        <p className="article__notfound">Article not found</p>
+        <>
+          <div className="article__triangle-container">
+            <div className="article__triangle">
+              <span className="article__triangle--icon">!</span>
+            </div>
+          </div>
+          <p className="article__notfound">Article not found</p>
+        </>
       )}
     </div>
   );
