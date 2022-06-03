@@ -41,7 +41,9 @@ function ArticleContent() {
           </article>
         );
       })}
-      {article.length === 0 && <p>Nenhuma receita econtrada 😭😭😭😭</p>}
+      {article.length === 0 && (
+        <p className="article__notfound">Article not found</p>
+      )}
     </div>
   );
 }
