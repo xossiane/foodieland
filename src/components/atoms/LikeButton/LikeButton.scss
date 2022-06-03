@@ -3,16 +3,16 @@
   position: absolute;
   right: 16px;
   top: 16px;
-}
 
-.like-button__button {
-  border: none;
-  background-color: $colorLight;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
+  &__button {
+    border: none;
+    background-color: $colorLight;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
 }
