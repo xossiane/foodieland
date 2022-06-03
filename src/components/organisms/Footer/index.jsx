@@ -1,11 +1,10 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import Logo from "/assets/Logo.svg";
 import "./Footer.scss";
-import { SearchBlogContext } from "/src/context/SearchBlogContext";
-
 import { Facebook, Instagram, Twitter } from "../../atoms";
 function Footer() {
-  const { windowSize } = useContext(SearchBlogContext);
+  const [windowSize, setWindowSize] = useState(window.innerWidth);
+
   const getSocial = () => {
     if (windowSize < 1024) {
       return (
@@ -25,6 +24,15 @@ function Footer() {
       );
     }
   };
+
+  useEffect(() => {
+    let timeoutId = null;
+    const updateSize = () => {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => setWindowSize(window.innerWidth), 150);
+    };
+    window.addEventListener("resize", updateSize);
+  }, []);
 
   return (
     <footer className="footer">

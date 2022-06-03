@@ -9,10 +9,10 @@ import {
 } from "../../atoms";
 import bar from "../../../../public/assets/bar.png";
 import "./ArticleContent.scss";
-import { SearchBlogContext } from "/src/context/SearchBlogContext";
+import { BlogContext } from "/src/context/BlogContext";
 
 function ArticleContent() {
-  const { getFilteredArray, dataArticles } = useContext(SearchBlogContext);
+  const { dataArticles } = useContext(BlogContext);
   //const article = getFilteredArray();
   const article = dataArticles;
 

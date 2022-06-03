@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { SearchBlogContext } from "../../../context/SearchBlogContext";
+import { BlogContext } from "../../../context/BlogContext";
 import { NavigationItem } from "../../atoms";
 import "./Navigation.scss";
 
@@ -11,7 +11,7 @@ const Navigation = (props) => {
     navigationItems,
     windowSize,
     navigationNumber,
-  } = useContext(SearchBlogContext);
+  } = useContext(BlogContext);
   const [isDesktop, setIsDesktop] = useState(false);
   const [minPages, setMinPages] = useState(pages > navigationNumber);
   const [maxPages, setMaxPages] = useState(

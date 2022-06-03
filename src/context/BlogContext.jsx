@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import articles from "/src/data/articles.json";
 import usePagination from "../hooks/usePagination";
 
-export const SearchBlogContext = React.createContext({
+export const BlogContext = React.createContext({
   searchInput: "",
   searchInputHandler: () => {},
   pages: "",
@@ -14,7 +14,7 @@ export const SearchBlogContext = React.createContext({
   articles: [],
 });
 
-const SearchBlogProvider = ({ children }) => {
+const BlogContextProvider = ({ children }) => {
   const [searchInput, setSearchInput] = useState("");
 
   const getFilteredArray = () => {
@@ -54,7 +54,7 @@ const SearchBlogProvider = ({ children }) => {
   );
 
   return (
-    <SearchBlogContext.Provider
+    <BlogContext.Provider
       value={{
         searchInput,
         searchInputHandler,
@@ -69,8 +69,8 @@ const SearchBlogProvider = ({ children }) => {
       }}
     >
       {children}
-    </SearchBlogContext.Provider>
+    </BlogContext.Provider>
   );
 };
 
-export default SearchBlogProvider;
+export default BlogContextProvider;

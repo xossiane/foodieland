@@ -1,11 +1,11 @@
 import React, { useState, useContext } from "react";
 import { SearchIcon, Button } from "../../atoms";
 import "./SearchBlog.scss";
-import { SearchBlogContext } from "/src/context/SearchBlogContext";
+import { BlogContext } from "/src/context/BlogContext";
 
 function SearchBlog() {
   const { searchInput, searchInputHandler, fetchArticlesHandler } =
-    useContext(SearchBlogContext);
+    useContext(BlogContext);
 
   const onSubmitHandler = (e) => {
     e.preventDefault();
