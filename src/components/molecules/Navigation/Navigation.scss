@@ -1,5 +1,16 @@
+@use "/public/styles/variables" as *;
+
 .navigation {
   margin-top: 22px;
   display: flex;
   justify-content: center;
+
+  @media screen {
+    @media (min-width: $desktop-x) {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
 }

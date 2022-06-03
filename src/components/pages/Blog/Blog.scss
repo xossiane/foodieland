@@ -4,11 +4,11 @@
   flex-direction: column;
   padding: 0 2rem;
   @media screen and (min-width: $desktop-x) {
-    margin: 60px auto;
     display: flex;
     max-width: 1280px;
     flex-direction: row;
-    margin: 0 auto;
+    margin: 0 auto 100px;
     justify-content: space-between;
+    position: relative;
   }
 }
