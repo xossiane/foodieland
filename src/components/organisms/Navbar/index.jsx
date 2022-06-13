@@ -44,9 +44,9 @@ function Navbar() {
             className={`nav__list ${isNavOpen ? "nav__list-display--on" : ""}`}
           >
             <li className="nav__list--item">
-              <a className="nav__list--link" href="#">
+              <Link className="nav__list--link" to="/">
                 Home
-              </a>
+              </Link>
             </li>
             <li className="nav__list--item">
               <a className="nav__list--link" href="#">
@@ -54,7 +54,7 @@ function Navbar() {
               </a>
             </li>
             <li className="nav__list--item">
-              <Link className="nav__list--link" to="/">
+              <Link className="nav__list--link" to="/blog">
                 Blog
               </Link>
             </li>

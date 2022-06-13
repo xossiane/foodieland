@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Logo from "/assets/Logo.svg";
 import "./Footer.scss";
 import { Facebook, Instagram, Twitter } from "../../atoms";
+import { Link } from "react-router-dom";
 function Footer() {
   const [windowSize, setWindowSize] = useState(window.innerWidth);
 
@@ -51,14 +52,14 @@ function Footer() {
               </a>
             </li>
             <li className="footer__list--item">
-              <a className="footer__list--link" href="#">
+              <Link className="footer__list--link" to="/blog">
                 Blog
-              </a>
+              </Link>
             </li>
             <li className="footer__list--item">
-              <a className="footer__list--link" href="#">
+              <Link className="footer__list--link" to="/contact">
                 Contact
-              </a>
+              </Link>
             </li>
             <li className="footer__list--item">
               <a className="footer__list--link" href="#">
