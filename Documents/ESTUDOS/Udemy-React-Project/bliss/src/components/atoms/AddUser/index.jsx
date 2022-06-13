@@ -1,11 +1,12 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import Button from '../../Button'
 
 function AddUser(props) {
+    const MainContext = React.createContext(AddUser);
     const [enterUsername, setEnterUsername] = useState('');
     const [enterAge, setEnterAge] = useState('');
-
+    
     const addUserHandler = (event) => {
         event.preventDefault();
         if (enterUsername.trim().length === 0 || enterAge.trim().length === 0) {
@@ -17,11 +18,15 @@ function AddUser(props) {
             alert("Please, enter a valid age")
         )}
 
-        props.onAddUser(enterUsername, enterAge);
+        console.log(enterUsername, enterAge);
+        // props.onAddUser(enterUsername, enterAge);
         setEnterUsername('');
         setEnterAge('');   
         
+        
     };
+    
+    
     
     const usernameChangeHandler = (event) => {
         setEnterUsername(event.target.value);
@@ -32,6 +37,7 @@ function AddUser(props) {
     };
 
     return (
+    
     <form className= "App-header__form"onSubmit={addUserHandler}>
         <label htmlFor = "username">Username:</label>
         <input className = "App-header__form--input" id = "username" type="text" placeholder="your name" value={enterUsername} onChange={usernameChangeHandler}/> 

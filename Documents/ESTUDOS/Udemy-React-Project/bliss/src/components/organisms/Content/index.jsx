@@ -1,5 +1,5 @@
 import { useState } from 'react';
-
+import MainContext from '../../atoms/AddUser'
 import '../../../App.scss'
 import AddUserSubmit from "../../molecules/AddUserSubmit";
 import UsersList from '../../molecules/UsersList';
@@ -17,7 +17,7 @@ function Content (props){
   
     return(
         
-        <><AddUserSubmit onAddUser={addUserHandler} ></AddUserSubmit><UsersList users={usersList}></UsersList></>
+        <><MainContext onAddUser={setUsersList} > <AddUserSubmit AddUser={addUserHandler} ></AddUserSubmit><UsersList users={usersList}></UsersList></MainContext></>
        
        
     )
