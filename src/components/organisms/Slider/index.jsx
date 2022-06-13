@@ -33,7 +33,10 @@ const Slider = (props) => {
   return (
     <section className="slider">
       <div className="slider__container">
-        <h2 className="slider__title">Check out the delicious recipe</h2>
+        <h2 className="slider__title">{props.title}</h2>
+        {props.subtitle && (
+          <h4 className="slider__subTittle">{props.subtitle}</h4>
+        )}
       </div>
       <div className="slider__container">
         <div className="slider__prev">
