@@ -1,0 +1,30 @@
+[
+  {
+    "id": 0,
+    "image": "/assets/Food01.png",
+    "title": "Mixed Tropical Fruit Salad with Superfood Boosts",
+    "firstInfo": "30 Minutes",
+    "secondInfo": "Healthy"
+  },
+  {
+    "id": 1,
+    "image": "/assets/Food02.png",
+    "title": "Big and Juicy Wagyu Beef Cheeseburger",
+    "firstInfo": "30 Minutes",
+    "secondInfo": "Western"
+  },
+  {
+    "id": 2,
+    "image": "/assets/Food03.png",
+    "title": "Healthy Japanese Fried Rice with Asparagus",
+    "firstInfo": "30 Minutes",
+    "secondInfo": "Healthy"
+  },
+  {
+    "id": 3,
+    "image": "/assets/Food04.png",
+    "title": "Cauliflower Walnut Vegetarian Taco Meat",
+    "firstInfo": "30 Minutes",
+    "secondInfo": "Eastern"
+  }
+]
