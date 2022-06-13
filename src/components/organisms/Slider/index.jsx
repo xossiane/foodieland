@@ -3,49 +3,12 @@ import React, { useRef, useState } from "react";
 import "./Slider.scss";
 
 import { Card } from "../../molecules";
-
-import Food01 from "/assets/Food01.png";
-import Food02 from "/assets/Food02.png";
-import Food03 from "/assets/Food03.png";
-import Food04 from "/assets/Food04.png";
-
+import cardData from "../../../data/cardData.json";
 import Prev from "/assets/Prev.svg";
 import Next from "/assets/Next.svg";
 
 const Slider = () => {
   const [isScrolling, setIsScrolling] = useState(false);
-
-  const cardData = [
-    {
-      id: 0,
-      image: Food01,
-      title: "Mixed Tropical Fruit Salad with Superfood Boosts",
-      firstInfo: "30 Minutes",
-      secondInfo: "Healthy",
-    },
-    {
-      id: 1,
-      image: Food02,
-      title: "Big and Juicy Wagyu Beef Cheeseburger",
-      firstInfo: "30 Minutes",
-      secondInfo: "Western",
-    },
-    {
-      id: 2,
-      image: Food03,
-      title: "Healthy Japanese Fried Rice with Asparagus",
-      firstInfo: "30 Minutes",
-      secondInfo: "Healthy",
-    },
-    {
-      id: 3,
-      image: Food04,
-      title: "Cauliflower Walnut Vegetarian Taco Meat",
-      firstInfo: "30 Minutes",
-      secondInfo: "Eastern",
-    },
-  ];
-
   const slider = useRef(null);
 
   const leftArrowClickHandler = () => {
