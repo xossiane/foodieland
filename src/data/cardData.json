@@ -29,30 +29,30 @@
   },
   {
     "id": 4,
-    "image": "/assets/Food01.png",
-    "title": "Mixed Tropical Fruit Salad with Superfood Boosts",
+    "image": "/assets/Food05.png",
+    "title": "Rainbow Chicken Salad with Almond Honey Mustard Dressing",
     "firstInfo": "30 Minutes",
     "secondInfo": "Healthy"
   },
   {
     "id": 5,
-    "image": "/assets/Food02.png",
-    "title": "Big and Juicy Wagyu Beef Cheeseburger",
+    "image": "/assets/Food06.png",
+    "title": "Barbeque Spicy Sandwiches with Chips ",
     "firstInfo": "30 Minutes",
-    "secondInfo": "Western"
+    "secondInfo": "Snack"
   },
   {
     "id": 6,
-    "image": "/assets/Food03.png",
-    "title": "Healthy Japanese Fried Rice with Asparagus",
+    "image": "/assets/Food07.png",
+    "title": "Firecracker Vegan Lettuce Wraps - Spicy! ",
     "firstInfo": "30 Minutes",
-    "secondInfo": "Healthy"
+    "secondInfo": "Seafood"
   },
   {
     "id": 7,
-    "image": "/assets/Food04.png",
-    "title": "Cauliflower Walnut Vegetarian Taco Meat",
+    "image": "/assets/article1.png",
+    "title": "Chicken Ramen Soup with Mushroom ",
     "firstInfo": "30 Minutes",
-    "secondInfo": "Eastern"
+    "secondInfo": "Japanese"
   }
 ]
