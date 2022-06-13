@@ -1,9 +1,9 @@
-import { Navbar, Footer } from "../../organisms";
+import { Navbar, Footer, Slider } from "../../organisms";
 export default function Home() {
   return (
     <div>
       <Navbar />
-      <h1>Home</h1>
+      <Slider length="8" />
       <Footer />
     </div>
   );

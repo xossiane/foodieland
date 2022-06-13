@@ -1,14 +1,12 @@
 @use "/public/styles/variables" as *;
 .card {
-  margin-right: 50px;
+  &:not(:last-child) {
+    margin-right: 50px;
 
-  &:nth-child(4) {
-    margin-right: 0;
-  }
-
-  @media screen {
-    @media (min-width: $desktop-xm) {
-      margin-right: 40px;
+    @media screen {
+      @media (min-width: $desktop-xm) {
+        margin-right: 40px;
+      }
     }
   }
 }
