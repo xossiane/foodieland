@@ -74,6 +74,7 @@
       @media (min-width: $desktop-xm) {
         justify-content: center;
         flex-wrap: wrap;
+        row-gap: 4rem;
       }
     }
   }
