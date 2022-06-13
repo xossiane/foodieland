@@ -7,7 +7,7 @@ import cardData from "../../../data/cardData.json";
 import Prev from "/assets/Prev.svg";
 import Next from "/assets/Next.svg";
 
-const Slider = () => {
+const Slider = (props) => {
   const [isScrolling, setIsScrolling] = useState(false);
   const slider = useRef(null);
 
@@ -28,6 +28,8 @@ const Slider = () => {
     }, 1000);
   };
 
+  const slicedCardData = cardData.slice(0, props.length);
+
   return (
     <section className="slider">
       <div className="slider__container">
@@ -44,7 +46,7 @@ const Slider = () => {
           </button>
         </div>
         <div className="slider__content" ref={slider}>
-          {cardData.map((data) => (
+          {slicedCardData.map((data) => (
             <Card
               key={data.id}
               image={data.image}

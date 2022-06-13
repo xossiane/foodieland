@@ -6,7 +6,7 @@ function Contact() {
       <Navbar />
       <Form />
       <NewsletterForm />
-      <Slider />
+      <Slider length="4" />
       <Footer />
     </>
   );
