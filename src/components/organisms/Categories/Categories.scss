@@ -4,7 +4,7 @@
   display: grid;
   width: 100%;
   max-width: 42rem;
-  grid-template: repeat(5, auto) / repeat(2, minmax(auto, 42rem));
+  grid-template: repeat(4, auto) / repeat(2, minmax(auto, 42rem));
   row-gap: 3.8rem;
   column-gap: 2.8rem;
   justify-items: center;
@@ -14,6 +14,11 @@
     font-weight: 600;
     font-family: $inter;
     text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  &__button {
     grid-column-start: 1;
     grid-column-end: 3;
   }

@@ -13,7 +13,9 @@ const Categories = () => {
       <CategoriesCard image={Breakfast} text="Breakfast" />
       <CategoriesCard image={Breakfast} text="Breakfast" />
       <CategoriesCard image={Breakfast} text="Breakfast" />
-      <Button>View All Categories</Button>
+      <Button className="button--blue categories__button">
+        View All Categories
+      </Button>
     </section>
   );
 };
