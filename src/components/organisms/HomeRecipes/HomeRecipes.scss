@@ -6,9 +6,11 @@
 
 .ads__img--mt{ 
     @media only screen and (min-width: $tablet){
-    
     width: 359.44px;
     height: 383px;
+    position: relative;
+    bottom: 609px;
+    left: 1150px;
 }
 }
 
