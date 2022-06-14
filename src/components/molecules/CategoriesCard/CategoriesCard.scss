@@ -2,6 +2,7 @@
 
 .categories {
   &__card {
+    position: relative;
     height: 20rem;
     width: 18rem;
     display: flex;
@@ -46,6 +47,19 @@
         rgba(0, 0, 0, 0.05) 100%
       );
     }
+  }
+
+  &__image {
+    z-index: 3;
+  }
+
+  &__blur {
+    position: absolute;
+    z-index: 1;
+    top: 2rem;
+    right: 2rem;
+    filter: blur(1.8rem);
+    opacity: 0.3;
   }
 
   &__text {
