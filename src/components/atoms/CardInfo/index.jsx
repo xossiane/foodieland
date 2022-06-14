@@ -5,7 +5,7 @@ import Timer from "/assets/Timer.svg";
 
 const CardInfo = (props) => {
   return (
-    <div className="card__info">
+    <div className={`${`card__info`} ${props.className}`}>
       <div className="card__info__item">
         <img src={ForkKnife} />
         <p className="card__info__text">{props.firstInfo}</p>

@@ -1,0 +1,55 @@
+@use "/public/styles/variables" as *;
+.HomeRecipes{
+    
+    &__title{
+    font-family: $inter;
+    color: $colorDark;
+    font-weight: 900;
+    font-size: 3.5rem;
+    line-height: 36px;
+    letter-spacing: -0.04em;
+    width: 30.1rem;
+    height: 8.9rem;
+    text-align: center;
+    
+
+    }
+    &__text{
+    font-family: $inter;
+    font-size: 1.6rem;
+    color: $colorGrey;
+    height: 11.2rem;
+    width: 35.9rem;
+    font-weight: 400;
+    margin: auto;
+    text-align: center;
+    margin-top: 1.5rem;
+    width: 35.9rem;
+    line-height: 2.5rem;
+    letter-spacing: 0.02em;
+    }
+    &__content {
+    background: $colorBlue;
+    border-radius: 30px;
+    width: 344.26px;
+    height: 446.73px;
+    display: flex;
+    margin: auto;
+    align-items: center;
+}
+    &__info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    }
+
+.card--mt{
+    align-items: center;
+    margin: 0 auto;
+}
+
+
+
+
