@@ -9,71 +9,86 @@
   margin: 0 auto;
   border-radius: 50px;
 
-  &__mainCourse {
+  &__header {
     display: inline-block;
     position: relative;
   }
-}
 
-.imgDentro {
-  position: absolute;
-  width: 99.96px;
-  height: 98.4px;
-  left: 2%;
-  top: 80%;
-}
-.textoDentro {
-  width: 71.7px;
-  height: 11.14px;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 15px;
-  letter-spacing: -0.02em;
-  color: #000000;
-}
-.hot {
-  position: absolute;
-  display: flex;
-  left: 75%;
-  top: 90%;
-}
-.bot {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.testeImg {
-  width: 417px;
-  height: 414px;
-  transform: matrix(0, -1, 1, 0, 0, 0);
-  border-radius: 0px 50px 50px 0px;
-}
+  &__mainCourse {
+    width: 417px;
+    height: 414px;
+    transform: matrix(0, -1, 1, 0, 0, 0);
+    border-radius: 0px 50px 50px 0px;
+  }
 
-.testeTitle {
-  width: 413px;
-  height: 61px;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 26px;
-  line-height: 31px;
-  text-align: center;
-  letter-spacing: -0.04em;
-  color: #000000;
-  margin-top: 30.6px;
-}
-.testeDesc {
-  width: 341px;
-  height: 66px;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 28px;
-  text-align: center;
-  color: rgba(0, 0, 0, 0.6);
+  &__recipesLike {
+    position: absolute;
+    width: 99.96px;
+    height: 98.4px;
+    left: 2%;
+    top: 80%;
+  }
+
+  &__topContainer {
+    width: 141.58px;
+    height: 29.48px;
+    background-color: white;
+    border-radius: 50px;
+    position: absolute;
+    display: flex;
+    left: 65%;
+    top: 90%;
+    justify-content: center;
+    align-items: center;
+
+    &--icon {
+      width: 21.78px;
+      height: 15.73px;
+    }
+    &--title {
+      width: 71.7px;
+      height: 11.14px;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 15px;
+      letter-spacing: -0.02em;
+      color: #000000;
+    }
+  }
+
+  &__botContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &--title {
+      width: 413px;
+      height: 61px;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 26px;
+      line-height: 31px;
+      text-align: center;
+      letter-spacing: -0.04em;
+      color: #000000;
+      margin-top: 30.6px;
+    }
+
+    &--description {
+      width: 341px;
+      height: 66px;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 28px;
+      text-align: center;
+      color: rgba(0, 0, 0, 0.6);
+    }
+  }
 }
 
 .containerLabel {

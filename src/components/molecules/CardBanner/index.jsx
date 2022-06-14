@@ -4,19 +4,26 @@ export default function CardHomeHeader(props) {
     <>
       {props.data.map((dado) => (
         <div key={dado.id} className="banner">
-          <div className="banner__mainCourse">
-            <img className="testeImg" src={dado.img} />
+          <div className="banner__header">
+            <img className="banner__mainCourse" src={dado.img} />
+            <img
+              className="banner__recipesLike"
+              src="/assets/recipesLike.png"
+            />
 
-            <img className="imgDentro" src="/assets/recipesLike.png" />
-            <div className="hot">
-              <img src="/assets/folhaPequena.png" />
-              <p className="textoDentro">Hot Recipes</p>
+            <div className="banner__topContainer">
+              <img
+                className="banner__topContainer--icon"
+                src="/assets/folhaPequena.png"
+              />
+              <p className="banner__topContainer--title">Hot Recipes</p>
             </div>
           </div>
 
-          <div className="bot">
-            <h2 className="testeTitle">{dado.title}</h2>
-            <p className="testeDesc">{dado.desc}</p>
+          <div className="banner__botContainer">
+            <h2 className="banner__botContainer--title">{dado.title}</h2>
+
+            <p className="banner__botContainer--description">{dado.desc}</p>
 
             <div className="containerLabel">
               <div className="card">
