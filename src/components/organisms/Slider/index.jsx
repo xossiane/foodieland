@@ -10,6 +10,7 @@ import Next from "/assets/Next.svg";
 const Slider = (props) => {
   const [isScrolling, setIsScrolling] = useState(false);
   const slider = useRef(null);
+  const classes = "slider " + props.className;
 
   const leftArrowClickHandler = () => {
     slider.current.scrollBy(-340, 0);
@@ -31,7 +32,7 @@ const Slider = (props) => {
   const slicedCardData = cardData.slice(0, props.length);
 
   return (
-    <section className="slider">
+    <section className={classes}>
       <div className="slider__container">
         <h2 className="slider__title">{props.title}</h2>
         {props.subtitle && (
