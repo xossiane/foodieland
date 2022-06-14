@@ -36,7 +36,7 @@ const Slider = (props) => {
       <div className="slider__container">
         <h2 className="slider__title">{props.title}</h2>
         {props.subtitle && (
-          <h4 className="slider__subTittle">{props.subtitle}</h4>
+          <h4 className="slider__subTitle">{props.subtitle}</h4>
         )}
       </div>
       <div className="slider__container">

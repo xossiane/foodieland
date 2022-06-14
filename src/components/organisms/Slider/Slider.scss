@@ -15,6 +15,10 @@
     }
   }
 
+  &--homeSlider &__container:first-child {
+    display: block;
+  }
+
   &__title {
     font-family: $inter;
     font-weight: $fontWeightTitle;
@@ -23,6 +27,16 @@
     line-height: 43.57px;
     letter-spacing: -4%;
     text-align: center;
+  }
+
+  &__subTitle {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: center;
+    color: $colorGrey;
+    font-family: $inter;
+    margin-bottom: 30px;
   }
 
   &__prev {
@@ -77,6 +91,18 @@
         row-gap: 4rem;
       }
     }
+  }
+
+  //modificadores
+  &--homeSlider &__container:first-child {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &--homeSlider &__title {
+    font-size: 3rem;
+    line-height: 3.8rem;
+    margin-bottom: 1.4rem;
   }
 
   @media screen {
