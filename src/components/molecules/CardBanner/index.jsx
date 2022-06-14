@@ -27,7 +27,10 @@ export default function CardHomeHeader(props) {
                 <h4>{dado.date}</h4>
               </div>
             </div>
-            <button>View Recipes</button>
+            <button className="testeBtn">
+              View Recipes
+              <span className="play"></span>
+            </button>
           </div>
         </div>
       ))}

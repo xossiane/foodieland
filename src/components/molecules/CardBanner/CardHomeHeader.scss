@@ -67,6 +67,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  margin-top: 23px;
 }
 
 .testeUser {
@@ -78,4 +79,41 @@
   align-items: baseline;
   justify-content: space-evenly;
   margin-left: 17px;
+}
+.testeBtn {
+  width: 151.19px;
+  height: 41.48px;
+  border: none;
+  border-radius: 100px;
+  position: relative;
+  text-align: left;
+  padding: 0 20px;
+  cursor: pointer;
+}
+.play {
+  display: inline-block;
+  width: 24.53px;
+  height: 22.56px;
+  position: absolute;
+  top: 50%;
+  right: 10%;
+
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background-color: #ffff;
+}
+.play::after {
+  content: " ";
+  width: 8px;
+  height: 8px;
+  background-color: #000000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+.testeBtn:hover .play {
+  background-color: blue;
 }
