@@ -1,10 +1,12 @@
+@use "/public/styles/variables" as *;
+
 .banner {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-content: center;
   width: 417px;
-  height: 832px;
+  height: 770px;
   background: #e7fafe;
   margin: 0 auto;
   border-radius: 50px;
@@ -46,15 +48,16 @@
       height: 15.73px;
     }
     &--title {
+      margin-left: 10px;
       width: 71.7px;
       height: 11.14px;
-      font-family: "Inter";
+      font-family: $inter;
       font-style: normal;
-      font-weight: 600;
+      font-weight: $fontWeightTitle;
       font-size: 12px;
       line-height: 15px;
       letter-spacing: -0.02em;
-      color: #000000;
+      color: $colorDark;
     }
   }
 
@@ -66,27 +69,27 @@
     &--title {
       width: 413px;
       height: 61px;
-      font-family: "Inter";
+      font-family: $inter;
       font-style: normal;
-      font-weight: 600;
+      font-weight: $fontWeightTitle;
       font-size: 26px;
       line-height: 31px;
       text-align: center;
       letter-spacing: -0.04em;
-      color: #000000;
+      color: $colorDark;
       margin-top: 30.6px;
     }
 
     &--description {
       width: 341px;
       height: 66px;
-      font-family: "Inter";
+      font-family: $inter;
       font-style: normal;
       font-weight: 400;
       font-size: 16px;
       line-height: 28px;
       text-align: center;
-      color: rgba(0, 0, 0, 0.6);
+      color: $colorGrey;
     }
   }
 
@@ -110,13 +113,14 @@
     }
 
     &--content {
-      font-family: "Inter";
+      margin-left: 10px;
+      font-family: $inter;
       font-style: normal;
-      font-weight: 500;
+      font-weight: $fontWeightBody;
       font-size: 14px;
       line-height: 17px;
       letter-spacing: -0.02em;
-      color: rgba(0, 0, 0, 0.6);
+      color: $colorGrey;
     }
   }
   &__footer {
@@ -139,27 +143,27 @@
       width: 90.75px;
       height: 20.14px;
 
-      font-family: "Inter";
+      font-family: $inter;
       font-style: normal;
       font-weight: 700;
       font-size: 16px;
       line-height: 19px;
       letter-spacing: -0.02em;
 
-      color: #000000;
+      color: $colorDark;
     }
     &--date {
       width: 102.35px;
       height: 18.02px;
 
-      font-family: "Inter";
+      font-family: $inter;
       font-style: normal;
-      font-weight: 500;
+      font-weight: $fontWeightBody;
       font-size: 14px;
       line-height: 17px;
       letter-spacing: -0.02em;
 
-      color: rgba(0, 0, 0, 0.6);
+      color: $colorGrey;
     }
   }
 
@@ -172,7 +176,7 @@
     text-align: left;
     padding: 0 20px;
     cursor: pointer;
-    background: #000000;
+    background: $colorDark;
     color: white;
     margin-left: 50px;
     &--play {
@@ -185,13 +189,13 @@
 
       transform: translateY(-50%);
       border-radius: 50%;
-      background-color: #ffff;
+      background-color: $colorLight;
 
       &::after {
         content: " ";
         width: 8px;
         height: 8px;
-        background-color: #000000;
+        background-color: $colorDark;
         position: absolute;
         top: 50%;
         left: 50%;
