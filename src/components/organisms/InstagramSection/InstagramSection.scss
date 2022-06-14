@@ -1,0 +1,22 @@
+@use "/public/styles/variables" as *;
+
+.InstagramSection{
+    &__text{
+        text-align: center;
+        font-family: $inter;
+        padding: 0 1.5rem;
+
+        &Heading{
+            font-size: 2.8rem;
+        }
+
+        &Paragraph{
+            font-size: 1.4rem;
+            letter-spacing: .04rem;
+        }
+    }
+
+    &__posts{
+        width: fit-content;
+    }
+}

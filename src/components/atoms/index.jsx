@@ -18,3 +18,4 @@ export { default as ArticleText } from "./ArticleText";
 export { default as BlogTitle } from "./BlogTitle";
 export { default as SearchIcon } from "./SearchIcon";
 export { default as Button } from "./Button";
+export { default as CircleAvatar } from "./CircleAvatar";

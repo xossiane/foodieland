@@ -7,3 +7,4 @@ export { default as Recipes } from "./Recipes";
 export { default as Articles } from "./Articles";
 export { default as BlogHeader } from "./BlogHeader";
 export { default as LearnMore } from "./LearnMore";
+export { default as InstagramSection } from "./InstagramSection";
