@@ -6,7 +6,7 @@ export default function Home() {
       <Slider
         className="slider--homeSlider"
         length="8"
-        title="Try this delicious recipeto make your day"
+        title="Try this delicious recipe to make your day"
         subtitle="Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim "
       />
       <Footer />

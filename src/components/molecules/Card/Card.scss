@@ -9,4 +9,12 @@
       }
     }
   }
+
+  &:nth-child(4n) {
+    @media screen {
+      @media (min-width: $desktop-xm) {
+        margin-right: 0px;
+      }
+    }
+  }
 }

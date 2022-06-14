@@ -107,8 +107,9 @@
     @media screen {
       @media (min-width: $desktop) {
         flex-direction: row;
+        column-gap: 14rem;
         align-items: center;
-        padding: 0 5rem;
+        padding: 0 8rem;
       }
     }
   }
