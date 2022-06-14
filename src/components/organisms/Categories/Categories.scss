@@ -4,10 +4,11 @@
   display: grid;
   width: 100%;
   max-width: 42rem;
-  grid-template: repeat(4, auto) / repeat(2, minmax(auto, 42rem));
+  grid-template: repeat(5, auto) / repeat(2, minmax(auto));
   row-gap: 3.8rem;
   column-gap: 2.8rem;
   justify-items: center;
+  margin: 0 auto;
 
   &__title {
     font-size: 4.8rem;
@@ -16,10 +17,54 @@
     text-align: center;
     grid-column-start: 1;
     grid-column-end: 3;
+
+    @media screen {
+      @media (min-width: $tablet) {
+        grid-column-end: 4;
+      }
+    }
+
+    @media screen {
+      @media (min-width: $desktop-x) {
+        grid-column-end: 4;
+        justify-self: left;
+      }
+    }
   }
 
   &__button {
     grid-column-start: 1;
     grid-column-end: 3;
+
+    @media screen {
+      @media (min-width: $tablet) {
+        grid-column-start: 1;
+        grid-column-end: 4;
+      }
+    }
+
+    @media screen {
+      @media (min-width: $desktop-x) {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 4;
+        grid-column-end: 7;
+        justify-self: right;
+      }
+    }
+  }
+
+  @media screen {
+    @media (min-width: $tablet) {
+      max-width: 80rem;
+      grid-template: repeat(4, auto) / repeat(3, auto);
+    }
+  }
+
+  @media screen {
+    @media (min-width: $desktop-x) {
+      max-width: 130rem;
+      grid-template: repeat(2, auto) / repeat(6, auto);
+    }
   }
 }
