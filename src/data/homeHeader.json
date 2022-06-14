@@ -1,0 +1,29 @@
+[
+  {
+    "id": 0,
+    "img": "/assets/recipes1.png",
+    "title": "Chicken Meatballs with Cream Cheese",
+    "desc": "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim",
+    "avatar": "/assets/robert.png",
+    "author": "Robert Fox",
+    "date": "12 November 2021"
+  },
+  {
+    "id": 1,
+    "img": "/assets/recipes2.png",
+    "title": "Traditional Bolognaise Ragu",
+    "desc": "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim",
+    "avatar": "/assets/robert.png",
+    "author": "Robert Fox",
+    "date": "12 November 2021"
+  },
+  {
+    "id": 2,
+    "img": "/assets/recipes3.png",
+    "title": "Pork and Chive Chinese Dumplings",
+    "desc": "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim",
+    "avatar": "/assets/robert.png",
+    "author": "Robert Fox",
+    "date": "12 November 2021"
+  }
+]
