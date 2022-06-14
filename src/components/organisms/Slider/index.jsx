@@ -14,6 +14,7 @@ import Next from "/assets/Next.svg";
 
 const Slider = () => {
   const [isScrolling, setIsScrolling] = useState(false);
+  const cardRef = useRef();
 
   const cardData = [
     {
@@ -83,6 +84,7 @@ const Slider = () => {
         <div className="slider__content" ref={slider}>
           {cardData.map((data) => (
             <Card
+              ref={cardRef}
               key={data.id}
               image={data.image}
               title={data.title}
