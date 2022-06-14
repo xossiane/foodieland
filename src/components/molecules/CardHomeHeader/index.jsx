@@ -20,10 +20,12 @@ export default function CardHomeHeader(props) {
           </div>
 
           <div className="containerBot">
-            <div>
+            <div className="testeUser">
               <img src={dado.avatar} />
-              <h3>{dado.author}</h3>
-              <h4>{dado.date}</h4>
+              <div className="testeDadosUser">
+                <h3>{dado.author}</h3>
+                <h4>{dado.date}</h4>
+              </div>
             </div>
             <button>View Recipes</button>
           </div>

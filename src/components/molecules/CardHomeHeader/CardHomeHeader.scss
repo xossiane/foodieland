@@ -63,5 +63,19 @@
 }
 
 .containerBot {
-  border: 1px solid red;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.testeUser {
+  display: flex;
+}
+.testeDadosUser {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: space-evenly;
+  margin-left: 17px;
 }
