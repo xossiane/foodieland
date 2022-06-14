@@ -1,7 +1,7 @@
 import "./CategoriesCard.scss";
 
 const CategoriesCard = (props) => {
-  const classes = "categories__card" + props.className;
+  const classes = "categories__card " + props.className;
 
   return (
     <div className={classes}>
