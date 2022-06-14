@@ -1,20 +1,24 @@
 [
   {
     "id": 0,
-    "img": "/assets/recipes1.png",
-    "title": "Chicken Meatballs with Cream Cheese",
-    "desc": "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim",
-    "avatar": "/assets/robert.png",
-    "author": "Robert Fox",
-    "date": "12 November 2021"
+    "img": "/assets/frangoHomeHeader.png",
+    "title": "Spicy delicious checken wings",
+    "desc": "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim ",
+    "avatar": "/assets/john.png",
+    "author": "John Smith",
+    "time": "30 Minutes",
+    "category": "Chicken",
+    "date": "15 March 2022"
   },
   {
     "id": 1,
-    "img": "/assets/recipes2.png",
+    "img": "/assets/vagemHomeHeader.png",
     "title": "Traditional Bolognaise Ragu",
     "desc": "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim",
     "avatar": "/assets/robert.png",
     "author": "Robert Fox",
+    "time": "25 Minutes",
+    "category": "Vegan",
     "date": "12 November 2021"
   },
   {
@@ -24,6 +28,8 @@
     "desc": "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim",
     "avatar": "/assets/robert.png",
     "author": "Robert Fox",
+    "time": "45 Minutes",
+    "category": "Dessert",
     "date": "12 November 2021"
   }
 ]
