@@ -1,0 +1,67 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+}
+.testeImg {
+  height: 408.98px;
+  transform: matrix(0, -1, 1, 0, 0, 0);
+}
+
+.testeTitle {
+  width: 413px;
+  height: 61px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 31px;
+  text-align: center;
+  letter-spacing: -0.04em;
+  color: #000000;
+}
+.testeDesc {
+  width: 341px;
+  height: 66px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.containerLabel {
+  margin-top: 56px;
+  margin-top: 56px;
+  display: flex;
+}
+
+.card {
+  width: 139.82px;
+  height: 39px;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.testeItens {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: -0.02em;
+  color: rgba(0, 0, 0, 0.6);
+}
+.testeImgDesc {
+  width: 24.14px;
+  height: 23.4px;
+}
+
+.containerBot {
+  border: 1px solid red;
+}

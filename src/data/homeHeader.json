@@ -6,30 +6,10 @@
     "desc": "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim ",
     "avatar": "/assets/john.png",
     "author": "John Smith",
+    "iconTimer": "/assets/Timer.png",
     "time": "30 Minutes",
     "category": "Chicken",
+    "iconCategory": "/assets/ForkKnife.png",
     "date": "15 March 2022"
-  },
-  {
-    "id": 1,
-    "img": "/assets/vagemHomeHeader.png",
-    "title": "Traditional Bolognaise Ragu",
-    "desc": "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim",
-    "avatar": "/assets/robert.png",
-    "author": "Robert Fox",
-    "time": "25 Minutes",
-    "category": "Vegan",
-    "date": "12 November 2021"
-  },
-  {
-    "id": 2,
-    "img": "/assets/recipes3.png",
-    "title": "Pork and Chive Chinese Dumplings",
-    "desc": "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim",
-    "avatar": "/assets/robert.png",
-    "author": "Robert Fox",
-    "time": "45 Minutes",
-    "category": "Dessert",
-    "date": "12 November 2021"
   }
 ]
