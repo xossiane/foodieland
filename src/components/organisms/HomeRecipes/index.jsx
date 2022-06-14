@@ -1,35 +1,50 @@
-import { Card } from "../../molecules";
-import homerecipes from "/src/data/homerecipes.json";
+import HomeRecipes from "../../molecules/HomeRecipes"
+import React, { useRef, useState } from "react";
+import { Advertising } from "../../atoms";
 import './HomeRecipes.scss'
 
-function HomeRecipes (props) {
+import Prev from "/assets/Prev.svg";
+import Next from "/assets/Next.svg";
+
+function HomeRecipesSlider() {
+    const [isScrolling, setIsScrolling] = useState(0);
+    const slider = useRef(null);
+
+    const leftArrowClickHandler = () => {
+        slider.current.scrollBy(-340, 0);
+        disableBtnHandler();
+      };
     
-    const recipes = homerecipes;
-return (
-    <div className="HomeRecipes__post">
-        <div className="HomeRecipes__info">
-        <h2 className="HomeRecipes__title">Simple and tasty recipes</h2>
-        <p className="HomeRecipes__text">Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim </p>
-        </div>
-        
-        {recipes.map((recipes) => (
-            <div className="HomeRecipes__content">
-            <Card
-              key={recipes.id}
-              image={recipes.img}
-              title={recipes.title}
-              firstInfo={recipes.firstInfo}
-              secondInfo={recipes.secondInfo}
-              className="card--mt"
-            ></Card>
-            </div>)
-            
-            )
-            
-        }
-        
-    </div>
-)
+      const rightArrowClickHandler = () => {
+        slider.current.scrollBy(340, 0);
+        disableBtnHandler();
+      };
+    
+      const disableBtnHandler = () => {
+        setIsScrolling(true);
+        setInterval(() => {
+          setIsScrolling(false);
+        }, 1000);
+      };
+
+    return (
+        <section className="HomeRecipes__slider">
+         <button
+            className="slider__button--mt"
+            onClick={leftArrowClickHandler}
+            disabled={isScrolling}>
+            <img src={Prev} />
+          </button>        
+        <HomeRecipes ref={slider}></HomeRecipes>
+        <button
+            className="slider__button--mt"
+            onClick={rightArrowClickHandler}
+            disabled={isScrolling}
+          >
+            <img src={Next} />
+          </button>
+          <Advertising className="ads__img--mt"></Advertising>
+        </section> )
 }
 
-export default HomeRecipes;
+export default HomeRecipesSlider;
