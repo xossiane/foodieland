@@ -13,8 +13,8 @@
   },
   {
     "id": 2,
-    "img": "/assets/meet.png",
-    "text": "Vegan",
+    "img": "/assets/meat.png",
+    "text": "Meat",
     "class": "categories__card--red"
   },
   {
