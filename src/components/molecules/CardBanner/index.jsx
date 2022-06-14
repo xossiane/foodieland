@@ -25,28 +25,29 @@ export default function CardHomeHeader(props) {
 
             <p className="banner__botContainer--description">{dado.desc}</p>
 
-            <div className="containerLabel">
-              <div className="card">
-                <img className="testeImgDesc" src={dado.iconTimer} />
-                <p className="testeItens"> {dado.time}</p>
+            <div className="banner__informations">
+              <div className="banner__card mr">
+                <img className="banner__card--icons" src={dado.iconTimer} />
+                <p className="banner__card--content"> {dado.time}</p>
               </div>
-              <div className="card">
-                <img className="testeImgDesc" src={dado.iconCategory} />
-                <p className="testeItens"> {dado.category}</p>
+              <div className="banner__card ml">
+                <img className="banner__card--icons" src={dado.iconCategory} />
+                <p className="banner__card--content"> {dado.category}</p>
               </div>
             </div>
 
-            <div className="containerBot">
-              <div className="testeUser">
+            <div className="banner__footer">
+              <div className="banner__authorInformations">
                 <img src={dado.avatar} />
-                <div className="testeDadosUser">
-                  <h3>{dado.author}</h3>
-                  <h4>{dado.date}</h4>
+                <div className="banner__authorData">
+                  <h3 className="banner__authorData--name">{dado.author}</h3>
+                  <h4 className="banner__authorData--date">{dado.date}</h4>
                 </div>
               </div>
-              <button className="testeBtn">
+
+              <button className="banner__button">
                 View Recipes
-                <span className="play"></span>
+                <span className="banner__button--play"></span>
               </button>
             </div>
           </div>
