@@ -8,12 +8,13 @@
   background: #e7fafe;
   margin: 0 auto;
   border-radius: 50px;
+
+  &__mainCourse {
+    display: inline-block;
+    position: relative;
+  }
 }
 
-.teste {
-  display: inline-block;
-  position: relative;
-}
 .imgDentro {
   position: absolute;
   width: 99.96px;

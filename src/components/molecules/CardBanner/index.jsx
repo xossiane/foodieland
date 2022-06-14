@@ -4,7 +4,7 @@ export default function CardHomeHeader(props) {
     <>
       {props.data.map((dado) => (
         <div key={dado.id} className="banner">
-          <div className="teste">
+          <div className="banner__mainCourse">
             <img className="testeImg" src={dado.img} />
 
             <img className="imgDentro" src="/assets/recipesLike.png" />
