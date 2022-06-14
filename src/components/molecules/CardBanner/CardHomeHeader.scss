@@ -1,12 +1,53 @@
-.container {
+.banner {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-content: center;
+  width: 417px;
+  height: 832px;
+  background: #e7fafe;
+  margin: 0 auto;
+  border-radius: 50px;
+}
+
+.teste {
+  display: inline-block;
+  position: relative;
+}
+.imgDentro {
+  position: absolute;
+  width: 99.96px;
+  height: 98.4px;
+  left: 2%;
+  top: 80%;
+}
+.textoDentro {
+  width: 71.7px;
+  height: 11.14px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: -0.02em;
+  color: #000000;
+}
+.hot {
+  position: absolute;
+  display: flex;
+  left: 75%;
+  top: 90%;
+}
+.bot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .testeImg {
-  height: 408.98px;
+  width: 417px;
+  height: 414px;
   transform: matrix(0, -1, 1, 0, 0, 0);
+  border-radius: 0px 50px 50px 0px;
 }
 
 .testeTitle {
@@ -20,6 +61,7 @@
   text-align: center;
   letter-spacing: -0.04em;
   color: #000000;
+  margin-top: 30.6px;
 }
 .testeDesc {
   width: 341px;
