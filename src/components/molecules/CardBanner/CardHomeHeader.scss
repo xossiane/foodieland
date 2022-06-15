@@ -1,5 +1,9 @@
 @use "/public/styles/variables" as *;
-
+.sliderBanner {
+  overflow: hidden;
+  display: flex;
+  overflow-x: auto;
+}
 .banner {
   display: flex;
   flex-direction: column;

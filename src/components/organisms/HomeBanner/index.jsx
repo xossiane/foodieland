@@ -3,9 +3,7 @@ import { CardHomeHeader } from "../../molecules";
 export default function HomeHeader() {
   return (
     <div>
-      <div>
-        <CardHomeHeader data={data} />
-      </div>
+      <CardHomeHeader data={data} />
     </div>
   );
 }

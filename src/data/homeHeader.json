@@ -11,5 +11,18 @@
     "category": "Chicken",
     "iconCategory": "/assets/ForkKnife.png",
     "date": "15 March 2022"
+  },
+  {
+    "id": 1,
+    "img": "/assets/vagemHomeHeader.png",
+    "title": "Delicious salmon with vegetables",
+    "desc": "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim ",
+    "avatar": "/assets/john.png",
+    "author": "Smith John",
+    "iconTimer": "/assets/Timer.png",
+    "time": "45 Minutes",
+    "category": "Fish",
+    "iconCategory": "/assets/ForkKnife.png",
+    "date": "01 March 2022"
   }
 ]
