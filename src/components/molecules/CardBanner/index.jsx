@@ -9,7 +9,7 @@ export default function CardHomeHeader(props) {
   const slider = useRef(null);
   const newBanner = props.data.slice(currentIten, currentIten + 1);
 
-  useEffect(() => {
+  /* useEffect(() => {
     const time = setTimeout(() => {
       if (totalItem - 1 === currentIten) {
         setCurrentIten(0);
@@ -20,7 +20,7 @@ export default function CardHomeHeader(props) {
     () => {
       time.clearTimeOut();
     };
-  }, [currentIten]);
+  }, [currentIten]); */
 
   return (
     <div ref={slider} className="sliderBanner">
@@ -50,11 +50,11 @@ export default function CardHomeHeader(props) {
 
             {/* nao sao modificadores */}
             <div className="banner__informations">
-              <div className="banner__card mr">
+              <div className="banner__card">
                 <img className="banner__card--icons" src={dado.iconTimer} />
                 <p className="banner__card--content"> {dado.time}</p>
               </div>
-              <div className="banner__card ml">
+              <div className="banner__card">
                 <img className="banner__card--icons" src={dado.iconCategory} />
                 <p className="banner__card--content"> {dado.category}</p>
               </div>
@@ -70,7 +70,8 @@ export default function CardHomeHeader(props) {
               </div>
 
               <button className="banner__button">
-                View Recipes
+                <p className="banner__textButton">View Recipes</p>
+
                 <span className="banner__button--play"></span>
               </button>
             </div>

@@ -9,22 +9,46 @@
   flex-direction: column;
   flex-wrap: wrap;
   align-content: center;
-  width: 417px;
+  width: 400px;
   height: 770px;
   background: #e7fafe;
   margin: 0 auto;
   border-radius: 50px;
 
+  @media screen {
+    @media (min-width: $desktop-xm) {
+      display: flex;
+      align-content: space-between;
+      flex-direction: column;
+      width: 1280px;
+      height: 640px;
+    }
+  }
+
   &__header {
     display: inline-block;
     position: relative;
+
+    @media screen {
+      @media (min-width: $desktop-xm) {
+        order: 2;
+      }
+    }
   }
 
   &__mainCourse {
-    width: 417px;
-    height: 414px;
-    transform: matrix(0, -1, 1, 0, 0, 0);
+    width: 410px;
+    height: 400px;
+    transform: rotate(270deg);
     border-radius: 0px 50px 50px 0px;
+    @media screen {
+      @media (min-width: $desktop-xm) {
+        /*  margin-left: 50px; */
+        width: 660px;
+        height: 640px;
+        transform: rotate(0);
+      }
+    }
   }
 
   &__recipesLike {
@@ -33,6 +57,11 @@
     height: 98.4px;
     left: 2%;
     top: 80%;
+    @media screen {
+      @media (min-width: $desktop-xm) {
+        top: 15%;
+      }
+    }
   }
 
   &__topContainer {
@@ -46,6 +75,13 @@
     top: 90%;
     justify-content: center;
     align-items: center;
+
+    @media screen {
+      @media (min-width: $desktop-xm) {
+        /* top: 10%;
+        left: -75%; */
+      }
+    }
 
     &--icon {
       width: 21.78px;
@@ -70,6 +106,14 @@
     flex-direction: column;
     align-items: center;
 
+    @media screen {
+      @media (min-width: $desktop-xm) {
+        margin-left: 50px;
+
+        order: 1;
+      }
+    }
+
     &--title {
       width: 413px;
       height: 61px;
@@ -82,6 +126,16 @@
       letter-spacing: -0.04em;
       color: $colorDark;
       margin-top: 30.6px;
+      @media screen {
+        @media (min-width: $desktop-xm) {
+          width: 520px;
+          height: 154px;
+          font-size: 64px;
+          line-height: 77px;
+          letter-spacing: -0.04em;
+          margin-top: 127px;
+        }
+      }
     }
 
     &--description {
@@ -94,6 +148,14 @@
       line-height: 28px;
       text-align: center;
       color: $colorGrey;
+
+      @media screen {
+        @media (min-width: $desktop-xm) {
+          width: 520px;
+          height: 56px;
+          /*  margin-left: 50px; */
+        }
+      }
     }
   }
 
@@ -103,6 +165,11 @@
     justify-content: space-between;
     width: 100%;
     padding: 0 5%;
+    @media screen {
+      @media (min-width: $desktop-xm) {
+        justify-content: flex-start;
+      }
+    }
   }
 
   &__card {
@@ -113,6 +180,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media screen {
+      @media (min-width: $desktop-xm) {
+        margin-left: 16px;
+      }
+    }
 
     &--icons {
       width: 24.14px;
@@ -135,6 +208,12 @@
     flex-direction: row;
     align-items: center;
     margin-top: 23px;
+
+    @media screen {
+      @media (min-width: $desktop-xm) {
+        margin-top: 104px;
+      }
+    }
   }
   &__authorInformations {
     display: flex;
@@ -158,6 +237,13 @@
       letter-spacing: -0.02em;
 
       color: $colorDark;
+
+      @media screen {
+        @media (min-width: $desktop-xm) {
+          width: 86px;
+          height: 19px;
+        }
+      }
     }
     &--date {
       width: 102.35px;
@@ -171,10 +257,36 @@
       letter-spacing: -0.02em;
 
       color: $colorGrey;
+      @media screen {
+        @media (min-width: $desktop-xm) {
+          width: 97px;
+          height: 17px;
+        }
+      }
     }
   }
 
+  &__textButton {
+    width: 89.93px;
+    height: 15.98px;
+
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: -0.02em;
+
+    color: #ffffff;
+    @media screen {
+      @media (min-width: $desktop-xm) {
+        width: 127px;
+        height: 24px;
+      }
+    }
+  }
   &__button {
+    align-items: center;
     width: 151.19px;
     height: 41.48px;
     border: none;
@@ -184,8 +296,16 @@
     padding: 0 20px;
     cursor: pointer;
     background: $colorDark;
-    color: white;
+
     margin-left: 50px;
+
+    @media screen {
+      @media (min-width: $desktop-xm) {
+        width: 200px;
+        height: 60px;
+      }
+    }
+
     &--play {
       display: inline-block;
       width: 24.53px;
@@ -215,12 +335,4 @@
       background-color: rgb(237, 8, 8);
     }
   }
-}
-
-.mr {
-  margin-right: 50px;
-}
-
-.ml {
-  margin-left: 50px;
 }
