@@ -28,12 +28,20 @@
   }
 
   &__posts {
+    position: relative;
+  }
+
+  &__content {
     display: flex;
     padding: 0 5.5rem;
     column-gap: 6rem;
     overflow: hidden;
     overflow-x: auto;
-    position: relative;
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 
   &__prev {

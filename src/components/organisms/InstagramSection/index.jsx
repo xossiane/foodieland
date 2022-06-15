@@ -31,7 +31,7 @@ function InstagramSection() {
             tempor incididunt ut labore et dolore magna aliqut enim ad minim{" "}
           </p>
         </div>
-        <div className="InstagramSection__posts" ref={postSlider}>
+        <div className="InstagramSection__posts">
           <div className="InstagramSection__prev">
             <button
               className="InstagramSection__button"
@@ -41,19 +41,22 @@ function InstagramSection() {
               <img src={Prev} />
             </button>
           </div>
-          <InstaCard
-            src={"assets/instaposts/green-leaf-lettuce.png"}
-            alt={"green leaf lettuce"}
-          />
-          <InstaCard src={"assets/instaposts/pancake.png"} alt={"pancake"} />
-          <InstaCard
-            src={"assets/instaposts/purple-onion-on-a-table.png"}
-            alt={"onion"}
-          />
-          <InstaCard
-            src={"assets/instaposts/pork-chops.png"}
-            alt={"pork chop"}
-          />
+          <div className="InstagramSection__content" ref={postSlider}>
+            <InstaCard
+              src={"assets/instaposts/green-leaf-lettuce.png"}
+              alt={"green leaf lettuce"}
+            />
+            <InstaCard src={"assets/instaposts/pancake.png"} alt={"pancake"} />
+            <InstaCard
+              src={"assets/instaposts/purple-onion-on-a-table.png"}
+              alt={"onion"}
+            />
+            <InstaCard
+              src={"assets/instaposts/pork-chops.png"}
+              alt={"pork chop"}
+            />
+          </div>
+
           <div className="InstagramSection__next">
             <button
               className="InstagramSection__button"
