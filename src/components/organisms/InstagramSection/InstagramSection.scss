@@ -104,7 +104,12 @@
 
   &__viewMore {
     border: none;
+    margin: 0 auto;
+    width: 250px;
     font-family: $inter;
     padding: 2.2rem 3.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }

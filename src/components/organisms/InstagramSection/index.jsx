@@ -68,7 +68,10 @@ function InstagramSection() {
             </button>
           </div>
         </div>
-        <Button className="InstagramSection__viewMore">View all posts </Button>
+        <Button className="InstagramSection__viewMore">
+          <p>Visit Our Instagram</p>
+          <img src="/assets/insta.png" alt="" />
+        </Button>
       </div>
     </section>
   );
