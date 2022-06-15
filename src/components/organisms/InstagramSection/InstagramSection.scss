@@ -5,6 +5,7 @@
     text-align: center;
     font-family: $inter;
     padding: 0 1.5rem;
+    margin-bottom: 4rem;
 
     &Heading {
       font-size: 2.8rem;
@@ -20,6 +21,10 @@
   }
 
   &__posts {
-    width: fit-content;
+    display: flex;
+    padding: 0 7rem;
+    column-gap: 7rem;
+    overflow: hidden;
+    overflow-x: auto;
   }
 }
