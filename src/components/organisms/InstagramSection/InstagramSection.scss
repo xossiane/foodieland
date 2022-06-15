@@ -1,6 +1,13 @@
 @use "/public/styles/variables" as *;
 
 .InstagramSection {
+  &__container {
+    margin: 0 auto;
+    width: 95%;
+    background-image: linear-gradient(to top, #e7f9fd, #fff);
+    border-radius: 10px;
+  }
+
   &__text {
     text-align: center;
     font-family: $inter;
@@ -22,8 +29,8 @@
 
   &__posts {
     display: flex;
-    padding: 0 7rem;
-    column-gap: 7rem;
+    padding: 0 5.5rem;
+    column-gap: 6rem;
     overflow: hidden;
     overflow-x: auto;
   }
