@@ -43,7 +43,7 @@ function HomeRecipesSlider() {
           >
             <img src={Next} />
           </button>
-          <Advertising className="ads__img--mt"></Advertising>
+        
         </section> )
 }
 

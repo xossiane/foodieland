@@ -1,16 +1,14 @@
 @use "/public/styles/variables" as *;
 
-.HomeRecipes__slider{
+.HomeRecipes__container{
     margin: auto;
 }
 
-.ads__img--mt{ 
-    @media only screen and (min-width: $tablet){
-    width: 359.44px;
-    height: 383px;
-    position: relative;
-    bottom: 609px;
-    left: 1150px;
+.HomeRecipes__slider{
+    margin: auto;
+    align-items: center;
+
 }
-}
+
+
 

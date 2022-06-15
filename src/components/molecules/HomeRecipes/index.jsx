@@ -11,8 +11,6 @@ return (
         <h2 className="HomeRecipes__title">Simple and tasty recipes</h2>
         <p className="HomeRecipes__text">Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim </p>
     </header><div className="HomeRecipes__post">
-
-
             {recipes.map((recipes) => (
                 <div className="HomeRecipes__content">
                     <Card
@@ -23,11 +21,13 @@ return (
                         secondInfo={recipes.secondInfo}
                         className="card--mt"
                     ></Card>
-
                 </div>
+                
             )
-
+                
             )}
+            <Advertising className="ads__img--mt"></Advertising>
+
 
         </div></>
 )
