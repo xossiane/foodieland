@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { Button } from "../../atoms";
-import InstaCard from "../../molecules/InstaCard";
+import { InstaCard } from "../../molecules";
 import "./InstagramSection.scss";
 
 import Prev from "/assets/Prev.svg";

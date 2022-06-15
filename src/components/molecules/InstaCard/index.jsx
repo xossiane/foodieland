@@ -1,5 +1,5 @@
 import React from "react";
-import CircleAvatar from "../../atoms/CircleAvatar";
+import { CircleAvatar } from "../../atoms";
 import "./InstaCard.scss";
 
 function InstaCard({ src, alt }) {
