@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import InstaCard from "../../molecules/InstaCard";
 import "./InstagramSection.scss";
 
