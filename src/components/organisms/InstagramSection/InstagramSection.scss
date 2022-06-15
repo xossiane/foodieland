@@ -33,5 +33,39 @@
     column-gap: 6rem;
     overflow: hidden;
     overflow-x: auto;
+    position: relative;
+  }
+
+  &__prev {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    z-index: 2;
+
+    @media screen {
+      @media (min-width: $desktop-xm) {
+        display: none;
+      }
+    }
+  }
+
+  &__next {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+
+    @media screen {
+      @media (min-width: $desktop-xm) {
+        display: none;
+      }
+    }
+  }
+
+  &__button {
+    border: none;
+    background-color: transparent;
   }
 }
