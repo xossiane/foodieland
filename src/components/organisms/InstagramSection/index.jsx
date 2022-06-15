@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { Button } from "../../atoms";
 import InstaCard from "../../molecules/InstaCard";
 import "./InstagramSection.scss";
 
@@ -67,6 +68,7 @@ function InstagramSection() {
             </button>
           </div>
         </div>
+        <Button className="InstagramSection__viewMore">View all posts </Button>
       </div>
     </section>
   );

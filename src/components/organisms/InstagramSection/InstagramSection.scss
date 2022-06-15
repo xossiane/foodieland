@@ -3,9 +3,18 @@
 .InstagramSection {
   &__container {
     margin: 0 auto;
+    text-align: center;
     width: 95%;
     background-image: linear-gradient(to top, #e7f9fd, #fff);
     border-radius: 10px;
+    padding-bottom: 3rem;
+
+    @media screen {
+      @media (min-width: $desktop-xm) {
+        width: 100%;
+        border-radius: 0;
+      }
+    }
   }
 
   &__text {
@@ -17,6 +26,7 @@
     &Heading {
       font-size: 2.8rem;
       margin-bottom: 3rem;
+      font-weight: $fontWeightTitle;
     }
 
     &Paragraph {
@@ -24,11 +34,18 @@
       line-height: 2.8rem;
       letter-spacing: 0.04rem;
       color: $colorGrey;
+      @media screen {
+        @media (min-width: $desktop-xm) {
+          width: 55%;
+          margin: 0 auto;
+        }
+      }
     }
   }
 
   &__posts {
     position: relative;
+    margin-bottom: 2rem;
   }
 
   &__content {
@@ -41,6 +58,14 @@
 
     &::-webkit-scrollbar {
       display: none;
+    }
+
+    @media screen {
+      @media (min-width: $desktop-xm) {
+        column-gap: 5rem;
+        justify-content: center;
+        padding: 0;
+      }
     }
   }
 
@@ -75,5 +100,11 @@
   &__button {
     border: none;
     background-color: transparent;
+  }
+
+  &__viewMore {
+    border: none;
+    font-family: $inter;
+    padding: 2.2rem 3.4rem;
   }
 }
