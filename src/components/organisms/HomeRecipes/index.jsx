@@ -1,50 +1,16 @@
 import HomeRecipes from "../../molecules/HomeRecipes"
-import React, { useRef, useState } from "react";
-import { Advertising } from "../../atoms";
+import '../../../data/homerecipes.json'
 import './HomeRecipes.scss'
 
-import Prev from "/assets/Prev.svg";
-import Next from "/assets/Next.svg";
 
 function HomeRecipesSlider() {
-    const [isScrolling, setIsScrolling] = useState(0);
-    const slider = useRef(null);
+     return (
+         <section className="HomeRecipes__slider">
+            <HomeRecipes></HomeRecipes>
+            
 
-    const leftArrowClickHandler = () => {
-        slider.current.scrollBy(-340, 0);
-        disableBtnHandler();
-      };
-    
-      const rightArrowClickHandler = () => {
-        slider.current.scrollBy(340, 0);
-        disableBtnHandler();
-      };
-    
-      const disableBtnHandler = () => {
-        setIsScrolling(true);
-        setInterval(() => {
-          setIsScrolling(false);
-        }, 1000);
-      };
 
-    return (
-        <section className="HomeRecipes__slider">
-         <button
-            className="slider__button--mt"
-            onClick={leftArrowClickHandler}
-            disabled={isScrolling}>
-            <img src={Prev} />
-          </button>        
-        <HomeRecipes ref={slider}></HomeRecipes>
-        <button
-            className="slider__button--mt"
-            onClick={rightArrowClickHandler}
-            disabled={isScrolling}
-          >
-            <img src={Next} />
-          </button>
-        
         </section> )
-}
+};
 
 export default HomeRecipesSlider;
