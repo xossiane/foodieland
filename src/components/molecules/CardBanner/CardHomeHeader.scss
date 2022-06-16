@@ -60,6 +60,7 @@
     @media screen {
       @media (min-width: $desktop-xm) {
         top: 15%;
+        left: -7.5%;
       }
     }
   }
@@ -78,8 +79,8 @@
 
     @media screen {
       @media (min-width: $desktop-xm) {
-        /* top: 10%;
-        left: -75%; */
+        left: -85%;
+        top: 12%;
       }
     }
 
@@ -134,6 +135,7 @@
           line-height: 77px;
           letter-spacing: -0.04em;
           margin-top: 127px;
+          text-align: left;
         }
       }
     }
@@ -153,6 +155,8 @@
         @media (min-width: $desktop-xm) {
           width: 520px;
           height: 56px;
+          text-align: left;
+          margin-top: 24px;
           /*  margin-left: 50px; */
         }
       }
@@ -168,6 +172,8 @@
     @media screen {
       @media (min-width: $desktop-xm) {
         justify-content: flex-start;
+        margin-right: 35px;
+        padding: 0;
       }
     }
   }

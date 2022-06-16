@@ -9,14 +9,15 @@ export default function CardHomeHeader(props) {
   const slider = useRef(null);
   const newBanner = props.data.slice(currentIten, currentIten + 1);
 
-  /* useEffect(() => {
+  /* mostrar que tem mais a ser exebido */
+  /*  useEffect(() => {
     const time = setTimeout(() => {
       if (totalItem - 1 === currentIten) {
         setCurrentIten(0);
       } else {
         setCurrentIten(currentIten + 1);
       }
-    }, 2000);
+    }, 5000);
     () => {
       time.clearTimeOut();
     };
