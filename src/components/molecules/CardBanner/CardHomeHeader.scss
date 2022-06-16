@@ -310,6 +310,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        border-radius: 23px;
       }
     }
 
@@ -346,7 +347,7 @@
     }
 
     &:hover &--play {
-      background-color: rgb(237, 8, 8);
+      background-color: #e7fafe;
     }
   }
 }

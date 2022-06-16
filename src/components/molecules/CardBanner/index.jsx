@@ -10,7 +10,7 @@ export default function CardHomeHeader(props) {
   const newBanner = props.data.slice(currentIten, currentIten + 1);
 
   /* mostrar que tem mais a ser exebido */
-  /*  useEffect(() => {
+  useEffect(() => {
     const time = setTimeout(() => {
       if (totalItem - 1 === currentIten) {
         setCurrentIten(0);
@@ -21,7 +21,7 @@ export default function CardHomeHeader(props) {
     () => {
       time.clearTimeOut();
     };
-  }, [currentIten]); */
+  }, [currentIten]);
 
   return (
     <div ref={slider} className="sliderBanner">
