@@ -43,7 +43,6 @@
     border-radius: 0px 50px 50px 0px;
     @media screen {
       @media (min-width: $desktop-xm) {
-        /*  margin-left: 50px; */
         width: 660px;
         height: 640px;
         transform: rotate(0);
@@ -157,7 +156,6 @@
           height: 56px;
           text-align: left;
           margin-top: 24px;
-          /*  margin-left: 50px; */
         }
       }
     }
@@ -218,6 +216,7 @@
     @media screen {
       @media (min-width: $desktop-xm) {
         margin-top: 104px;
+        margin-right: 104px;
       }
     }
   }
@@ -292,7 +291,6 @@
     }
   }
   &__button {
-    align-items: center;
     width: 151.19px;
     height: 41.48px;
     border: none;
@@ -309,6 +307,9 @@
       @media (min-width: $desktop-xm) {
         width: 200px;
         height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
     }
 
@@ -323,6 +324,13 @@
       transform: translateY(-50%);
       border-radius: 50%;
       background-color: $colorLight;
+
+      @media screen {
+        @media (min-width: $desktop-xm) {
+          top: 45%;
+          right: 17%;
+        }
+      }
 
       &::after {
         content: " ";
