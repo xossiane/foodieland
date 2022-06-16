@@ -3,6 +3,7 @@
 } */
 .recipe-container {
   margin-bottom: 30px;
+  
   @media screen {
     @media (min-width: $desktop-x) {
       display: flex;
