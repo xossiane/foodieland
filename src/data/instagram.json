@@ -1,0 +1,20 @@
+[
+    {
+        "id": 0,
+        "picture": "/assets/instaposts/green-leaf-lettuce.png",
+        "alt": "green leaf lettuce"
+    },
+    {
+        "id": 1,
+        "picture": "/assets/instaposts/pancake.png",
+        "alt": "a pancake with strawberries"
+    },{
+        "id": 2,
+        "picture": "/assets/instaposts/purple-onion-on-a-table.png",
+        "alt": "purple onion on a table"
+    },{
+        "id": 3,
+        "picture": "/assets/instaposts/pork-chops.png",
+        "alt": "pork chop"
+    }
+]

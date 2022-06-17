@@ -8,3 +8,5 @@ export { default as Articles } from "./Articles";
 export { default as BlogHeader } from "./BlogHeader";
 export { default as HomeHeader } from "./HomeBanner";
 export { default as Categories } from "./Categories";
+export { default as LearnMore } from "./LearnMore";
+export { default as InstagramSection } from "./InstagramSection";

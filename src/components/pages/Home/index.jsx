@@ -1,5 +1,12 @@
 import HomeRecipesSlider from "../../organisms/HomeRecipes";
-import { Navbar, Footer, HomeHeader, Categories } from "../../organisms";
+import {
+  Navbar,
+  Footer,
+  HomeHeader,
+  Categories,
+  LearnMore,
+  InstagramSection,
+} from "../../organisms";
 export default function Home() {
   return (
     <div>
@@ -7,6 +14,8 @@ export default function Home() {
       <HomeHeader />
       <Categories />
       <HomeRecipesSlider />
+      <LearnMore />
+      <InstagramSection />
       <Footer />
     </div>
   );

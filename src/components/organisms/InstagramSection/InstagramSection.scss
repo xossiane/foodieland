@@ -1,0 +1,115 @@
+@use "/public/styles/variables" as *;
+
+.InstagramSection {
+  &__container {
+    margin: 0 auto;
+    text-align: center;
+    width: 95%;
+    background-image: linear-gradient(to top, #e7f9fd, #fff);
+    border-radius: 10px;
+    padding-bottom: 3rem;
+
+    @media screen {
+      @media (min-width: $desktop-xm) {
+        width: 100%;
+        border-radius: 0;
+      }
+    }
+  }
+
+  &__text {
+    text-align: center;
+    font-family: $inter;
+    padding: 0 1.5rem;
+    margin-bottom: 4rem;
+
+    &Heading {
+      font-size: 2.8rem;
+      margin-bottom: 3rem;
+      font-weight: $fontWeightTitle;
+    }
+
+    &Paragraph {
+      font-size: 1.4rem;
+      line-height: 2.8rem;
+      letter-spacing: 0.04rem;
+      color: $colorGrey;
+      @media screen {
+        @media (min-width: $desktop-xm) {
+          width: 55%;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+
+  &__posts {
+    position: relative;
+    margin-bottom: 2rem;
+  }
+
+  &__content {
+    display: flex;
+    padding: 0 5.5rem;
+    column-gap: 6rem;
+    overflow: hidden;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    @media screen {
+      @media (min-width: $desktop-xm) {
+        column-gap: 5rem;
+        justify-content: center;
+        padding: 0;
+      }
+    }
+  }
+
+  &__prev {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    z-index: 2;
+
+    @media screen {
+      @media (min-width: $desktop-xm) {
+        display: none;
+      }
+    }
+  }
+
+  &__next {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+
+    @media screen {
+      @media (min-width: $desktop-xm) {
+        display: none;
+      }
+    }
+  }
+
+  &__button {
+    border: none;
+    background-color: transparent;
+  }
+
+  &__viewMore {
+    border: none;
+    margin: 0 auto;
+    width: 250px;
+    font-family: $inter;
+    padding: 2.2rem 3.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
