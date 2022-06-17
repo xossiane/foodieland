@@ -1,7 +1,7 @@
 import { Card } from "../../molecules";
 import homerecipes from "/src/data/homerecipes.json";
 import "./HomeRecipes.scss";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { Advertising } from "../../atoms";
 import leftarrow from "/assets/leftarrow.png";
 import rightarrow from "/assets/rightarrow.png";

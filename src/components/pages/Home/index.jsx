@@ -1,4 +1,3 @@
-import HomeRecipesSlider from "../../organisms/HomeRecipes";
 import {
   Navbar,
   Footer,
@@ -8,6 +7,7 @@ import {
   InstagramSection,
   Slider,
   NewsletterForm,
+  HomeRecipesSlider,
 } from "../../organisms";
 export default function Home() {
   return (

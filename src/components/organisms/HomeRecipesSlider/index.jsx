@@ -1,4 +1,4 @@
-import HomeRecipes from "../../molecules/HomeRecipes";
+import { HomeRecipes } from "../../molecules";
 import "../../../data/homerecipes.json";
 import "./HomeRecipes.scss";
 
