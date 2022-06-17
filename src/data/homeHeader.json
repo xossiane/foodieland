@@ -1,0 +1,28 @@
+[
+  {
+    "id": 0,
+    "img": "/assets/frangoHomeHeader.png",
+    "title": "Spicy delicious checken wings",
+    "desc": "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim ",
+    "avatar": "/assets/john.png",
+    "author": "John Smith",
+    "iconTimer": "/assets/Timer.png",
+    "time": "30 Minutes",
+    "category": "Chicken",
+    "iconCategory": "/assets/ForkKnife.png",
+    "date": "15 March 2022"
+  },
+  {
+    "id": 1,
+    "img": "/assets/vagemHomeHeader.png",
+    "title": "Delicious salmon with vegetables",
+    "desc": "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim ",
+    "avatar": "/assets/albert.png",
+    "author": "Alberto S.",
+    "iconTimer": "/assets/Timer.png",
+    "time": "45 Minutes",
+    "category": "Fish",
+    "iconCategory": "/assets/ForkKnife.png",
+    "date": "01 March 2022"
+  }
+]
