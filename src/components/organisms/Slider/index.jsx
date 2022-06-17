@@ -6,27 +6,19 @@ import { Card } from "../../molecules";
 import cardData from "../../../data/cardData.json";
 import Prev from "/assets/Prev.svg";
 import Next from "/assets/Next.svg";
+import useSlider from "../../../hooks/useSlider";
 
 const Slider = (props) => {
-  const [isScrolling, setIsScrolling] = useState(false);
+  const [leftScroll, rightScroll, isScrolling] = useSlider(340);
   const slider = useRef(null);
   const classes = "slider " + props.className;
 
   const leftArrowClickHandler = () => {
-    slider.current.scrollBy(-340, 0);
-    disableBtnHandler();
+    leftScroll(slider.current);
   };
 
   const rightArrowClickHandler = () => {
-    slider.current.scrollBy(340, 0);
-    disableBtnHandler();
-  };
-
-  const disableBtnHandler = () => {
-    setIsScrolling(true);
-    setInterval(() => {
-      setIsScrolling(false);
-    }, 1000);
+    rightScroll(slider.current);
   };
 
   const slicedCardData = cardData.slice(0, props.length);

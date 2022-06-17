@@ -6,27 +6,20 @@ import { Advertising } from "../../atoms";
 import leftarrow from "/assets/leftarrow.png";
 import rightarrow from "/assets/rightarrow.png";
 
+import useSlider from "../../../hooks/useSlider";
+
 function HomeRecipes(props) {
   const recipes = homerecipes;
-  const [isScrolling, setIsScrolling] = useState(false);
+  const [leftScroll, rightScroll, isScrolling] = useSlider(350);
 
   const slider = useRef(null);
 
   const leftArrowClickHandler = () => {
-    window.scrollBy(-290, 0);
-    disabled = { isScrolling };
+    leftScroll(slider.current);
   };
 
   const rightArrowClickHandler = () => {
-    window.scrollBy(290, 0);
-    disabled = { isScrolling };
-  };
-
-  const disableBtnHandler = () => {
-    setIsScrolling(true);
-    setInterval(() => {
-      setIsScrolling(false);
-    }, 1000);
+    rightScroll(slider.current);
   };
 
   return (
@@ -39,9 +32,9 @@ function HomeRecipes(props) {
         </p>
       </header>
 
-      <div className="HomeRecipes__post">
+      <div className="HomeRecipes__post" ref={slider}>
         {recipes.map((recipes) => (
-          <div className="HomeRecipes__content" ref={slider} key={recipes.id}>
+          <div className="HomeRecipes__content" key={recipes.id}>
             {
               <Card
                 image={recipes.img}
@@ -58,10 +51,16 @@ function HomeRecipes(props) {
       </div>
 
       <div className="HomeRecipes__slider__arrows">
-        <button className="leftArrow" onClick={leftArrowClickHandler}>
+        <button
+          className="HomeRecipes__paginationButton"
+          onClick={leftArrowClickHandler}
+        >
           <img src={leftarrow}></img>
         </button>
-        <button className="rightArrow" onClick={rightArrowClickHandler}>
+        <button
+          className="HomeRecipes__paginationButton"
+          onClick={rightArrowClickHandler}
+        >
           <img src={rightarrow}></img>
         </button>
       </div>

@@ -1,11 +1,12 @@
 @use "/public/styles/variables" as *;
 
-.HomeRecipes{
-    &__container{
-    @media only screen and (min-width: $tablet){
-        display: flex;
-    }}
-    &__title{
+.HomeRecipes {
+  &__container {
+    @media only screen and (min-width: $desktop-x) {
+      display: flex;
+    }
+  }
+  &__title {
     font-family: $inter;
     color: $colorDark;
     font-weight: 900;
@@ -15,13 +16,12 @@
     width: 30.1rem;
     height: 8.9rem;
     text-align: center;
-    @media only screen and (min-width: $tablet){
-        width: 80rem;
-        height: 8.9rem;
+    @media only screen and (min-width: $desktop-x) {
+      width: 80rem;
+      height: 8.9rem;
     }
-    
-    }
-    &__text{
+  }
+  &__text {
     font-family: $inter;
     font-size: 1.6rem;
     color: $colorGrey;
@@ -34,13 +34,13 @@
     width: 35.9rem;
     line-height: 2.5rem;
     letter-spacing: 0.02em;
-    @media only screen and (min-width: $tablet){
-        width: 70rem;
-        height: 8.9rem;
-        margin: auto;
+    @media only screen and (min-width: $desktop-x) {
+      width: 70rem;
+      height: 8.9rem;
+      margin: auto;
     }
-    }
-    &__content {
+  }
+  &__content {
     background: $colorBlue;
     border-radius: 30px;
     width: 344.26px;
@@ -48,62 +48,69 @@
     display: flex;
     margin: auto;
     align-items: center;
-    margin: 5rem;}
-    
-    &__post {
-        display: flex;
-        overflow: hidden;
-        overflow-x: auto;
-        @media only screen and (min-width: $tablet){
-        height: 1546px;
-        display: inline-grid;
-        grid-template-columns: 430px 430px 430px;
-        grid-template-rows: 430px 430px 430px;
-        position: relative;
-        
-        
+    margin-right: 4rem;
+    text-align: left;
+    padding: 0 2rem;
+    @media only screen and (min-width: $desktop-x) {
+      margin: 5rem;
     }
-}
-    &__info{
+  }
+
+  &__post {
+    display: flex;
+    overflow: hidden;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 0 3rem;
+    @media only screen and (min-width: $desktop-x) {
+      height: 1546px;
+      display: inline-grid;
+      grid-template-columns: 430px 430px 430px;
+      grid-template-rows: 430px 430px 430px;
+      position: relative;
+    }
+  }
+  &__info {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: auto;
-    @media only screen and (min-width: $tablet){
-    grid-column: 1;
-    
+    @media only screen and (min-width: $desktop-x) {
+      grid-column: 1;
     }
-   
-}    }
+  }
 
-.card--mt{
-    align-items: center;
-    margin: 0 auto;
+  &__paginationButton {
+    border: none;
+  }
 }
 
-.ads__img--mt{
-    margin: 3rem auto;
-    // display: none;
-    @media only screen and (min-width: $tablet){
+.card--mt {
+  align-items: center;
+  margin: 0 auto;
+}
+
+.ads__img--mt {
+  margin: 3rem auto;
+  display: none;
+  @media only screen and (min-width: $desktop-x) {
+    display: block;
     margin: auto auto -35px auto;
     grid-row-start: 2;
     grid-row-end: 3;
     grid-column-start: 3;
-
-}}
-
-.HomeRecipes__slider{
-    text-align: center;
-    &__arrows{
-        display: flex;
-        text-align: center;
-        justify-content: space-evenly;
-        margin-top: 2rem;
-    @media only screen and (min-width: $tablet){
-        display: none;
-        
-    }}
+  }
 }
 
-
-
+.HomeRecipes__slider {
+  text-align: center;
+  &__arrows {
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+    @media only screen and (min-width: $desktop-x) {
+      display: none;
+    }
+  }
+}
