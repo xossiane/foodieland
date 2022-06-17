@@ -2,6 +2,7 @@
 
 .learnMore {
   margin-bottom: 10rem;
+  margin: auto;
 
   &__text {
     display: flex;
@@ -20,6 +21,7 @@
 
   &__title {
     font-size: 3.6rem;
+    text-align: left;
   }
   &__paragraph {
     font-size: 1.6rem;
@@ -29,14 +31,14 @@
 
   @media screen {
     @media (min-width: $desktop) {
+      max-width: 1400px;
       &__container{
         display: flex;
+        margin-bottom: 8rem;
       }
       &__title{
-        
-        width: 52.6rem;
         display: flex;
-        font-size: 4.8rem;
+        font-size: 3.6rem;
       }
       &__paragraph{
         height: 8.4rem;
@@ -45,9 +47,8 @@
       &__text{
         background-image: none;
         display: flex;
-        flex-direction: column;
-        width: 30%;
-        
+        /* flex-direction: column; */
+        /* width: 30%; */
         margin: auto;
         align-items: flex-start;
       }
