@@ -7,3 +7,4 @@ export { default as Recipes } from "./Recipes";
 export { default as Articles } from "./Articles";
 export { default as BlogHeader } from "./BlogHeader";
 export { default as HomeHeader } from "./HomeBanner";
+export { default as Categories } from "./Categories";

@@ -6,3 +6,4 @@ export { default as ArticleContent } from "./ArticleContent";
 export { default as Navigation } from "./Navigation";
 export { default as SearchBlog } from "./SearchBlog";
 export { default as CardHomeHeader } from "./CardBanner";
+export { default as CategoriesCard } from "./CategoriesCard";

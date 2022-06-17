@@ -1,0 +1,38 @@
+[
+  {
+    "id": 0,
+    "img": "/assets/breakfast.png",
+    "text": "Breackfast",
+    "class": ""
+  },
+  {
+    "id": 1,
+    "img": "/assets/vegan.png",
+    "text": "Vegan",
+    "class": "categories__card--green"
+  },
+  {
+    "id": 2,
+    "img": "/assets/meat.png",
+    "text": "Meat",
+    "class": "categories__card--red"
+  },
+  {
+    "id": 3,
+    "img": "/assets/dessert.png",
+    "text": "Dessert",
+    "class": "categories__card--yellow"
+  },
+  {
+    "id": 4,
+    "img": "/assets/lunch.png",
+    "text": "Vegan",
+    "class": "categories__card--gray"
+  },
+  {
+    "id": 5,
+    "img": "/assets/chocolate.png",
+    "text": "Vegan",
+    "class": "categories__card--gray"
+  }
+]
