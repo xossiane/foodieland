@@ -13,9 +13,8 @@ export default function CardBanner(props) {
               className="banner__recipesLike"
               src="/assets/recipesLike.png"
             />
-            {/* top container com bot fazendo modificador */}
+
             <div className="banner__topContainer">
-              {/* não é modificador */}
               <img
                 className="banner__topContainer__icon"
                 src="/assets/folhaPequena.png"
@@ -29,7 +28,6 @@ export default function CardBanner(props) {
 
             <p className="banner__botContainer__description">{dado.desc}</p>
 
-            {/* nao sao modificadores */}
             <div className="banner__informations">
               <div className="banner__card">
                 <img className="banner__card__icons" src={dado.iconTimer} />
@@ -40,7 +38,7 @@ export default function CardBanner(props) {
                 <p className="banner__card__content"> {dado.category}</p>
               </div>
             </div>
-            {/* corrigir modificador */}
+
             <div className="banner__footer">
               <div className="banner__authorInformations">
                 <img src={dado.avatar} />
