@@ -1,8 +1,11 @@
 @use "/public/styles/variables" as *;
 
 .slider {
-  position: relative;
   margin-top: 152px;
+
+  &__container {
+    position: relative;
+  }
 
   &__container:first-child {
     display: none;
@@ -25,9 +28,26 @@
     text-align: center;
   }
 
+  &__subTitle {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: center;
+    color: $colorGrey;
+    font-family: $inter;
+    margin-bottom: 30px;
+
+    @media screen {
+      @media (min-width: $desktop) {
+        text-align: left;
+        margin-bottom: 0;
+      }
+    }
+  }
+
   &__prev {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 10px;
     transform: translateY(-50%);
     z-index: 2;
@@ -42,7 +62,7 @@
   &__next {
     position: absolute;
     right: 10px;
-    top: 50%;
+    top: 40%;
     transform: translateY(-50%);
     z-index: 2;
 
@@ -73,6 +93,38 @@
     @media screen {
       @media (min-width: $desktop-xm) {
         justify-content: center;
+        flex-wrap: wrap;
+        row-gap: 4rem;
+      }
+    }
+  }
+
+  //modificadores
+  &--homeSlider &__container:first-child {
+    display: flex;
+    flex-direction: column;
+
+    @media screen {
+      @media (min-width: $desktop) {
+        flex-direction: row;
+        column-gap: 14rem;
+        align-items: center;
+        padding: 0 8rem;
+      }
+    }
+  }
+
+  &--homeSlider &__title {
+    font-size: 3rem;
+    line-height: 3.8rem;
+    margin-bottom: 1.4rem;
+
+    @media screen {
+      @media (min-width: $desktop) {
+        text-align: left;
+        font-size: 4.8rem;
+        line-height: 5.8rem;
+        margin-bottom: 0;
       }
     }
   }

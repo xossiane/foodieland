@@ -6,6 +6,8 @@ import {
   Categories,
   LearnMore,
   InstagramSection,
+  Slider,
+  NewsletterForm,
 } from "../../organisms";
 export default function Home() {
   return (
@@ -16,6 +18,13 @@ export default function Home() {
       <HomeRecipesSlider />
       <LearnMore />
       <InstagramSection />
+      <Slider
+        className="slider--homeSlider"
+        length="8"
+        title="Try this delicious recipe to make your day"
+        subtitle="Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim "
+      />
+      <NewsletterForm />
       <Footer />
     </div>
   );
