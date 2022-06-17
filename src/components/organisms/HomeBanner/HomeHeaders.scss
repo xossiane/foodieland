@@ -1,0 +1,31 @@
+@use "/public/styles/variables" as *;
+.homeBanner {
+  margin-bottom: 10rem;
+
+  @media screen {
+    @media (min-width: $desktop-xm) {
+      margin-bottom: 17.3rem;
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  &__dots {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid;
+
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+
+    &--active {
+      background-color: $colorDark;
+    }
+  }
+}
