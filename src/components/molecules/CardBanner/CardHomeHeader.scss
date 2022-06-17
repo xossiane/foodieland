@@ -44,6 +44,7 @@
         margin-top: 20px;
       }
       @media (min-width: $desktop-xm) {
+        margin-top: 0px;
         order: 2;
       }
     }
