@@ -9,6 +9,8 @@
 
   &__container:first-child {
     display: none;
+    max-width: 144rem;
+    margin: 0 auto;
 
     @media screen {
       @media (min-width: $desktop) {
