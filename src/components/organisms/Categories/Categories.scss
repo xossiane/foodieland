@@ -8,7 +8,7 @@
   row-gap: 3.8rem;
   column-gap: 2.8rem;
   justify-items: center;
-  margin: 0 auto;
+  margin: 0 auto 6.3rem;
 
   &__title {
     font-size: 4.8rem;
@@ -65,6 +65,7 @@
     @media (min-width: $desktop-x) {
       max-width: 130rem;
       grid-template: repeat(2, auto) / repeat(6, auto);
+      margin-bottom: 21.5rem;
     }
   }
 }

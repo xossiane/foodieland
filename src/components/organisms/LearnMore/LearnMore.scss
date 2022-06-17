@@ -1,9 +1,10 @@
 @use "/public/styles/variables" as *;
 
-.learnMore{
+.learnMore {
+  margin-bottom: 10rem;
 
-    &__text{
-        display: flex;
+  &__text {
+    display: flex;
     align-items: center;
     flex-direction: column;
     text-align: center;
@@ -13,15 +14,21 @@
     padding: 3rem 2rem;
     font-family: $inter;
     gap: 3rem;
-    background-image: linear-gradient(to bottom,#E7F9FD, #fff);
+    background-image: linear-gradient(to bottom, #e7f9fd, #fff);
     border-radius: 10px;
+  }
+
+  &__title {
+    font-size: 3.6rem;
+  }
+  &__paragraph {
+    font-size: 1.6rem;
+    line-height: 2.3rem;
+  }
+
+  @media screen {
+    @media (min-width: $desktop) {
+      margin-bottom: 24rem;
     }
-    
-    &__title{
-        font-size: 3.6rem;
-    }
-    &__paragraph{
-        font-size:1.6rem;
-        line-height: 2.3rem;
-    }
+  }
 }

@@ -3,6 +3,13 @@
   overflow: hidden;
   display: flex;
   overflow-x: auto;
+  margin-bottom: 10rem;
+
+  @media screen {
+    @media (min-width: $desktop-xm) {
+      margin-bottom: 17.3rem;
+    }
+  }
 }
 .banner {
   display: flex;
