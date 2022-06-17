@@ -17,27 +17,27 @@ export default function CardBanner(props) {
             <div className="banner__topContainer">
               {/* não é modificador */}
               <img
-                className="banner__topContainer--icon"
+                className="banner__topContainer__icon"
                 src="/assets/folhaPequena.png"
               />
-              <p className="banner__topContainer--title">Hot Recipes</p>
+              <p className="banner__topContainer__title">Hot Recipes</p>
             </div>
           </div>
 
           <div className="banner__botContainer">
-            <h2 className="banner__botContainer--title">{dado.title}</h2>
+            <h2 className="banner__botContainer__title">{dado.title}</h2>
 
-            <p className="banner__botContainer--description">{dado.desc}</p>
+            <p className="banner__botContainer__description">{dado.desc}</p>
 
             {/* nao sao modificadores */}
             <div className="banner__informations">
               <div className="banner__card">
-                <img className="banner__card--icons" src={dado.iconTimer} />
-                <p className="banner__card--content"> {dado.time}</p>
+                <img className="banner__card__icons" src={dado.iconTimer} />
+                <p className="banner__card__content"> {dado.time}</p>
               </div>
               <div className="banner__card">
-                <img className="banner__card--icons" src={dado.iconCategory} />
-                <p className="banner__card--content"> {dado.category}</p>
+                <img className="banner__card__icons" src={dado.iconCategory} />
+                <p className="banner__card__content"> {dado.category}</p>
               </div>
             </div>
             {/* corrigir modificador */}
@@ -45,8 +45,8 @@ export default function CardBanner(props) {
               <div className="banner__authorInformations">
                 <img src={dado.avatar} />
                 <div className="banner__authorData">
-                  <h3 className="banner__authorData--name">{dado.author}</h3>
-                  <h4 className="banner__authorData--date">{dado.date}</h4>
+                  <h3 className="banner__authorData__name">{dado.author}</h3>
+                  <h4 className="banner__authorData__date">{dado.date}</h4>
                 </div>
               </div>
 
