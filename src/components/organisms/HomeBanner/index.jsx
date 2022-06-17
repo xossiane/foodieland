@@ -7,7 +7,7 @@ export default function HomeHeader() {
   const totalItem = data.length;
   const [currentItem, setCurrentItem] = useState(0);
 
-  useEffect(() => {
+  /*  useEffect(() => {
     const time = setTimeout(() => {
       if (totalItem - 1 === currentItem) {
         setCurrentItem(0);
@@ -19,7 +19,7 @@ export default function HomeHeader() {
       time.clearTimeOut();
     };
   }, [currentItem]);
-
+ */
   return (
     <section className="homeBanner">
       <CardBanner data={data} currentItem={currentItem} />

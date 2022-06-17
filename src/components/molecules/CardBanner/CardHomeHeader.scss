@@ -16,6 +16,16 @@
   border-radius: 50px;
 
   @media screen {
+    @media (min-width: $tablet) {
+      width: 680px;
+    }
+    @media (min-width: $desktop-xm) {
+      display: flex;
+      align-content: space-between;
+      flex-direction: column;
+      width: 1280px;
+      height: 640px;
+    }
     @media (min-width: $desktop-xm) {
       display: flex;
       align-content: space-between;
@@ -30,7 +40,11 @@
     position: relative;
 
     @media screen {
+      @media (min-width: $tablet) {
+        margin-top: 20px;
+      }
       @media (min-width: $desktop-xm) {
+        margin-top: 0px;
         order: 2;
       }
     }
