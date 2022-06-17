@@ -55,7 +55,7 @@
         display: flex;
         font-size: 4.8rem;
         font-weight: 700;
-        text-align: center;
+        text-align: left;
       }
       &__paragraph {
         height: 8.4rem;
@@ -67,8 +67,6 @@
       &__text {
         background-image: none;
         display: flex;
-        /* flex-direction: column; */
-        /* width: 30%; */
         margin: auto;
         align-items: flex-start;
       }

@@ -2,7 +2,7 @@
   {
     "id": 0,
     "img": "/assets/breakfast.png",
-    "text": "Breackfast",
+    "text": "Breakfast",
     "class": ""
   },
   {
@@ -26,13 +26,13 @@
   {
     "id": 4,
     "img": "/assets/lunch.png",
-    "text": "Vegan",
+    "text": "Lunch",
     "class": "categories__card--gray"
   },
   {
     "id": 5,
     "img": "/assets/chocolate.png",
-    "text": "Vegan",
+    "text": "Chocolate",
     "class": "categories__card--gray"
   }
 ]

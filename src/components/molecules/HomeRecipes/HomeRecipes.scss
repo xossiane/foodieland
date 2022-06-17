@@ -73,6 +73,9 @@
       grid-template-rows: 430px 430px 430px;
       position: relative;
     }
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
   &__info {
     display: flex;
@@ -92,6 +95,7 @@
 .card--mt {
   align-items: center;
   margin: 0 auto;
+  padding-bottom: 2rem;
 }
 
 .ads__img--mt {
