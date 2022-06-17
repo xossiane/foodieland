@@ -2,7 +2,7 @@ import HomeRecipesSlider from "../../organisms/HomeRecipes";
 import {
   Navbar,
   Footer,
-  HomeHeader,
+  HomeBanner,
   Categories,
   LearnMore,
   InstagramSection,
@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div>
       <Navbar />
-      <HomeHeader />
+      <HomeBanner />
       <Categories />
       <HomeRecipesSlider />
       <LearnMore />
