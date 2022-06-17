@@ -10,8 +10,11 @@
     padding-bottom: 3rem;
 
     @media screen {
-      @media (min-width: $desktop-xm) {
+      @media (min-width: $tablet) {
         width: 100%;
+      }
+
+      @media (min-width: $desktop-xm) {
         border-radius: 0;
       }
     }
