@@ -17,7 +17,7 @@ function Content (props){
   
     return(
         
-        <><MainContext onAddUser={setUsersList} > <AddUserSubmit AddUser={addUserHandler} ></AddUserSubmit><UsersList users={usersList}></UsersList></MainContext></>
+        <><MainContext onAddUser={addUserHandler} > <AddUserSubmit onAddUser={addUserHandler} ></AddUserSubmit><UsersList users={usersList}></UsersList></MainContext></>
        
        
     )
