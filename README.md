@@ -19,11 +19,11 @@
 <!--Tabela de conteudo-->
 <h2 align="center">Tabela de conteúdo</h2>
 <p align="center">
- <a href="http://localhost:3000/">Home</a> •
+ <a href="http://localhost:3000/"> Home</a> •
  <a href="http://localhost:3000/Recipes">Recipes</a> • 
  <a href="http://localhost:3000/blog">Blog</a> • 
  <a href="#aboutus">About Us</a> • 
- <a href="http://localhost:3000/contact">Contact Us</a> • 
+ <a href="http://localhost:3000/contact">Contact Us</a> 
 </p>
 <!--Tabela de conteudo-->
 
