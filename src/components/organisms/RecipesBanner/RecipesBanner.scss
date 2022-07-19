@@ -11,6 +11,16 @@
         height: 60rem;
         margin: auto;
     }
+    &--text{
+        font-family: $inter;
+        width: 128rem;
+        font-size: 16px;
+        line-height: 28px;
+        height: 8.4rem;
+        font-weight: $fontWeightBody;
+        opacity: 0.4;
+        margin: 8rem;
+    }
     &__nutritional{
         height: 60rem;
         width: 40rem;
