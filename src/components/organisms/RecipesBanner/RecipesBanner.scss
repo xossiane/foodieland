@@ -11,15 +11,62 @@
         height: 60rem;
         margin: auto;
     }
+    &--text{
+        font-family: $inter;
+        width: 128rem;
+        font-size: 16px;
+        line-height: 28px;
+        height: 8.4rem;
+        font-weight: $fontWeightBody;
+        opacity: 0.4;
+        margin: 8rem;
+    }
     &__nutritional{
         height: 60rem;
         width: 40rem;
         background-color: #E7FAFE;
         border-radius: 30px;
+        margin-left: 4rem;
+        &Bar{
+            display: flex;
+            margin-left: 3.2rem;
+            margin-bottom: 1.6rem;
+            margin-right: 3.2rem;
+            position: relative;
+        }
         &--title{
             font-family: $inter;
             font-weight: $fontWeightTitle;
             margin: 3.2rem 3.2rem;
+            font-size: 2.4rem;
+        }
+        &--type{
+            font-family: $inter;
+            color: $colorGrey;
+            font-weight: $fontWeightTitle;
+            opacity: 0.8;
+            margin-left: 3.2rem;
+        }
+        &--value{
+            font-family: $inter;
+            color: $colorDark;
+            font-weight: $fontWeightTitle;
+            display: flex;
+            flex-direction: row-reverse;
+            margin-top: -1.7rem;
+            margin-right: 3.2rem;
+            margin-bottom: 3.2rem;
+        }
+        &--text{
+            font-family: "Inter", sans-serif;
+            font-size: 14px;
+            height: 5.6rem;
+            width: 33.6rem;
+            opacity: 0.7;
+            margin: auto;
+            text-align: center;
+            margin-top: 9.7rem;
+            margin-bottom: 3.2rem;
         }
     }
 
