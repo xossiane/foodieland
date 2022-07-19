@@ -1,5 +1,12 @@
 @use "/public/styles/variables" as *;
 .RecipesHeader{
+    &__container{
+        position: relative;
+    }
+    &__btn{
+        display: flex;
+        flex-direction: row-reverse;
+    }
     &__title{
     font-family: $inter;
     font-weight: 600;
@@ -8,11 +15,12 @@
     &__info{
         display: flex;
         margin-top: 4.8rem;
+        justify-content: center;
         &--prepTime{
             font-family: $inter;
             display: flex;
             flex-direction: column;
-            margin-left: 7.5rem;
+            margin-left: 2rem;
             margin-top: 0.5rem;
             &2{
                 opacity: 0.5;
@@ -20,15 +28,26 @@
         }
         &--cookTime{
             font-family: $inter;
-            margin-left: 7.2rem;
+            margin-left: 2.2rem;
+            margin-top: 0.4rem;
             
         }
+        &--type{
+            font-family: $inter;
+            margin-left: 2rem;
+            margin-top: 1.3rem;
+            &Img{
+            height: 2.4rem;
+            width: 2.4rem;
+            margin-left: 5.2rem;
+            margin-top: 1rem;
+        }}
     &__bar{
         margin-left: 4rem;
         &2{
             
-            position: absolute;
-            margin-left: -3.2rem;
+            position: relative;
+            margin-left: 6rem;
         }
     }
     &--text{
@@ -40,13 +59,12 @@
     &__timer{
         width: 2.4rem;
         height: 2.4rem;
-        position: absolute;
-        left: 33.3rem;
+        margin-left: 5rem;
         margin-top: 1rem;
         &--mt{
             display: flex;
-            margin-top: 1rem;
-            left: 66.6rem;
+            margin-top: -1rem;
+            margin-left: 5.2rem;
         }
     }
     &--author{
