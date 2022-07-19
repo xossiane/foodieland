@@ -1,0 +1,26 @@
+@use "/public/styles/variables" as *;
+
+.RecipesBanner{
+    &__container{
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+    }
+    &__img{
+        width: 84rem;
+        height: 60rem;
+        margin: auto;
+    }
+    &__nutritional{
+        height: 60rem;
+        width: 40rem;
+        background-color: #E7FAFE;
+        border-radius: 30px;
+        &--title{
+            font-family: $inter;
+            font-weight: $fontWeightTitle;
+            margin: 3.2rem 3.2rem;
+        }
+    }
+
+}
