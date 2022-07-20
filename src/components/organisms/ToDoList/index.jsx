@@ -3,6 +3,8 @@ import './ToDoList.scss'
 /* import 'bootstrap/dist/css/bootstrap.min.css'; */
 import { Button, Card } from 'react-bootstrap';
 import undone from '/assets/undone.png'
+import horizontalbar from '/assets/horizontalbar.png'
+
 
 function ToDo({ toDo, index, markToDo, removeToDo }) {
   
@@ -10,11 +12,12 @@ function ToDo({ toDo, index, markToDo, removeToDo }) {
       <>
       <div
         className="TodoList">
-        <span style={{ textDecoration: toDo.isDone ? "line-through" : "" }}>{toDo.text}</span>
-        <div>
-          <button className="TodoList__btn" variant="outline-success" onClick={() => markToDo(index)}><img src={undone} alt="" /></button>
-          <button className="TodoList__btn--remove" variant="outline-danger" onClick={() => removeToDo(index)}>✕</button>
+          <div>
+          <button className="TodoList__btn" onClick={() => markToDo(index)}><img src={undone} alt="" /></button>
+          {/* <button className="TodoList__btn--remove" variant="outline-danger" onClick={() => removeToDo(index)}>✕</button> */}
         </div>
+        <span className="TodoList__items" style={{ textDecoration: toDo.isDone ? "line-through" : "" }}>{toDo.text}</span>
+        
       </div>
       </>
     );
@@ -56,6 +59,14 @@ function ToDoList(){
     {
         text: "Lorem ipsum dolor sit amet",
         isDone: false
+    },
+    {
+      text: "Lorem ipsum dolor sit amet",
+      isDone: false
+    },
+    {
+      text: "Lorem ipsum dolor sit amet",
+      isDone: false
     }]);
 
     /* adiciona uma nova tarefa */
@@ -75,7 +86,7 @@ function ToDoList(){
     /* remove tarefa feita */
     const removeToDo = index => {
         const newToDos = [...toDo];
-        newToDos.splice(index, 1); //muda o conteúdo da array, removendo ou substituindo elementos existentes com novos
+        newToDos[index].isDone = false; //muda o conteúdo da array, removendo ou substituindo elementos existentes com novos
         setToDo(newToDos);
     }
 
@@ -95,8 +106,26 @@ function ToDoList(){
               markToDo={markToDo}
               removeToDo={removeToDo}
               />
+              <img className="TodoList__horizontalBar" src={horizontalbar} alt="" />
             </Card.Body>
           </Card>
+          
+        ))}
+        <h2 className="TodoList__title--subtitle"> For the Sauce </h2>
+        {toDo.map((toDo, index) => (
+          <Card>
+            <Card.Body>
+              <ToDo
+              key={index}
+              index={index}
+              toDo={toDo}
+              markToDo={markToDo}
+              removeToDo={removeToDo}
+              />
+              <img className="TodoList__horizontalBar" src={horizontalbar} alt="" />
+            </Card.Body>
+          </Card>
+          
         ))}
       </div>
     
