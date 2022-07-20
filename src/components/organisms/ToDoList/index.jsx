@@ -1,43 +1,47 @@
 import { useState } from "react";
 import './ToDoList.scss'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button, Card, Form } from 'react-bootstrap';
+/* import 'bootstrap/dist/css/bootstrap.min.css'; */
+import { Button, Card } from 'react-bootstrap';
+
 
 function ToDo({ toDo, index, markToDo, removeToDo }) {
+  
     return (
+      <>
       <div
-        className="todo">
+        className="TodoList">
         <span style={{ textDecoration: toDo.isDone ? "line-through" : "" }}>{toDo.text}</span>
         <div>
-          <Button variant="outline-success" onClick={() => markToDo(index)}>✓</Button>{' '}
-          <Button variant="outline-danger" onClick={() => removeToDo(index)}>✕</Button>
+          <Button className="TodoList__btn" variant="outline-success" onClick={() => markToDo(index)}>✓</Button>{' '}
+          <Button className="TodoList__btn--remove" variant="outline-danger" onClick={() => removeToDo(index)}>✕</Button>
         </div>
       </div>
+      </>
     );
   }
   
-  function FormTodo({ addToDo }) {
-    const [value, setValue] = useState("");
+  // function FormTodo({ addToDo }) {
+  //   const [value, setValue] = useState("");
   
-    const handleSubmit = e => {
-      e.preventDefault();
-      if (!value) return;
-      addToDo(value);
-      setValue("");
-    };
+  //   const handleSubmit = e => {
+  //     e.preventDefault();
+  //     if (!value) return;
+  //     addToDo(value);
+  //     setValue("");
+  //   };
   
-    return (
-      <Form onSubmit={handleSubmit}> 
-      <Form.Group>
-        <Form.Label><b>Add Todo</b></Form.Label>
-        <Form.Control type="text" className="input" value={value} onChange={e => setValue(e.target.value)} placeholder="Add new todo" />
-      </Form.Group>
-      <Button variant="primary mb-3" type="submit">
-        Submit
-      </Button>
-    </Form>
-    );
-  }
+  //   return (
+  //     <Form onSubmit={handleSubmit}> 
+  //     <Form.Group>
+  //       <Form.Label><b>Add Todo</b></Form.Label>
+  //       <Form.Control type="text" className="input" value={value} onChange={e => setValue(e.target.value)} placeholder="Add new todo" />
+  //     </Form.Group>
+  //     <Button variant="primary mb-3" type="submit">
+  //       Submit
+  //     </Button>
+  //   </Form>
+  //   );
+  // }      <-------------- TALVEZ O ERRO AQUI SEJA A EXPORTAÇAO PRA RECIPES PAGE
 
   
 function ToDoList(){
@@ -79,6 +83,8 @@ function ToDoList(){
     return (
         
         <div>
+        <h2 className="TodoList__title"> Ingredients </h2>
+        <h2 className="TodoList__title--subtitle"> For main dish </h2>
         {toDo.map((toDo, index) => (
           <Card>
             <Card.Body>

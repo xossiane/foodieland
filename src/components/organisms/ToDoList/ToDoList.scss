@@ -1,6 +1,30 @@
-.todo {
+@use "/public/styles/variables" as *;
+.TodoList{
     align-items: center;
     display: flex;
     font-size: 18px;
     justify-content: space-between;
+    font-family: $inter;
+    margin-left: 8rem;
+    margin-bottom: 6rem;
+    &__btn{
+      color: tomato;
+      &--remove{
+        color: blue;
+      }
+    }
+    &__title{
+      font-family: $inter;
+      font-size: 3.6rem;
+      margin-left: 8rem;
+      letter-spacing: -0.04em;
+      margin-bottom: 4.8rem;
+      &--subtitle{
+        font-family: $inter;
+        font-size: 2.4rem;
+        margin-left: 8rem;
+        margin-bottom: 3.2rem;
+      }
+    }
   }
+  
