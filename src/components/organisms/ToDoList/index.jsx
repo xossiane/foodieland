@@ -2,7 +2,7 @@ import { useState } from "react";
 import './ToDoList.scss'
 /* import 'bootstrap/dist/css/bootstrap.min.css'; */
 import { Button, Card } from 'react-bootstrap';
-
+import undone from '/assets/undone.png'
 
 function ToDo({ toDo, index, markToDo, removeToDo }) {
   
@@ -12,8 +12,8 @@ function ToDo({ toDo, index, markToDo, removeToDo }) {
         className="TodoList">
         <span style={{ textDecoration: toDo.isDone ? "line-through" : "" }}>{toDo.text}</span>
         <div>
-          <Button className="TodoList__btn" variant="outline-success" onClick={() => markToDo(index)}>✓</Button>{' '}
-          <Button className="TodoList__btn--remove" variant="outline-danger" onClick={() => removeToDo(index)}>✕</Button>
+          <button className="TodoList__btn" variant="outline-success" onClick={() => markToDo(index)}><img src={undone} alt="" /></button>
+          <button className="TodoList__btn--remove" variant="outline-danger" onClick={() => removeToDo(index)}>✕</button>
         </div>
       </div>
       </>
