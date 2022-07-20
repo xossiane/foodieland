@@ -2,19 +2,34 @@ import { useState } from "react";
 import './ToDoList.scss'
 /* import 'bootstrap/dist/css/bootstrap.min.css'; */
 import { Button, Card } from 'react-bootstrap';
+import undone from '/assets/undone.png'
+import horizontalbar from '/assets/horizontalbar.png'
 
 
-function ToDo({ toDo, index, markToDo, removeToDo }) {
+function ToDo({ toDo, index, ToggleTodo, handleClick }) {
   
     return (
+      
       <>
       <div
         className="TodoList">
-        <span style={{ textDecoration: toDo.isDone ? "line-through" : "" }}>{toDo.text}</span>
-        <div>
-          <Button className="TodoList__btn" variant="outline-success" onClick={() => markToDo(index)}>✓</Button>{' '}
-          <Button className="TodoList__btn--remove" variant="outline-danger" onClick={() => removeToDo(index)}>✕</Button>
+          <div>
+          <button className="TodoList__btn" 
+          onClick={
+            () => ToggleTodo(index)
+            }>
+
+            <img src={undone} 
+            onClick={handleClick} 
+            style = {{background: toDo.isDone ? "black" : " "}}
+
+            alt="" />
+            </button>
+          {/* <button className="TodoList__btn--remove" variant="outline-danger" onClick={() => removeToDo(index)}>✕</button> */}
         </div>
+        
+        <span className="TodoList__items" style={{ textDecoration: toDo.isDone ? "line-through" : "" }}>{toDo.text}</span>
+        
       </div>
       </>
     );
@@ -56,28 +71,30 @@ function ToDoList(){
     {
         text: "Lorem ipsum dolor sit amet",
         isDone: false
+    },
+    {
+      text: "Lorem ipsum dolor sit amet",
+      isDone: false
+    },
+    {
+      text: "Lorem ipsum dolor sit amet",
+      isDone: false
     }]);
 
-    /* adiciona uma nova tarefa */
-    const addToDo = text => {
-        const newToDos = [...toDo, {text}];
-        setToDo(newToDos);
-    }
+    const ToggleTodo = index =>{
 
+      const newTodos = [...toDo];
+      
+      newTodos[index].isDone = !newTodos[index].isDone
+      
+      setToDo(newTodos);
+      
+      }
 
-    /* marca a tarefa como feita */
-    const markToDo = index => {
-        const newToDos = [...toDo];
-        newToDos[index].isDone = true;
-        setToDo(newToDos);
-    }
-
-    /* remove tarefa feita */
-    const removeToDo = index => {
-        const newToDos = [...toDo];
-        newToDos.splice(index, 1); //muda o conteúdo da array, removendo ou substituindo elementos existentes com novos
-        setToDo(newToDos);
-    }
+      const [isDone, setIsDone] = useState(false);
+      const handleClick = () => {
+        setIsDone(true);
+      }
 
 
     return (
@@ -85,6 +102,7 @@ function ToDoList(){
         <div>
         <h2 className="TodoList__title"> Ingredients </h2>
         <h2 className="TodoList__title--subtitle"> For main dish </h2>
+        
         {toDo.map((toDo, index) => (
           <Card>
             <Card.Body>
@@ -92,11 +110,28 @@ function ToDoList(){
               key={index}
               index={index}
               toDo={toDo}
-              markToDo={markToDo}
-              removeToDo={removeToDo}
+              ToggleTodo={ToggleTodo}
               />
+              <img className="TodoList__horizontalBar" src={horizontalbar} alt="" />
+              
             </Card.Body>
           </Card>
+          
+        ))}
+        <h2 className="TodoList__title--subtitle"> For the Sauce </h2>
+        {toDo.map((toDo, index) => (
+          <Card>
+            <Card.Body>
+              <ToDo
+              key={index}
+              index={index}
+              toDo={toDo}
+              ToggleTodo={ToggleTodo}
+              />
+              <img className="TodoList__horizontalBar" src={horizontalbar} alt="" />
+            </Card.Body>
+          </Card>
+          
         ))}
       </div>
     
