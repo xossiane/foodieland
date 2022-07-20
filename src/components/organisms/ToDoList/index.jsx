@@ -6,16 +6,18 @@ import undone from '/assets/undone.png'
 import horizontalbar from '/assets/horizontalbar.png'
 
 
-function ToDo({ toDo, index, markToDo, removeToDo }) {
+function ToDo({ toDo, index, ToggleTodo }) {
   
     return (
+      
       <>
       <div
         className="TodoList">
           <div>
-          <button className="TodoList__btn" onClick={() => markToDo(index)}><img src={undone} alt="" /></button>
+          <button className="TodoList__btn" onClick={() => ToggleTodo(index)}><img src={undone} alt="" /></button>
           {/* <button className="TodoList__btn--remove" variant="outline-danger" onClick={() => removeToDo(index)}>✕</button> */}
         </div>
+        
         <span className="TodoList__items" style={{ textDecoration: toDo.isDone ? "line-through" : "" }}>{toDo.text}</span>
         
       </div>
@@ -69,26 +71,15 @@ function ToDoList(){
       isDone: false
     }]);
 
-    /* adiciona uma nova tarefa */
-    const addToDo = text => {
-        const newToDos = [...toDo, {text}];
-        setToDo(newToDos);
-    }
+    const ToggleTodo = index =>{
 
-
-    /* marca a tarefa como feita */
-    const markToDo = index => {
-        const newToDos = [...toDo];
-        newToDos[index].isDone = true;
-        setToDo(newToDos);
-    }
-
-    /* remove tarefa feita */
-    const removeToDo = index => {
-        const newToDos = [...toDo];
-        newToDos[index].isDone = false; //muda o conteúdo da array, removendo ou substituindo elementos existentes com novos
-        setToDo(newToDos);
-    }
+      const newTodos = [...toDo];
+      
+      newTodos[index].isDone = !newTodos[index].isDone
+      
+      setToDo(newTodos);
+      
+      }
 
 
     return (
@@ -96,6 +87,7 @@ function ToDoList(){
         <div>
         <h2 className="TodoList__title"> Ingredients </h2>
         <h2 className="TodoList__title--subtitle"> For main dish </h2>
+        
         {toDo.map((toDo, index) => (
           <Card>
             <Card.Body>
@@ -103,10 +95,10 @@ function ToDoList(){
               key={index}
               index={index}
               toDo={toDo}
-              markToDo={markToDo}
-              removeToDo={removeToDo}
+              ToggleTodo={ToggleTodo}
               />
               <img className="TodoList__horizontalBar" src={horizontalbar} alt="" />
+              
             </Card.Body>
           </Card>
           
@@ -119,8 +111,7 @@ function ToDoList(){
               key={index}
               index={index}
               toDo={toDo}
-              markToDo={markToDo}
-              removeToDo={removeToDo}
+              ToggleTodo={ToggleTodo}
               />
               <img className="TodoList__horizontalBar" src={horizontalbar} alt="" />
             </Card.Body>
