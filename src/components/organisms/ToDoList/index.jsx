@@ -6,7 +6,7 @@ import undone from '/assets/undone.png'
 import horizontalbar from '/assets/horizontalbar.png'
 
 
-function ToDo({ toDo, index, ToggleTodo }) {
+function ToDo({ toDo, index, ToggleTodo, handleClick }) {
   
     return (
       
@@ -14,7 +14,17 @@ function ToDo({ toDo, index, ToggleTodo }) {
       <div
         className="TodoList">
           <div>
-          <button className="TodoList__btn" onClick={() => ToggleTodo(index)}><img src={undone} alt="" /></button>
+          <button className="TodoList__btn" 
+          onClick={
+            () => ToggleTodo(index)
+            }>
+
+            <img src={undone} 
+            onClick={handleClick} 
+            style = {{background: toDo.isDone ? "black" : " "}}
+
+            alt="" />
+            </button>
           {/* <button className="TodoList__btn--remove" variant="outline-danger" onClick={() => removeToDo(index)}>✕</button> */}
         </div>
         
@@ -79,6 +89,11 @@ function ToDoList(){
       
       setToDo(newTodos);
       
+      }
+
+      const [isDone, setIsDone] = useState(false);
+      const handleClick = () => {
+        setIsDone(true);
       }
 
 
