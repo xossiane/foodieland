@@ -37,28 +37,28 @@ function ToDoSteps({toDoSteps, index, ToggleTodo, handleClick}){
 
 function ToDoListSteps(){
     const [toDoSteps, setToDoSteps] = useState([{
-        title: "Lorem ipsum dolor sit amet",
+        title: "1. Lorem ipsum dolor sit amet",
         img: "/assets/preparing.png",
         text: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
         isDone: false
     },
     {
-        title: "Lorem ipsum dolor sit amet",
+        title: "2. Lorem ipsum dolor sit amet",
         text: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
         isDone: false
     },
     {
-        title: "Lorem ipsum dolor sit amet",
+        title: "3. Lorem ipsum dolor sit amet",
         text: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
         isDone: false
     },
     {
-        title: "Lorem ipsum dolor sit amet",
+        title: "4. Lorem ipsum dolor sit amet",
         text: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
         isDone: false
     },
     {
-        title: "Lorem ipsum dolor sit amet",
+        title: "5. Lorem ipsum dolor sit amet",
         text: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
         isDone: false
     }]);
