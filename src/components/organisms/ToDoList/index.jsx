@@ -7,7 +7,9 @@ import horizontalbar from '/assets/horizontalbar.png'
 
 
 function ToDo({ toDo, index, ToggleTodo, handleClick }) {
-  
+ /*  var doneStyle = {
+    color: 'black'
+  } */
     return (
       
       <>
@@ -21,14 +23,14 @@ function ToDo({ toDo, index, ToggleTodo, handleClick }) {
 
             <img src={undone} 
             onClick={handleClick} 
-            style = {{background: toDo.isDone ? "black" : " "}}
+            style = {{background: toDo.isDone ? "black" : " ", borderRadius: toDo.isDone ? "64px" : ""  }}
 
             alt="" />
             </button>
           {/* <button className="TodoList__btn--remove" variant="outline-danger" onClick={() => removeToDo(index)}>✕</button> */}
         </div>
         
-        <span className="TodoList__items" style={{ textDecoration: toDo.isDone ? "line-through" : "" }}>{toDo.text}</span>
+        <span className="TodoList__items" style={{textDecoration: toDo.isDone ? "line-through" : ""}}>{toDo.text}</span>
         
       </div>
       </>
