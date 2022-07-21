@@ -1,0 +1,27 @@
+@use "/public/styles/variables" as *;
+.TodoListSteps__items{
+    display: flex;
+    margin-left: 2.4rem;
+    letter-spacing: -0.02em;
+    align-items: center;
+    display: flex;
+    font-size: 18px;
+    font-family: $inter;
+    justify-content: flex-start;
+    margin-left: 8rem;
+    margin-bottom: 6rem;
+    text-align: justify;
+    width: 79.2rem;
+    height: 10.4rem;
+    opacity: 0.6;
+}
+
+.ToDoSteps{
+    display: flex;
+    
+}
+
+.TodoListSteps__content{
+    display: flex;
+    flex-direction: column;
+}
