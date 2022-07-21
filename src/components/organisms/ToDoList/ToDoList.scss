@@ -3,12 +3,12 @@
     align-items: center;
     display: flex;
     font-size: 18px;
-    justify-content: space-between;
     font-family: $inter;
+    justify-content: flex-start;
     margin-left: 8rem;
     margin-bottom: 6rem;
     &__items{
-      margin-left: -5rem;
+      margin-left: 2.4rem;
       letter-spacing: -0.02em;
     }
     &__horizontalBar{
@@ -23,6 +23,7 @@
       border: 0;
       padding: 0;
       background-color: white;
+      margin-left: 8rem;
       &--remove{
         color: blue;
       }
