@@ -1,5 +1,6 @@
 import { useState } from "react";
-import '../ToDoList/TodoList.scss'
+import '../ToDoList/ToDoList.scss'
+import './ToDoListSteps.scss'
 /* import 'bootstrap/dist/css/bootstrap.min.css'; */
 import { Card } from 'react-bootstrap';
 import undone from '/assets/undone.png'
@@ -22,7 +23,10 @@ function ToDoSteps({toDoSteps, index, ToggleTodo, handleClick}){
                     alt="" />
                     </button>
             </div>
-            <span className="TodoList__items" style={{textDecoration: toDoSteps.isDone ? "line-through" : ""}}>{toDoSteps.text}</span>
+            <div className="TodoListSteps__content">
+            <h2 className="TodoList__title--subtitle">{toDoSteps.title}</h2>
+            <span className="TodoListSteps__items" style={{textDecoration: toDoSteps.isDone ? "line-through" : ""}}>{toDoSteps.text}</span>
+            </div>
         </div>
         </>
     )
