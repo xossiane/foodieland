@@ -1,7 +1,7 @@
 import { useState } from "react";
 import './ToDoList.scss'
 /* import 'bootstrap/dist/css/bootstrap.min.css'; */
-import { Button, Card } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import undone from '/assets/undone.png'
 import horizontalbar from '/assets/horizontalbar.png'
 
