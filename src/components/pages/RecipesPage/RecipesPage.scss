@@ -1,0 +1,9 @@
+@use "/public/styles/variables" as *;
+.RecipesPage__mid{
+    display: flex;
+}
+
+.RecipesPage__ToDoList{
+    display: flex;
+    flex-direction: column;
+}
