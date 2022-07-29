@@ -2,83 +2,157 @@
 .RecipesHeader{
     &__container{
         position: relative;
+        @media screen and (min-width: $tablet){
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
     }
     &__btn{
+        display: none;
+        @media screen and (min-width: $tablet){
         display: flex;
-        flex-direction: row-reverse;
+        flex-direction: row-reverse;}
 
     }
     &__print{
-        margin: 1rem;
+        @media screen and (min-width: $tablet){
+        margin: 1rem;}
     }
     &__share{
-        margin: 1rem;
+        @media screen and (min-width: $tablet){ 
+        margin: 1rem;}
     }
     &__title{
     font-family: $inter;
     font-weight: 600;
+    font-size: 3rem;  
+    width: 22.7rem;
+    height: 7.2 rem;
+    text-align: center;
+    margin: auto;
+    @media screen and (min-width: $tablet){
+    font-family: $inter;
+    font-weight: 600;
     font-size: 6.4rem;
     text-align: center;}
+}
     &__info{
+        @media screen and (min-width: $tablet){
         display: flex;
         margin-top: 4.8rem;
-        justify-content: center;
+        justify-content: center;}
         &--prepTime{
+            font-family: $inter;
+            font-size: 0.8rem;
+            display: flex;
+            flex-direction: column;
+            margin-left: 7rem;
+            width: 7.3rem;
+            margin-top: -3.5rem;
+            &1{
+                display: flex;
+                margin-top:-5rem;
+            }
+            @media screen and (min-width: $tablet){
             font-family: $inter;
             display: flex;
             flex-direction: column;
             margin-left: 2rem;
-            margin-top: 0.5rem;
+            margin-top: 0.5rem;}
             &2{
-                opacity: 0.5;
+                @media screen and (min-width: $tablet){
+                opacity: 0.5;}
             }
         }
         &--cookTime{
             font-family: $inter;
+            font-size: 0.8rem;
+            flex-direction: column;
+            margin-left: 21rem;
+            margin-top: -21.25rem;
+            @media screen and (min-width: $tablet){
+            font-family: $inter;
             margin-left: 2.2rem;
-            margin-top: 0.4rem;
-            
+            margin-top: 0.4rem;}
         }
         &--type{
             font-family: $inter;
+            font-size: 1.2rem;
+            margin-top: -2.2rem;
+            margin-left: 34rem;
+            display: flex;
+            @media screen and (min-width: $tablet){
+            font-family: $inter;
             margin-left: 2rem;
-            margin-top: 1.3rem;
+            margin-top: 1.3rem;}
             &Img{
+            display: flex;
+            margin-top: -6.7rem;
+            margin-left: 32rem;
+            @media screen and (min-width: $tablet){
             height: 2.4rem;
             width: 2.4rem;
             margin-left: 5.2rem;
-            margin-top: 1rem;
+            margin-top: 1rem;}
         }}
     &__bar{
-        margin-left: 4rem;
+        @media screen and (min-width: $tablet){
+        margin-left: 4rem;}
         &2{
-            
+            @media screen and (min-width: $tablet){
             position: relative;
-            margin-left: 6rem;
+            margin-left: 6rem;}
         }
     }
     &--text{
+        @media screen and (min-width: $tablet){
         display: flex;
         flex-direction: column;
         margin-top: 1rem;
-        margin-left: 4rem;
+        margin-left: 4rem;}
     }}
     &__timer{
+        margin: auto 3.1rem ;
+        display: flex;
+        @media screen and (min-width: $tablet){
         width: 2.4rem;
         height: 2.4rem;
         margin-left: 5rem;
-        margin-top: 1rem;
+        margin-top: 1rem;}
         &--mt{
+            margin: -4.5rem auto 17.9rem 14.5rem;
+            @media screen and (min-width: $tablet){
             display: flex;
             margin-top: -1rem;
-            margin-left: 5.2rem;
+            margin-left: 5.2rem;}
         }
     }
     &--author{
+        margin-left: 5rem;
+        @media screen and (min-width: $tablet){
         width: 5rem;
         height: 5rem;
         display: flex;
-        margin-left: 8rem; 
+        margin-left: 8rem;}
+        &Info{
+            display: flex;
+            margin-left: 13.1rem;
+            margin-top: -3rem; 
+        }
+        &Date{
+            display: flex;
+            margin-left: 25.2rem;
+            margin-top: -1.5rem;
+        }
+    }
+    &__horizontalBar{
+        display: flex;
+        margin: 3rem auto;
+        width: 17.1rem;
+        @media screen and (min-width: $tablet){
+            display: none;
+        }
     }
    
 

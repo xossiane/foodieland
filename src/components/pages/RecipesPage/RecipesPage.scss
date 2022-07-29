@@ -1,9 +1,14 @@
 @use "/public/styles/variables" as *;
 .RecipesPage__mid{
     display: flex;
+    flex-direction: column;
+    margin: auto;
+    @media screen and (min-width: $tablet){
+    display: flex;}
 }
 
 .RecipesPage__ToDoList{
     display: flex;
     flex-direction: column;
+    margin: 18rem auto;
 }

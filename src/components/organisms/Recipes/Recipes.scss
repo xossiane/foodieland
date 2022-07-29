@@ -5,6 +5,8 @@
   align-items: center;
 
   &__img {
+    width: 36.8rem;
+    height: 39.86rem;
     @media screen {
       @media (min-width: $desktop-x) {
         order: 3;

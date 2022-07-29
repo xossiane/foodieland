@@ -1,7 +1,7 @@
 import './ArticleAuthor.scss'
 const ArticleAuthor = (props) => {
     return (
-        <div className="article__author">{props.text}</div>
+        <div className={`${`article__author`} ${props.className}`}>{props.text}</div>
     );
   };
   
