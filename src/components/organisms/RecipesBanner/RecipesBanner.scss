@@ -3,8 +3,8 @@
 .RecipesBanner{
     &__container{
         display: flex;
-        flex-direction: row;
-        margin: auto;
+        margin: 6.4rem 8rem 0 0;
+        
     }
     &__img{
         width: 84rem;
@@ -24,7 +24,7 @@
     &__nutritional{
         height: 60rem;
         width: 40rem;
-        background-color: #E7FAFE;
+        background-color: $colorLightBlue;
         border-radius: 30px;
         margin-left: 4rem;
         &Bar{
