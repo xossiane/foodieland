@@ -5,6 +5,7 @@ import wade from "/assets/wade.png"
 import ForkKnife from "/assets/ForkKnife.png"
 import Print from "/assets/Print.png"
 import Share from "/assets/Share.png"
+import horizontalbar from "/assets/horizontalbar.png"
 import './RecipesHeader.scss'
 function RecipesHeader(){
     return (
@@ -14,8 +15,9 @@ function RecipesHeader(){
         <section className="RecipesHeader__info">
         <ArticleAvatar className="RecipesHeader--author" image={wade}/>
         <div className="RecipesHeader__info--text">
-        <ArticleAuthor text={"John Smith"}/>
-        <ArticleDate text={"15 March 2022"}/>
+        <ArticleAuthor className="RecipesHeader--authorInfo" text={"John Smith"}/>
+        <ArticleDate className="RecipesHeader--authorDate" text={"15 March 2022"}/>
+        <img className="RecipesHeader__horizontalBar" src={horizontalbar} alt="" />
         </div>
         <img className="RecipesHeader__info__bar" src={bar} alt="" />
         <img className="RecipesHeader__timer" src={Timer} />

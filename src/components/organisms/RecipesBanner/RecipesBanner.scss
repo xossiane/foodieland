@@ -3,15 +3,33 @@
 .RecipesBanner{
     &__container{
         display: flex;
-        margin: 6.4rem 8rem 0 0;
+        flex-direction: column;
+        @media screen and (min-width: $tablet){
+        display: flex;
+        margin: 6.4rem 8rem 0 0;}
         
     }
     &__img{
+        width: 37.7rem;
+        height: 25.1rem;
+        margin: auto;
+        border-radius: 30px;
+        @media screen and (min-width: $tablet){
         width: 84rem;
         height: 60rem;
-        margin: auto;
+        margin: auto;}
     }
     &--text{
+        font-family: $inter;
+        width: 34.2rem;
+        font-size: 16px;
+        line-height: 28px;
+        height: 18.1rem;
+        font-weight: $fontWeightBody;
+        opacity: 0.4;
+        margin: auto;
+        text-align: center;
+        @media screen and (min-width: $tablet){
         font-family: $inter;
         width: 128rem;
         font-size: 16px;
@@ -19,14 +37,20 @@
         height: 8.4rem;
         font-weight: $fontWeightBody;
         opacity: 0.4;
-        margin: 8rem;
+        margin: 8rem;}
     }
     &__nutritional{
+        width: 37.7rem;
+        height: 44.5rem;
+        margin: 1.5rem auto;
+        border-radius: 30px;
+        background-color: $colorLightBlue;
+        @media screen and (min-width: $tablet){
         height: 60rem;
         width: 40rem;
         background-color: $colorLightBlue;
         border-radius: 30px;
-        margin-left: 4rem;
+        margin-left: 4rem;}
         &Bar{
             display: flex;
             margin-left: 3.2rem;
@@ -58,6 +82,8 @@
             margin-bottom: 3.2rem;
         }
         &--text{
+            display: none;
+            @media screen and (min-width: $tablet){
             font-family: "Inter", sans-serif;
             font-size: 14px;
             height: 5.6rem;
@@ -66,7 +92,7 @@
             margin: auto;
             text-align: center;
             margin-top: 9.7rem;
-            margin-bottom: 3.2rem;
+            margin-bottom: 3.2rem;}
         }
     }
 
