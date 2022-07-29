@@ -6,6 +6,13 @@
     &__btn{
         display: flex;
         flex-direction: row-reverse;
+
+    }
+    &__print{
+        margin: 1rem;
+    }
+    &__share{
+        margin: 1rem;
     }
     &__title{
     font-family: $inter;
