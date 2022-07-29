@@ -1,5 +1,19 @@
 @use "/public/styles/variables" as *;
 .TodoListSteps__items{
+    display: flex;
+    margin-left: 2.4rem;
+    letter-spacing: -0.02em;
+    align-items: center;
+    display: flex;
+    font-size: 18px;
+    font-family: $inter;
+    justify-content: flex-start;
+    margin-left: 8rem;
+    margin-bottom: 4rem;
+    text-align: justify;
+    width: 33rem;
+    height: 23rem;
+    opacity: 0.6;
     @media screen and (min-width: $tablet){
     display: flex;
     margin-left: 2.4rem;
@@ -18,12 +32,14 @@
 }
 
 .ToDoSteps{
+    
     @media screen and (min-width: $tablet){
     display: flex;}
     
 }
 
 .TodoListSteps__img{
+    display: none;
     @media screen and (min-width: $tablet){
         margin: auto;
         position: relative;

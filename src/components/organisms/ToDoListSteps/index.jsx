@@ -25,7 +25,7 @@ function ToDoSteps({toDoSteps, index, ToggleTodo, handleClick}){
                     </button>
             </div>
             <div className="TodoListSteps__content">
-            <h2 className="TodoList__title--subtitle">{toDoSteps.title}</h2>
+            <h2 className="TodoList__title--subtitleItem">{toDoSteps.title}</h2>
             <span className="TodoListSteps__items" style={{textDecoration: toDoSteps.isDone ? "line-through" : ""}}>{toDoSteps.text}</span>
             <img className="TodoListSteps__img" src={toDoSteps.img}></img>
             
